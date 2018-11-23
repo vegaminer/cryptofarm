@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://cenalevepb.tk/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://cenalevepb.tk/feed.php">
+        <title>DokuWiki</title>
+        <description></description>
+        <link>http://cenalevepb.tk/</link>
+        <image rdf:resource="http://cenalevepb.tk/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2018-11-23T11:32:23+0300</dc:date>
+        <items>
+            <rdf:Seq>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://cenalevepb.tk/lib/tpl/dokuwiki/images/favicon.ico">
+        <title>DokuWiki</title>
+        <link>http://cenalevepb.tk/</link>
+        <url>http://cenalevepb.tk/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+</rdf:RDF>
