@@ -1,3 +1,3 @@
-data/tmp/
-data/locks/
-data/cache/
+#data/tmp/
+#data/locks/
+#data/cache/
