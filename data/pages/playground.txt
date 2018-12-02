@@ -1,1 +1,9 @@
-<note>test</note> <note tip>ggg</note>
+<WRAP group>
+<WRAP half column>
+columns 11
+</WRAP>
+
+<WRAP half column>
+columns 22
+</WRAP>
+</WRAP>
