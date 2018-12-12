@@ -1,22 +1,57 @@
-1543558282	90.154.70.153	E	playground:playground	wikiadmin			14
-1543559117	127.0.0.1	E	playground:playground		external edit		-14
-1543559237	90.154.70.153	E	playground:playground	wikiadmin			22
-1543559506	90.154.70.153	E	playground:playground	wikiadmin			7
-1543559804	90.154.70.153	C	start	wikiadmin	created		11
-1543559908	90.154.70.153	E	start	wikiadmin			13
-1543560194	90.154.70.153	E	playground:playground	wikiadmin			-31
-1543646525	90.154.70.153	C	playground	wikiadmin	created		4
-1543647056	90.154.70.153	E	playground	wikiadmin			34
-1543775848	90.154.70.153	E	playground	wikiadmin			60
-1543776602	90.154.70.153	E	start	wikiadmin			14
-1543776656	90.154.70.153	E	start	wikiadmin			-14
-1543776683	90.154.70.153	R	start	wikiadmin		1543776602	-24
-1543776693	127.0.0.1	E	start		external edit		24
-1543776716	90.154.70.153	D	start	wikiadmin	removed		-24
-1543776732	90.154.70.153	C	start	wikiadmin	created		4
-1543777134	90.154.70.153	E	start	wikiadmin			16
-1543777203	90.154.70.153	E	start	wikiadmin			15
-1543777246	90.154.70.153	E	start	wikiadmin			13
-1543777896	90.154.70.153	C	sidebar	wikiadmin	created		12
-1543777958	90.154.70.153	D	start	wikiadmin	removed		-48
-1543894110	90.154.70.153	C	start	wikiadmin	created		4
+1543913413	90.154.70.153	E	start	wikiadmin			8
+1543914266	90.154.70.153	C	windows	wikiadmin	created		161
+1543918445	90.154.70.153	E	windows	wikiadmin			45
+1544160290	90.154.70.153	C	windows:install	wikiadmin	↷ Page moved and renamed from windows to windows:install		206
+1544160290	90.154.70.153	D	windows	wikiadmin	↷ Page moved and renamed from windows to windows:install		-206
+1544160292	5.196.87.13	E	start		↷ Links adapted because of a move operation		8
+1544160347	90.154.70.153	C	windows:start	wikiadmin	created		11
+1544160645	90.154.70.153	E	windows:install	wikiadmin			108
+1544161081	90.154.70.153	E	windows:install	wikiadmin			110
+1544162095	90.154.70.153	E	windows:install	wikiadmin			283
+1544162132	90.154.70.153	E	windows:start	wikiadmin			8
+1544162165	90.154.70.153	C	windows:pdn	wikiadmin	created		25
+1544162430	90.154.70.153	D	windows:pdn	wikiadmin	removed		-25
+1544162464	90.154.70.153	C	windows:pdn	wikiadmin	created		18
+1544162600	90.154.70.153	E	windows:start	wikiadmin			-3
+1544162676	90.154.70.153	E	windows:install	wikiadmin			-19
+1544162900	90.154.70.153	E	windows:install	wikiadmin			-16
+1544163845	90.154.70.153	E	windows:install	wikiadmin			231
+1544165455	90.154.70.153	E	windows:install	wikiadmin			1204
+1544166939	90.154.70.153	E	windows:install	wikiadmin			1754
+1544167178	90.154.70.153	E	windows:install	wikiadmin			26
+1544168262	90.154.70.153	E	windows:install	wikiadmin			61
+1544168357	90.154.70.153	E	windows:install	wikiadmin			-20
+1544168376	90.154.70.153	C	windows:sidebar	wikiadmin	created		40
+1544168401	90.154.70.153	D	windows:pdn	wikiadmin	removed		-18
+1544168685	90.154.70.153	E	windows:sidebar	wikiadmin			1
+1544169277	90.154.70.153	E	windows:install	wikiadmin			-25
+1544261164	90.154.71.6	C	windows:media_creation_tool	wikiadmin	↷ Page name changed from windows:install to windows:media_creation_tool		3903
+1544261164	90.154.71.6	D	windows:install	wikiadmin	↷ Page name changed from windows:install to windows:media_creation_tool		-3903
+1544261164	90.154.71.6	e	windows:start	wikiadmin	↷ Links adapted because of a move operation		12
+1544261189	90.154.71.6	E	windows:media_creation_tool	wikiadmin			-47
+1544261204	138.201.139.14	E	start		↷ Links adapted because of a move operation		12
+1544262495	90.154.71.6	C	windows:burning_iso	wikiadmin	created		86
+1544262775	90.154.71.6	E	windows:start	wikiadmin			21
+1544265387	90.154.71.6	E	windows:burning_iso	wikiadmin			484
+1544266144	90.154.71.6	E	windows:burning_iso	wikiadmin			45
+1544267641	90.154.71.6	E	windows:burning_iso	wikiadmin			822
+1544270814	90.154.71.6	E	windows:burning_iso	wikiadmin			557
+1544270844	90.154.71.6	C	windows:bootable_usb	wikiadmin	↷ Page name changed from windows:burning_iso to windows:bootable_usb		1994
+1544270844	90.154.71.6	D	windows:burning_iso	wikiadmin	↷ Page name changed from windows:burning_iso to windows:bootable_usb		-1994
+1544270844	90.154.71.6	e	windows:media_creation_tool	wikiadmin	↷ Links adapted because of a move operation		1
+1544270844	90.154.71.6	e	windows:start	wikiadmin	↷ Links adapted because of a move operation		0
+1544271346	90.154.71.6	E	windows:bootable_usb	wikiadmin			259
+1544271809	90.154.71.6	E	windows:bootable_usb	wikiadmin			-103
+1544431598	90.154.71.6	E	windows:bootable_usb	wikiadmin			57
+1544431782	90.154.71.6	C	windows:installation	wikiadmin	created		205
+1544499868	90.154.71.6	E	windows:media_creation_tool	wikiadmin			33
+1544501069	90.154.71.6	E	windows:media_creation_tool	wikiadmin			17
+1544502835	90.154.71.6	E	windows:installation	wikiadmin			1075
+1544503073	90.154.71.6	C	wiki:site_notice	wikiadmin	created		1
+1544503125	90.154.71.6	E	wiki:site_notice	wikiadmin			23
+1544503149	90.154.71.6	C	wiki:navigation	wikiadmin	created		1
+1544503774	90.154.71.6	E	windows:installation	wikiadmin			414
+1544516871	90.154.71.6	E	windows:installation	wikiadmin			672
+1544518506	90.154.71.6	E	windows:installation	wikiadmin			1270
+1544588838	90.154.71.6	E	windows:installation	wikiadmin			830
+1544591689	90.154.71.6	E	windows:installation	wikiadmin			1437

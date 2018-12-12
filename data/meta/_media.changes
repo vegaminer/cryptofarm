@@ -1,2 +1,78 @@
-1543642429	90.154.70.153	C	wiki:backup:dw-backup-20181201-083301.tar	wikiadmin	created		34489856
-1543643074	90.154.70.153	D	wiki:backup:dw-backup-20181201-083301.tar	wikiadmin	removed		-34489856
+1544160526	90.154.70.153	C	windows:mediacreationtool_00.png	wikiadmin	created		147653
+1544162367	90.154.70.153	C	windows:mediacreationtool_00.pdn	wikiadmin	created		199445
+1544162497	90.154.70.153	C	windows:mediacreationtool_01.pdn	wikiadmin	created		46343
+1544162554	90.154.70.153	C	windows:mediacreationtool_05.pdn	wikiadmin	created		78535
+1544162554	90.154.70.153	C	windows:mediacreationtool_06.pdn	wikiadmin	created		60070
+1544162554	90.154.70.153	C	windows:mediacreationtool_07.pdn	wikiadmin	created		39611
+1544162554	90.154.70.153	E	windows:mediacreationtool_01.pdn	wikiadmin			0
+1544162554	90.154.70.153	C	windows:mediacreationtool_02.pdn	wikiadmin	created		127475
+1544162554	90.154.70.153	E	windows:mediacreationtool_00.pdn	wikiadmin			0
+1544162554	90.154.70.153	C	windows:mediacreationtool_03.pdn	wikiadmin	created		55709
+1544162554	90.154.70.153	C	windows:mediacreationtool_04.pdn	wikiadmin	created		65687
+1544162555	90.154.70.153	C	windows:mediacreationtool_08.pdn	wikiadmin	created		48419
+1544163887	90.154.70.153	C	windows:mediacreationtool_01.png	wikiadmin	created		27266
+1544163887	90.154.70.153	C	windows:mediacreationtool_02.png	wikiadmin	created		70476
+1544163887	90.154.70.153	C	windows:mediacreationtool_03.png	wikiadmin	created		30639
+1544163887	90.154.70.153	C	windows:mediacreationtool_05.png	wikiadmin	created		55384
+1544163887	90.154.70.153	C	windows:mediacreationtool_04.png	wikiadmin	created		38505
+1544163887	90.154.70.153	C	windows:mediacreationtool_06.png	wikiadmin	created		37521
+1544163887	90.154.70.153	C	windows:mediacreationtool_07.png	wikiadmin	created		20975
+1544163887	90.154.70.153	C	windows:mediacreationtool_08.png	wikiadmin	created		30690
+1544164181	90.154.70.153	E	windows:mediacreationtool_01.png	wikiadmin			-4371
+1544164205	90.154.70.153	E	windows:mediacreationtool_01.pdn	wikiadmin			-5286
+1544165374	90.154.70.153	E	windows:mediacreationtool_04.pdn	wikiadmin			3857
+1544165398	90.154.70.153	E	windows:mediacreationtool_04.png	wikiadmin			612
+1544165645	90.154.70.153	E	windows:mediacreationtool_05.png	wikiadmin			-9692
+1544165664	90.154.70.153	E	windows:mediacreationtool_05.pdn	wikiadmin			-1120
+1544166301	90.154.70.153	E	windows:mediacreationtool_06.pdn	wikiadmin			5603
+1544166313	90.154.70.153	E	windows:mediacreationtool_06.png	wikiadmin			-4261
+1544262583	90.154.71.6	C	windows:rufus_download.pdn	wikiadmin	created		56618
+1544262583	90.154.71.6	C	windows:rufus_download.png	wikiadmin	created		30805
+1544262583	90.154.71.6	C	windows:rufus_00.pdn	wikiadmin	created		71995
+1544262583	90.154.71.6	C	windows:rufus_00.png	wikiadmin	created		32679
+1544262583	90.154.71.6	C	windows:rufus_01.pdn	wikiadmin	created		30739
+1544262583	90.154.71.6	C	windows:rufus_02.pdn	wikiadmin	created		20051
+1544262583	90.154.71.6	C	windows:rufus_01.png	wikiadmin	created		12834
+1544262583	90.154.71.6	C	windows:rufus_02.png	wikiadmin	created		7662
+1544270563	90.154.71.6	E	windows:rufus_00.png	wikiadmin			173
+1544270563	90.154.71.6	E	windows:rufus_00.pdn	wikiadmin			0
+1544271776	90.154.71.6	E	windows:rufus_02.png	wikiadmin			521
+1544271776	90.154.71.6	E	windows:rufus_02.pdn	wikiadmin			3027
+1544500102	90.154.71.6	C	windows:windows_01.pdn	wikiadmin	created		62241
+1544500102	90.154.71.6	C	windows:windows_01.png	wikiadmin	created		33294
+1544501320	90.154.71.6	C	windows:windows_02.png	wikiadmin	created		14142
+1544501320	90.154.71.6	C	windows:windows_02.pdn	wikiadmin	created		29448
+1544501911	90.154.71.6	C	windows:windows_03.png	wikiadmin	created		36959
+1544501911	90.154.71.6	C	windows:windows_03.pdn	wikiadmin	created		70427
+1544502091	90.154.71.6	E	windows:windows_03.png	wikiadmin			1169
+1544502091	90.154.71.6	E	windows:windows_03.pdn	wikiadmin			1803
+1544503499	90.154.71.6	C	windows:windows_04.pdn	wikiadmin	created		62735
+1544503499	90.154.71.6	C	windows:windows_04.png	wikiadmin	created		34646
+1544504087	90.154.71.6	C	windows:windows_05.png	wikiadmin	created		32220
+1544504087	90.154.71.6	C	windows:windows_05.pdn	wikiadmin	created		69643
+1544504316	90.154.71.6	C	windows:windows_06.png	wikiadmin	created		23716
+1544504316	90.154.71.6	C	windows:windows_06.pdn	wikiadmin	created		49372
+1544517428	90.154.71.6	C	windows:windows_07.png	wikiadmin	created		44551
+1544517428	90.154.71.6	C	windows:windows_07.pdn	wikiadmin	created		73315
+1544517890	90.154.71.6	C	windows:windows_08.pdn	wikiadmin	created		27038
+1544517890	90.154.71.6	C	windows:windows_08.png	wikiadmin	created		13102
+1544518132	90.154.71.6	C	windows:windows_09.png	wikiadmin	created		25143
+1544518132	90.154.71.6	C	windows:windows_09.pdn	wikiadmin	created		41210
+1544518443	90.154.71.6	C	windows:windows_10.png	wikiadmin	created		26248
+1544518443	90.154.71.6	C	windows:windows_10.pdn	wikiadmin	created		38705
+1544587555	90.154.71.6	C	windows:windows_11.pdn	wikiadmin	created		38015
+1544587555	90.154.71.6	C	windows:windows_11.png	wikiadmin	created		21787
+1544587906	90.154.71.6	E	windows:windows_11.pdn	wikiadmin			5083
+1544587906	90.154.71.6	E	windows:windows_11.png	wikiadmin			4330
+1544588545	90.154.71.6	C	windows:windows_12.pdn	wikiadmin	created		20531
+1544588545	90.154.71.6	C	windows:windows_12.png	wikiadmin	created		8721
+1544588546	90.154.71.6	C	windows:windows_13.png	wikiadmin	created		11132
+1544588546	90.154.71.6	C	windows:windows_13.pdn	wikiadmin	created		25168
+1544588546	90.154.71.6	C	windows:windows_14.pdn	wikiadmin	created		53485
+1544588546	90.154.71.6	C	windows:windows_14.png	wikiadmin	created		29458
+1544590258	90.154.71.6	C	windows:windows_15.pdn	wikiadmin	created		48540
+1544590258	90.154.71.6	C	windows:windows_15.png	wikiadmin	created		27510
+1544590856	90.154.71.6	C	windows:windows_16.pdn	wikiadmin	created		63455
+1544590856	90.154.71.6	C	windows:windows_16.png	wikiadmin	created		34777
+1544591096	90.154.71.6	C	windows:windows_17.pdn	wikiadmin	created		49303
+1544591096	90.154.71.6	C	windows:windows_17.png	wikiadmin	created		31264

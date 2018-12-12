@@ -1,1 +1,1 @@
-test
+[[windows:media_creation_tool]]
