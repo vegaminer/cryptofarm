@@ -11,3 +11,14 @@ windows:all_pdn_images
 windows:bootable_usb
 windows:sidebar
 windows:installation
+windows:tuning
+windows:uac
+windows:tuning:uac
+windows:tuning:disable_update
+windows:rigutils:disableuac.bat
+windows:rigutils:windows_defender
+windows:windows_defender
+windows:rigutils:antivirustest.bat
+windows:rigutils
+hardware:power-meter
+windows
