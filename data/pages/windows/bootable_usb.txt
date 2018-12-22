@@ -1,0 +1,59 @@
+There are dozens of tools which may be used for creating bootable USB drives, but my favorite one is Rufus. This is free and open source project hosted at [[https://github.com/pbatard/rufus|github]].
+<WRAP group>
+<WRAP half column>
+**STEP 1.** Download Rufus
+
+Download [[https://rufus.ie|Rufus]] from project's site.
+  - Navigate to https://rufus.ie
+  - Scroll down and click ''"Rufus portable"'' link and save the file on your PC
+</WRAP>
+<WRAP half column>
+{{:windows:rufus_download.png?direct&400|Rufus download}}
+
+<wrap lo>{{material>attachment}}{{:windows:rufus_download.pdn|rufus_download.pdn}}</wrap>
+</WRAP>
+----
+<note>Technically speaking, it's not a burning, since we don't use laser for it, but historically writing an ISO file to a media was always a //burning// for me, so I'm using this term here.</note>
+<WRAP group>
+<WRAP half column>
+**STEP 2.** Burning ISO
+
+You'll need an USB drive of appropriate size. Most of 4GB sticks have enough space to hold Windows ISO, but once I had a 4GB stick which was 500 bytes less. Anyway, rufus will check available capacity of your USB drive and report to you if it's impossible to fit ISO into it.
+
+Insert USB stick into your PC and start rufus tool
+  - Click ''"Select"'' button
+  - Navigate to saved Windows ISO file (see [[:windows:media_creation_tool|media creation tool]])
+  - Click ''"Start"'' button
+</WRAP>
+<WRAP half column>
+
+{{:windows:rufus_00.png?direct&400|Creating bootable USB drive}}
+
+<wrap lo>{{material>attachment}}{{:windows:rufus_00.pdn|rufus_00.pdn}}</wrap>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+  4. Confirm that last copy of your BTC wallet with 100 coins in it was not saved to the drive
+
+</WRAP>
+<WRAP half column>
+{{:windows:rufus_01.png?direct&400|Creating bootable USB drive}}
+
+<wrap lo>{{material>attachment}}{{:windows:rufus_01.pdn|rufus_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+  5. Wait approx 8 minutes and click ''"Close"'' button upon completion
+</WRAP>
+<WRAP half column>
+{{:windows:rufus_02.png?direct&400|Creating bootable USB drive}}
+
+<wrap lo>{{material>attachment}}{{:windows:rufus_02.pdn|rufus_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+Continue to the next step "Windows [[installation]]"
+

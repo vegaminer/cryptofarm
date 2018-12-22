@@ -1,0 +1,22 @@
+All scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils
+
+=== Descri
+[[:windows:rigutils:antivirustest.bat|AntiVirusTest.bat]]
+[[:windows:rigutils:windows_defender|Window Defender]]
+
+{{anchor:cmd.exe:cmd.exe}}
+
+=== Install ===
+
+There is no special install program for rigutils. It's just a [[https://en.wikipedia.org/wiki/Zip_(file_format)|zip]] archive you have to download from GitHub and unpack it to your local drive. My favorite location for storing all my scripts under Windows is c:\bin, so rigutils will reside in c:\bin\rigutils directory. 
+
+Here is step-by-step guide for beginners.
+
+=== History ===
+
+It was May of year 2017 when I (re)discovered wonderful crypto-mining world after reading an article about a botnet mining [[https://www.getmonero.org/|Monero]]. Next day I was running full node and digging through [[https://www.reddit.com/r/MoneroMining/|reddit/MoneroMining]]. Two weeks later xmr-stak-cpu was running almost on every machine I had access to 8-) Next milestone was AMD Vega card. It was a nightmare to setup and manage, [[https://www.amd.com/en/support/kb/release-notes/rn-rad-win-blockchain-beta|blockchain]] driver was of beta quality, but for a long time it was the only choice for mining Monero... and Windows was his ball and chain he has to bear. I spent countless nights trying to figure out optimal undervolting setting, wrote a PHP script for finding optimal xmr-stak settings and got an OrangePi based [[hardware:power-meter]] for detecting the most efficient "sweet spot". No, I did't get rich, it's just a nice hobby...
+
+Step by step I wrote a bunch of bat scripts for managing mining rigs I had access to. So Rigutils tool set was born. Started as a simple helper for starting/stopping xmr-stak now it's capable of many more things. Is it possible to successfully manage a rig without using [[https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon|devcon.exe]] and [[https://forums.guru3d.com/threads/overdriventool-tool-for-amd-gpus.416116/|OverDriveNTool]]? The answer is Yes. Rigutils has no other binary dependencies except ones which is already present in any Windows setup.
+
+You may ask me - why bat files and not powershell or golang or PHP or bash, C/C++, Java etc.? Well, I hate writing bat files for its cryptic syntax, unpredictable behavior and absence of tooling of any kind. But I like it because it's a real challenge and fun and it reminds me of //good old days// of [[https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT|IBM XT]] computers, [[https://en.wikipedia.org/wiki/Intel_8086|i8086]], [[https://en.wikipedia.org/wiki/Floppy_disk|5.25" disks]] and [[https://en.wikipedia.org/wiki/IBM_PC_DOS#See_also|PC DOS]]
+

@@ -1,0 +1,272 @@
+The process of Windows installation is straight forward. For the rig with 8xVEGA cards I recommend at least 120GB SSD drive. Please remember that during installation all data from the drive will be erased.
+
+<note important>Before starting installation process you have to **disable network** on your PC, just unplug Ethernet cable and/or switch off Wi-Fi adapter. Windows may/should try to download updates during installation and this may lead to unpredictable results. You'll be able to enable network connection after completely disabling windows update mechanism</note>
+
+Insert [[bootable_usb|bootable USB]] drive with Windows installation into your PC and boot from it. Probably, you have to change BIOS settings in Boot section to be able to boot from USB drive. It may be a tricky task and depends on particular model of motherboard and BIOS version. 
+
+----
+**STEP 1.** Locale settings
+<WRAP group>
+<WRAP half column>
+If you need other language then you have to select it at "Media creation tool [[media_creation_tool#step5|Step 5]]"
+  - Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_01.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_01.pdn|windows_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 2.** Confirm installation
+<WRAP group>
+<WRAP half column>
+  2. Click ''"Install now"'' button
+</WRAP>
+<WRAP half column>
+{{windows_02.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_02.pdn|windows_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 3.** Product key
+<WRAP group>
+<WRAP half column>
+
+3.1. If you have a key then type it in the input field and click ''"Next"'' button
+3.2. Or just click the blue text ''"I don't have a product key"'' if you don't have one. You will be able to activate Windows later in this case.
+  
+</WRAP>
+<WRAP half column>
+{{windows_03.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_03.pdn|windows_03.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 4.** Select edition
+<WRAP group>
+<WRAP half column>
+This is the only valid choice you have - Operating system: Windows10 **Pro**, Architecture: **x64**. Otherwise you'll be not able to run mining software on it. 
+  4. Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_04.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_04.pdn|windows_04.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 5.** License terms
+<WRAP group>
+<WRAP half column>
+I'm happy that they don't put such a window before every step...
+  5. Click the checkbox and then ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_05.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_05.pdn|windows_05.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 6.** Type of installation
+<WRAP group>
+<WRAP half column>
+We need more control on installation process.
+  6. Click the text: ''"Custom: Install windows only (advanced)"''
+</WRAP>
+<WRAP half column>
+{{windows_06.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_06.pdn|windows_06.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 7.** Disk preparation
+<WRAP group>
+<WRAP half column>
+If your disk was used before then you have to delete all existing partitions on it. Select them one by one and click ''"Delete"'' button, until you get one unallocated free space.
+  7. Click ''"Next"'' button and wait. It may take some time, just be patient.
+</WRAP>
+<WRAP half column>
+{{windows_07.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_07.pdn|windows_07.pdn}}</wrap>
+
+{{windows_08.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_08.pdn|windows_08.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 8.** Select region
+<WRAP group>
+<WRAP half column>
+All setting from this step up may be changed later in control panel of Windows itself.
+  8. Correct the default region if you need and click ''"Yes"'' button
+</WRAP>
+<WRAP half column>
+{{windows_09.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_09.pdn|windows_09.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 9.** Keyboard layout
+<WRAP group>
+<WRAP half column>
+  9. Correct the default keyboard if you need and click ''"Yes"'' button.
+  
+</WRAP>
+<WRAP half column>
+{{windows_10.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_10.pdn|windows_10.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 10.** Secondary keyboard
+<WRAP group>
+<WRAP half column>
+If you are living in a country with national alphabet different from Latin one (Hebrew, Cyrillic, Arabic, 	Chinese, etc.)  then you may want to add secondary keyboard at this step.
+  10. Add a secondary keyboard if you need or just click ''"Skip"'' button
+</WRAP>
+<WRAP half column>
+{{windows_11.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_11.pdn|windows_11.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+Coffee brake {{typcn>beer}}
+<WRAP group>
+<WRAP half column>
+{{windows_12.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_12.pdn|windows_12.pdn}}</wrap>
+</WRAP>
+<WRAP half column>
+{{windows_13.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_13.pdn|windows_13.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 11.** Account type
+<WRAP group>
+<WRAP half column>
+Try to share with MS as little as possible. Use [[https://answers.microsoft.com/en-us/windows/forum/windows_10-security/microsoft-account-vs-local-account-on-windows-10/da6826f7-5e9b-48bf-8e0d-bf25456b4e0e|local account]] and enjoy full control over your rig.
+  11. Select ''"Set up for personal use"'' and click ''"Next"'' button. Click ''"Offline account"'' at next screen.
+</WRAP>
+<WRAP half column>
+{{windows_14.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_14.pdn|windows_14.pdn}}</wrap>
+
+{{windows_15.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_15.pdn|windows_15.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 12.** Account type (continue)
+<WRAP group>
+<WRAP half column>
+No thank you! Just get out of my way with your time and money stealing services.
+  12. Click ''"No"'' button
+</WRAP>
+<WRAP half column>
+{{windows_16.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_16.pdn|windows_16.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 13.** User name
+<WRAP group>
+<WRAP half column>
+  13. Type your user name here and click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_17.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_17.pdn|windows_17.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 14.** Password
+<WRAP group>
+<WRAP half column>
+  14. Enter really strong password (no 1234 or something like that). Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_18.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_18.pdn|windows_18.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 15.** Confirm password
+<WRAP group>
+<WRAP half column>
+  15. Retype your password and click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_19.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_19.pdn|windows_19.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 16.** Security questions
+<WRAP group>
+<WRAP half column>
+It's a security risk to provide easy to guess answers. Just enter some meaningless garbage here and forget about it.
+  16. Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{windows_20.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_20.pdn|windows_20.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 17.** Cortana
+<WRAP group>
+<WRAP half column>
+Cortana is a super hungry hog and wasteful piece of crap, you definitely don't need it at your mining rig. We'll disable it completely later, but for now just say No.
+  17. Click ''"No"'' button
+</WRAP>
+<WRAP half column>
+{{windows_21.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_21.pdn|windows_21.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 18.** Privacy settings
+<WRAP group>
+<WRAP half column>
+Say NO to all questions here as shown on the screenshot. Unfortunately, it has almost no effect since Windows will continue to collect usage statistic and send it back to Redmond (we will disable it completely later).
+  18. Click ''"Accept"'' button
+</WRAP>
+<WRAP half column>
+{{windows_22.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_22.pdn|windows_22.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP 19.** Last step
+<WRAP group>
+<WRAP half column>
+Just wait. Your PC will be rebooted automatically. After successful login continue to the next step [[:windows:tuning|"Windows tuning"]]
+</WRAP>
+<WRAP half column>
+{{windows_23.png?direct&400|Install Windows}}
+
+<wrap lo>{{material>attachment}}{{windows_23.pdn|windows_23.pdn}}</wrap>
+</WRAP>
+</WRAP>

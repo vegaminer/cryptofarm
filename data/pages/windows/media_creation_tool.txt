@@ -1,0 +1,114 @@
+<WRAP group>
+<WRAP half column>
+**STEP 1.** Visit MS site
+
+Download [[https://www.microsoft.com/en-us/software-download/windows10|media creation tool]] from official MS site.
+  - Navigate to https://www.microsoft.com/en-us/software-download/windows10
+  - Click ''"Download tool now"'' button
+  - Click ''"Save File"'' button in popup window
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_00.png?direct&400|Media creation tool download}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_00.pdn|mediacreationtool_00.pdn}}</wrap>
+</WRAP>
+----
+**STEP 2.** Run the tool
+<WRAP group>
+<WRAP half column>
+  - Run the tool and... wait for the next screen
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_01.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_01.pdn|mediacreationtool_01.pdn}}</wrap>
+</WRAP>
+----
+**STEP 3.** Read license terms
+<WRAP group>
+<WRAP half column>
+ 
+  - Read all hundred+ pages of this legal bullshit
+  - Click ''"Accept"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_02.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_02.pdn|mediacreationtool_02.pdn}}</wrap>
+</WRAP>
+----
+**STEP 4.** Installation method
+<WRAP group>
+<WRAP half column>
+  - Click ''"Create installation media"''. We need ISO file.
+  - Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_03.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_03.pdn|mediacreationtool_03.pdn}}</wrap>
+</WRAP>
+----
+**{{anchor:step5:STEP 5.}}** Windows type selection
+<WRAP group>
+<WRAP half column>
+  - ''Language'' - select whatever language you want. My choice is English.
+  - ''Edition'' - we need Windows 10
+  - ''Architecture'' - 64-bit (x64). Never select x32 for your rig!
+  - Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_04.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_04.pdn|mediacreationtool_04.pdn}}</wrap>
+</WRAP>
+----
+**STEP 6.** Media type selection
+<WRAP group>
+<WRAP half column>
+  - ''ISO file'' - It's up to you, but I prefer ISO files. At least I can save it and keep it for my next projects if any.
+  - ''Architecture'' - 64-bit (x64). Never select x32 for your rig!
+  - Click ''"Next"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_05.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_05.pdn|mediacreationtool_05.pdn}}</wrap>
+</WRAP>
+----
+**STEP 7.** Naming ISO file
+<WRAP group>
+<WRAP half column>
+  - Select a path for saving your ISO. Remember it ;)
+  - Give the file a meaningful name. Just imagine that you have several ISO files in one location and you have to tell them apart from each other. Just use build number and architecture.
+  - Click ''"Save"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_06.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_06.pdn|mediacreationtool_06.pdn}}</wrap>
+</WRAP>
+----
+**STEP 8.** Downloading
+<WRAP group>
+<WRAP half column>
+Just wait. It depends on your internet connection. File size is approx 4Gb
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_07.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_07.pdn|mediacreationtool_07.pdn}}</wrap>
+</WRAP>
+----
+**STEP 9.** Finish
+<WRAP group>
+<WRAP half column>
+  - Remember or better note location of the file and click ''"Finish"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:mediacreationtool_08.png?direct&400|Media creation tool}}
+
+<wrap lo>{{material>attachment}}{{:windows:mediacreationtool_08.pdn|mediacreationtool_08.pdn}}</wrap>
+</WRAP>
+----
+Continue to the next step [[bootable_usb|“Creating bootable USB drive” ]]

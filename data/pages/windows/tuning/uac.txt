@@ -1,0 +1,44 @@
+User Account Control or [[https://en.wikipedia.org/wiki/User_Account_Control|UAC]] for short is just an absurd and annoying Windows feature which may prevent automatization of some tasks. Looks like guys at Redmond never heard about [[https://en.wikipedia.org/wiki/Sudo|sudo]] and were forced into reinvention of wheel.
+
+You can disable UAC either manually by following this guide or by running the script [[windows:rigutils:disableuac.bat|DisableUAC.bat]]
+
+** STEP 1.** Open UAC settings
+<WRAP group>
+<WRAP half column>
+  - Type UAC in the search box located at taskbar
+  - Click ''"Open"''
+</WRAP>
+<WRAP half column>
+{{:windows:tuning_uac_00.png?direct&400|Disable UAC}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning_uac_00.pdn|tuning_uac_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 2.** Adjust slider position
+<WRAP group>
+<WRAP half column>
+  - Drag the slider down
+  - Click ''"OK"'' button
+</WRAP>
+<WRAP half column>
+{{:windows:tuning_uac_01.png?direct&400|Disable UAC}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning_uac_01.pdn|tuning_uac_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+** STEP 3.** Confirm action
+<WRAP group>
+<WRAP half column>
+  - Click ''"YES"'' button
+  - Reboot your PC
+</WRAP>
+<WRAP half column>
+{{:windows:tuning_uac_02.png?direct&400|Disable UAC}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning_uac_02.pdn|tuning_uac_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+Continue to the next step [[:windows:tuning:disable_update|"Disable Windows Update"]] after reboot
