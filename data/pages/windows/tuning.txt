@@ -1,3 +1,5 @@
-<note tip>tip</note>
+<WRAP center round tip 80%>
+All tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning journey by [[:windows:rigutils|installing Rigutils]] first
+</WRAP>
 
   * Disable [[:windows:tuning:uac|UAC]]

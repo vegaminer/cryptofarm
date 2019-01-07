@@ -1,4 +1,0 @@
-  1. Download MS [[media_creation_tool|Media Creation Tool]] and get Windows [[https://en.wikipedia.org/wiki/ISO_image|ISO]] file.
-  2. Create a [[bootable_usb|bootable USB]] drive.
-  3. [[https://en.wikipedia.org/wiki/Booting|Boot]] into Windows installation program and follow the [[installation|installation guide]] to setup your rig.
-  4. Continue setup process with [[tuning|tuning]] of your system.

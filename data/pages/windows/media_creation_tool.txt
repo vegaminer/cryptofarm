@@ -56,6 +56,11 @@ Download [[https://www.microsoft.com/en-us/software-download/windows10|media cre
   - ''Edition'' - we need Windows 10
   - ''Architecture'' - 64-bit (x64). Never select x32 for your rig!
   - Click ''"Next"'' button
+
+<WRAP center round tip 80%>
+It's possible to install any additional language later. I would recommende to complete installation steps with English and switch to your preferred language after that. Here is an [[https://www.itechtics.com/download-language-packs-windows-10-version-1803/|excellent instruction]] on how to install additional interface languages for Windows 10.
+</WRAP>
+
 </WRAP>
 <WRAP half column>
 {{:windows:mediacreationtool_04.png?direct&400|Media creation tool}}
@@ -103,7 +108,7 @@ Just wait. It depends on your internet connection. File size is approx 4Gb
 **STEP 9.** Finish
 <WRAP group>
 <WRAP half column>
-  - Remember or better note location of the file and click ''"Finish"'' button
+  - Remember or note location of the file and click ''"Finish"'' button
 </WRAP>
 <WRAP half column>
 {{:windows:mediacreationtool_08.png?direct&400|Media creation tool}}

@@ -1,3 +1,196 @@
-Get the script from github: [[https://github.com/vegaminer/rigutils/blob/master/windows/AntiVirusTest.bat|AntiVirusTest.bat]]
+<bootnote>This script is a part of [[:windows:rigutils|Rigutils]] tool set.</bootnote>
 
-This script is part of rigutils tool set. Visit [[:windows:rigutils|rigutils]] main page for more info.
+----
+
+=== Description ===
+
+Some of bat scripts should be executed with so called elevated admin rights. Most of the times, then you just double click on a bat file a //cmd.exe// command prompt with non elevated rights starts, and bat file executes without sufficient rights. There is a way to automate the elevating process from script itself, but it may trigger false alert message from Windows Defender (see [[https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Trojan%3aWin32%2fPowessere.G&threatid=2147725444|Trojan:Win32/Powessere.G]]). 
+
+Consider the following code:
+<code>
+set "self=%~s0"
+
+whoami.exe /groups | findstr.exe "S-1-16-12288" >nul 2>&1 || (
+  mshta.exe "javascript: var shell=new ActiveXObject('shell.application'); shell.ShellExecute('%self:\=\\%','','','runas',1); close();"
+  exit /b
+)
+
+echo I'm running in elevated environment!
+</code>
+
+Let's go through it part by part:
+
+  1. ''set "self=%~s0"'' - assign to a variable with name 'self' the short (without spaces) file name of our script itself.
+  2. ''whoami.exe /groups'' - Display group information for the user who is currently logged on to the local system (see official [[https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami|whoami]] manual). whoami is a system program located in C:\Windows\System32
+  3. ''| findstr.exe "S-1-16-12288" >nul 2>&1'' - search for [[https://support.microsoft.com/en-us/help/243330/well-known-security-identifiers-in-windows-operating-systems|well known S-1-16-12288]] group name in whoami output. findstr is a system program located in C:\Windows\System32. The sign "vertical bar" has its own name "pipe" and is used for redirecting text output stream ([[https://en.wikipedia.org/wiki/Standard_streams|stdout]]) from one program to text input stream ([[https://en.wikipedia.org/wiki/Standard_streams|stdin]]) of another program.
+  4. ''|| (...)'' - if S-1-16-12288 was not found (findstr return false result) it means that our script is running in non elevated environment and expression in parentheses should be executed. Double pipes read as "logical or" operation. 
+  5. ''mshta.exe'' - is a standard windows program located in C:\Windows\System32\ It is used for running MS proprietary [[https://en.wikipedia.org/wiki/HTML_Application|HTML applications]] (HTA for short). mshta is a system program located in C:\Windows\System32
+  6. ''"javascript: . . ."'' - is a javascript code executed by mshta
+  7. ''var shell=new ActiveXObject('shell.application');'' - create an instance of [[https://msdn.microsoft.com/en-us/library/windows/desktop/bb774094(v=vs.85).aspx|shell.application]] object
+  8. ''shell.ShellExecute('%self:\=\\%','','','runas',1);'' - execute our script given by variable self (expression %self:\=\\% just replaces single slash with double slash since this is js code) with admin rights. See [[https://docs.microsoft.com/en-us/windows/desktop/shell/shell-shellexecute|ShellExecute documentation]] for more details.
+  9. ''close();'' - just close mshta and exit
+  10. ''exit /b'' - exit from non privileged part of our script
+  11. ''echo I'm running in elevated environment!'' - self-explanatory statement
+  
+Well, why indeed Windows Defender think that this harmless code is a virus? It's because of the ShellExecute method call. There are known viruses/trojans which infect computers using exactly the same technique for getting into the elevated environment with admin rights.
+
+After finishing the above text an idea came to my mind: Hey, let's try to fool Windows Defender by a simple trick - copy mstha.exe with a different name... And it turns out that this method works perfectly! So [[:windows:rigutils:antivirustest.bat|AntiVirusTest.bat]] was born. Get a copy of it and run from [[:windows:cmd.exe|cmd.exe]] shell.
+
+To my mind, such a Windows Defender bypass method is clearly a bug (not critical, but bug), feel free to submit it to [[https://www.microsoft.com/en-us/msrc/bounty|MS bug bounty program]] and share with me your reward 8-)
+
+Seriously speaking, this trick may stop working in future. But luckily, Windows Defender has an [[https://support.microsoft.com/en-us/help/4028485/windows-10-add-an-exclusion-to-windows-security|exclusions list]] for trusted files and folders. If you ever got a message from Defender that //mshta.exe// pose a security risk to your system and block it from execution then you have to (re)enable it. After adding //mstha.exe// to the whitelist (see instruction below) of Windows Defender you may once again test your setup with [[:windows:rigutils:antivirustest.bat|AntiVirusTest.bat]]
+
+----
+
+=== Instruction ===
+
+**STEP 1.** Launch command prompt. 
+See [[windows:rigutils:cmd_rigutils.bat|cmd_rigutils.bat]]
+
+**STEP 2.** Run //AntiVirusTest.bat//
+<WRAP group>
+<WRAP half column>
+
+ 1. Type ''AntiVirusTest.bat'' (case of letters doesn't matter)
+ 2. Press ''Enter''  
+ <color #ffffff>.</color>
+ <WRAP center round tip 90%>
+You may start typing ''Anti'' and then press the ''Tab'' key on your keyboard. //cmd.exe// will search for commands in current directory starting with //Anti// and expand it to it's full name automatically.
+</WRAP>
+ 
+
+3. Confirm your action in this User Account Control dialog by clicking the ''Yes'' button. We will [[windows:tuning:uac|disable]] this annoying ''User Account Control'' messages later.
+
+ 4. If you see a popup windows with the message ''Hello, this is admin speaking!'' then it means that //AntiVirusTest// passed successfully and you don't have to do anything special about Windows Defender at the moment. Just click ''OK'' and that's it. 
+
+ If you see something different please continue to the next [[#step3|Step 3 "Troubleshooting"]]
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_00.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_00.pdn|antivirustest_00.pdn}}</wrap>
+
+{{:windows:rigutils:antivirustest_08.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_08.pdn|antivirustest_08.pdn}}</wrap>
+
+{{:windows:rigutils:antivirustest_09.png?direct&401|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_09.pdn|antivirustest_09.pdn}}</wrap>
+
+{{:windows:rigutils:antivirustest_10.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_10.pdn|antivirustest_10.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+**{{anchor:step3:STEP 3. Troubleshooting}}**
+<WRAP group>
+<WRAP half column>
+1. Most probably, you will see something similar to the screenshot - the message ''Looks like Windows Defender blocks the script'' and the popup window ''Threats found''. If it is so then just click the blue popup window. Don't worry if the window dismissed too fast just follow these [[open_windows_defender_settings|simple steps]] to open antivirus settings dialog and return back to this troubleshooting instruction.
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_01.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_01.pdn|antivirustest_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+{{anchor:threat_history:Threat history}}
+<WRAP group>
+<WRAP half column>
+2. Click ''See full history''.
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_02.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_02.pdn|antivirustest_02.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+3. Unfold an item in the history list
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_03.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_03.pdn|antivirustest_03.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+4. Show details window, just to be sure that your are going to whitelist the right file.
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_04.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_04.pdn|antivirustest_04.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+
+* 5. Verify that //mshta.exe// present in ''Affected items'' section.
+* 6. Click the ''OK'' button
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_05.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_05.pdn|antivirustest_05.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+7. Click the ''Allow'' button
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_06.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_06.pdn|antivirustest_06.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+8. Confirm your action by clicking the ''Yes'' button. We will [[windows:tuning:uac|disable]] this silly ''User Account Control'' dialog later.
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:antivirustest_07.png?direct&400|AntiVirusTest.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_07.pdn|antivirustest_07.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+github: [[https://github.com/vegaminer/rigutils/blob/master/windows/AntiVirusTest.bat|AntiVirusTest.bat]]

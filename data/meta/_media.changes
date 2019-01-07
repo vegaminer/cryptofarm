@@ -1,20 +1,40 @@
-1544676739	90.154.71.6	C	windows:windows_23.pdn	wikiadmin	created		51297
-1544676739	90.154.71.6	C	windows:windows_23.png	wikiadmin	created		35748
-1544776937	90.154.71.6	C	windows:tuning_uac_00.pdn	wikiadmin	created		71382
-1544776937	90.154.71.6	C	windows:tuning_uac_00.png	wikiadmin	created		48405
-1544776937	90.154.71.6	C	windows:tuning_uac_01.pdn	wikiadmin	created		86174
-1544776937	90.154.71.6	C	windows:tuning_uac_01.png	wikiadmin	created		44467
-1544776937	90.154.71.6	C	windows:tuning_uac_02.pdn	wikiadmin	created		76022
-1544776937	90.154.71.6	C	windows:tuning_uac_03.pdn	wikiadmin	created		76020
-1544777164	90.154.71.6	E	windows:tuning_uac_00.png	wikiadmin			-43
-1544777164	90.154.71.6	E	windows:tuning_uac_00.pdn	wikiadmin			-53
-1544777513	90.154.71.6	C	windows:tuning_uac_03.png	wikiadmin	created		39968
-1544777603	90.154.71.6	E	windows:tuning_uac_00.png	wikiadmin			0
-1544777604	90.154.71.6	E	windows:tuning_uac_00.pdn	wikiadmin			0
-1544777604	90.154.71.6	E	windows:tuning_uac_01.pdn	wikiadmin			0
-1544777604	90.154.71.6	E	windows:tuning_uac_01.png	wikiadmin			0
-1544777604	90.154.71.6	C	windows:tuning_uac_02.png	wikiadmin	created		39968
-1544777604	90.154.71.6	E	windows:tuning_uac_02.pdn	wikiadmin			0
-1544777616	90.154.71.6	D	windows:tuning_uac_03.pdn	wikiadmin	removed		-76020
-1544777628	90.154.71.6	D	windows:tuning_uac_03.png	wikiadmin	removed		-39968
-1545465125	90.154.71.6	C	windows:orangepi_powermeter.jpg	wikiadmin	created		134763
+1545812767	90.154.71.6	C	rigutils_02.png	wikiadmin	created		25122
+1545812768	90.154.71.6	C	rigutils_02.pdn	wikiadmin	created		44024
+1546772076	90.154.70.56	C	antivirustest_00.pdn	wikiadmin	created		20147
+1546772076	90.154.70.56	C	antivirustest_00.png	wikiadmin	created		7397
+1546772199	90.154.70.56	C	windows:rigutils:antivirustest_00.png	wikiadmin	created		7397
+1546772199	90.154.70.56	C	windows:rigutils:antivirustest_00.pdn	wikiadmin	created		20147
+1546864339	90.154.70.56	C	windows:rigutils:antivirustest_10.pdn	wikiadmin	created		23381
+1546864339	90.154.70.56	C	windows:rigutils:antivirustest_10.png	wikiadmin	created		6465
+1546864507	90.154.70.56	C	windows:rigutils:antivirustest_09.pdn	wikiadmin	created		20310
+1546864507	90.154.70.56	C	windows:rigutils:antivirustest_09.png	wikiadmin	created		5840
+1546864830	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			205
+1546864830	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			79
+1546869439	90.154.70.56	C	windows:rigutils:antivirustest_01.png	wikiadmin	created		23208
+1546869439	90.154.70.56	C	windows:rigutils:antivirustest_01.pdn	wikiadmin	created		51226
+1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_00.png	wikiadmin	created		19814
+1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_00.pdn	wikiadmin	created		49537
+1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_01.pdn	wikiadmin	created		46037
+1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_01.png	wikiadmin	created		27374
+1546872286	90.154.70.56	C	windows:rigutils:antivirustest_02.pdn	wikiadmin	created		40919
+1546872286	90.154.70.56	C	windows:rigutils:antivirustest_02.png	wikiadmin	created		17584
+1546889093	90.154.70.56	C	windows:rigutils:antivirustest_03.png	wikiadmin	created		7819
+1546889093	90.154.70.56	C	windows:rigutils:antivirustest_03.pdn	wikiadmin	created		24266
+1546889348	90.154.70.56	C	windows:rigutils:antivirustest_04.pdn	wikiadmin	created		27479
+1546889348	90.154.70.56	C	windows:rigutils:antivirustest_04.png	wikiadmin	created		9070
+1546889615	90.154.70.56	C	windows:rigutils:antivirustest_05.png	wikiadmin	created		17117
+1546889615	90.154.70.56	C	windows:rigutils:antivirustest_05.pdn	wikiadmin	created		47841
+1546891956	90.154.70.56	C	windows:rigutils:antivirustest_06.pdn	wikiadmin	created		28894
+1546891956	90.154.70.56	C	windows:rigutils:antivirustest_06.png	wikiadmin	created		13924
+1546892544	90.154.70.56	C	windows:rigutils:antivirustest_07.png	wikiadmin	created		16018
+1546892544	90.154.70.56	C	windows:rigutils:antivirustest_07.pdn	wikiadmin	created		37307
+1546893296	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			-196
+1546893296	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			-333
+1546893442	90.154.70.56	C	windows:rigutils:antivirustest_08.png	wikiadmin	created		15509
+1546893442	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			728
+1546893442	90.154.70.56	C	windows:rigutils:antivirustest_08.pdn	wikiadmin	created		36353
+1546893442	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			0
+1546893495	90.154.70.56	E	windows:rigutils:antivirustest_08.png	wikiadmin			0
+1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			0
+1546893495	90.154.70.56	E	windows:rigutils:antivirustest_08.pdn	wikiadmin			0
+1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			3120

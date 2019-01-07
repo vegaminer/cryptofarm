@@ -1,16 +1,101 @@
-All scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils
-
-=== Descri
-[[:windows:rigutils:antivirustest.bat|AntiVirusTest.bat]]
-[[:windows:rigutils:windows_defender|Window Defender]]
-
-{{anchor:cmd.exe:cmd.exe}}
+<bootnote>All scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils</bootnote>
 
 === Install ===
 
-There is no special install program for rigutils. It's just a [[https://en.wikipedia.org/wiki/Zip_(file_format)|zip]] archive you have to download from GitHub and unpack it to your local drive. My favorite location for storing all my scripts under Windows is c:\bin, so rigutils will reside in c:\bin\rigutils directory. 
+There is no special install program for Rigutils. It's just a[[https://en.wikipedia.org/wiki/Zip_(file_format)|zip]] archive. You have to download it from GitHub [[https://github.com/vegaminer/rigutils|repository]] and unpack to your local hard drive. My favorite location for scripts and programs under Windows is ''c:\bin'', so Rigutils will reside in ''c:\bin\rigutils'' accordingly. See the [[windows:rigutils:description|description]] page for short info on each file from the tool set.
 
-Here is step-by-step guide for beginners.
+----
+Here is step-by-step guide for beginners:
+
+<WRAP group>
+<WRAP half column>
+
+** STEP 1. ** Download Rigutils
+
+Download zip-archive from GitHub
+  1. Open [[:windows:tuning:firefox|FireFox]] and navigate to
+  ''https://github.com/vegaminer/rigutils''
+  2. Click pull-down menu ''Clone or download''
+  3. Click ''Download ZIP'' button
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_00.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_00.pdn|rigutils_00.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 2.** Save file
+
+In popup windows
+  4. Select ''Save File''
+  5. Click ''OK'' button
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_01.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_01.pdn|rigutils_01.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 4.** Open downloads folder
+
+At the toolbar of FireFox
+  6. Click the ''Downloads (arrow)'' button
+  7. Click ''Folder'' button next to downloaded file. File explorer window will be opened showing content of your Downloads folder.
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_02.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_02.pdn|rigutils_02.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 5.** Unpack file
+
+In explore window select the file ''rigutils-master.zip'' (should be done automatically)
+  8. Click ''Extract'' menu
+  9. Click ''Extract all'' buttin
+  10. Enter the recommended path ''c:\bin'' in folder selection control
+  11. Click ''Extract'' button
+
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_03.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_03.pdn|rigutils_03.pdn}}</wrap>
+
+{{:windows:rigutils_04.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_04.pdn|rigutils_04.pdn}}</wrap>
+
+{{:windows:rigutils_05.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_05.pdn|rigutils_05.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 6.** Rename folder
+
+By default the folder will have the name ''rigutils-master'', it's not a problem, but I prefer just ''rigutils''. Let's rename it
+  12. Open ''c:\bin'' folder in File Explorer window
+  13. Right click on ''rigutils-master'' folder
+  14. Click ''Rename'' menu item
+  15. Remove ''-master'' from folder name and press ''Enter'' button on your keyboard
+  
+<WRAP center round tip 80%>You may press ''F2'' on your keyboard to get directly to renaming mode. I highly recommend to get yourself accustomed to [[https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts|Windows Shortcuts]] It's very useful and fast!</WRAP>
+
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_06.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_06.pdn|rigutils_06.pdn}}</wrap>
+</WRAP>
+----
 
 === History ===
 

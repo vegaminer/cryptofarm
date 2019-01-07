@@ -18,4 +18,8 @@ windows:scripts:start
 windows:rigutils
 windows:rigutils:antivirustest.bat
 hardware:power-meter
-windows:install
+windows:rig_setup
+windows:cmd.exe
+windows:rigutils:cmd_rigutils.bat
+windows:rigutils:description
+windows:rigutils:open_windows_defender_settings

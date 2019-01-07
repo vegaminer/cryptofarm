@@ -22,3 +22,8 @@ windows:rigutils:antivirustest.bat
 windows:rigutils
 hardware:power-meter
 windows
+windows:cmd.exe
+windows:rigutils:cmd_rigutils.bat
+windows:tuning:firefox
+windows:rigutils:description
+windows:rigutils:open_windows_defender_settings
