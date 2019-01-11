@@ -1,1 +1,0 @@
-Get the script from github [[https://github.com/vegaminer/rigutils/blob/master/windows/DisableUAC.bat|DisableUAC.bat]]

@@ -1,5 +1,5 @@
 <WRAP center round tip 80%>
-All tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning journey by [[:windows:rigutils|installing Rigutils]] first
+All tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning steps by [[windows:rigutils:install|installing]] Rigutils first
 </WRAP>
 
-  * Disable [[:windows:tuning:uac|UAC]]
+  * Disable [[windows:tuning:disable_uac|User Access Control (UAC)]]

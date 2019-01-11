@@ -1,0 +1,9 @@
+See the [[windows:rigutils:install|install]] page for installation instructions.
+
+---
+This is a short summary for individual files in Rigutils/windows_tuning directory. For detailed information and instruction consult corresponding pages.
+
+  -<color #ffffff> </color> [[windows:rigutils:windows:cmd_rigutils.bat|cmd_rigutils.bat]] - simple script for fast opening //command prompt// window 
+  
+  - [[windows:rigutils:windows:antivirustest.bat|AntiVirusTest.bat]] - run it (once) before any other script in the package. It'll help you to detect any AntiVirus related problems.
+  - [[:windows:rigutils:windows_defender|Window Defender]]

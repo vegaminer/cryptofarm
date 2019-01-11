@@ -1,0 +1,26 @@
+=== How to open Windows Defender settings? ===
+
+<WRAP group>
+<WRAP half column>
+
+ 1. Press [[https://www.google.com/search?q=win+logo+key&source=lnms&tbm=isch&sa=X|WIN LOGO KEY + S]] to open search dialog.
+ 2. Type ''threat''.
+ 3. Click ''Virus & threat protection'' search item.
+ 4. Click ''Threat history''
+ 5. [[windows:rigutils:windows:antivirustest.bat#threat_history|Back]] to AntiVirusTest troubleshooting.
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:windows_defender_settings_00.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_defender_settings_00.pdn|windows_defender_settings_00.pdn}}</wrap>
+
+{{:windows:rigutils:windows_defender_settings_01.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_defender_settings_01.pdn|windows_defender_settings_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----

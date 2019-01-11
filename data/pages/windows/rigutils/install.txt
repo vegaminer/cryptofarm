@@ -1,0 +1,111 @@
+<bootnote>All scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils</bootnote>
+
+=== Install ===
+
+There is no special install program for Rigutils. It's just a[[https://en.wikipedia.org/wiki/Zip_(file_format)|zip]] archive. You have to download it from GitHub [[https://github.com/vegaminer/rigutils|repository]] and unpack to your local hard drive. My favorite location for scripts and programs under Windows is ''c:\bin'', so Rigutils will reside in ''c:\bin\rigutils'' accordingly. See the [[windows:rigutils|description]] page for short info on each file from the tool set.
+
+----
+=== Instruction ===
+
+<WRAP group>
+<WRAP half column>
+
+** STEP 1. ** Download Rigutils
+
+Download zip-archive from GitHub
+  1. Open [[:windows:tuning:firefox|FireFox]] and navigate to
+  ''https://github.com/vegaminer/rigutils''
+  2. Click pull-down menu ''Clone or download''
+  3. Click ''Download ZIP'' button
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_00.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_00.pdn|rigutils_00.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 2.** Save file
+
+In popup windows
+  4. Select ''Save File''
+  5. Click ''OK'' button
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_01.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_01.pdn|rigutils_01.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 4.** Open downloads folder
+
+At the toolbar of FireFox
+  6. Click the ''Downloads (arrow)'' button
+  7. Click ''Folder'' button next to downloaded file. File explorer window will be opened showing content of your Downloads folder.
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_02.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_02.pdn|rigutils_02.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 5.** Unpack file
+
+In explore window select the file ''rigutils-master.zip'' (should be done automatically)
+  8. Click ''Extract'' menu
+  9. Click ''Extract all'' buttin
+  10. Enter the recommended path ''c:\bin'' in folder selection control
+  11. Click ''Extract'' button
+
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_03.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_03.pdn|rigutils_03.pdn}}</wrap>
+
+{{:windows:rigutils_04.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_04.pdn|rigutils_04.pdn}}</wrap>
+
+{{:windows:rigutils_05.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_05.pdn|rigutils_05.pdn}}</wrap>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+**STEP 6.** Rename folder
+
+By default the folder will have the name ''rigutils-master'', it's not a problem, but I prefer just ''rigutils''. Let's rename it
+  12. Open ''c:\bin'' folder in File Explorer window
+  13. Right click on ''rigutils-master'' folder
+  14. Click ''Rename'' menu item
+  15. Remove ''-master'' from folder name and press ''Enter'' button on your keyboard
+  
+<WRAP center round tip 80%>You may press ''F2'' on your keyboard to get directly to renaming mode. I highly recommend to get yourself accustomed to [[https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts|Windows Shortcuts]] It's very useful and fast!</WRAP>
+
+</WRAP>
+<WRAP half column>
+{{:windows:rigutils_06.png?direct&400|Rigutils installation}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils_06.pdn|rigutils_06.pdn}}</wrap>
+</WRAP>
+----
+**STEP 7.** Configure Antivirus
+
+This step is optional, but I highly recommend to add the directory ''c:\bin\rigutils'' to exclusions list of Windows Defender Antivirus. You may find a detailed instructions [[windows:tuning:antivirus_exclusions|here]].
+----
+
+=== History ===
+
+It was May of year 2017 when I (re)discovered wonderful crypto-mining world after reading an article about a botnet mining [[https://www.getmonero.org/|Monero]]. Next day I was running full node and digging through [[https://www.reddit.com/r/MoneroMining/|reddit/MoneroMining]]. Two weeks later xmr-stak-cpu was running almost on every machine I had access to 8-) Next milestone was AMD Vega card. It was a nightmare to setup and manage, [[https://www.amd.com/en/support/kb/release-notes/rn-rad-win-blockchain-beta|blockchain]] driver was of beta quality, but for a long time it was the only choice for mining Monero... and Windows was his ball and chain he has to bear. I spent countless nights trying to figure out optimal undervolting setting, wrote a PHP script for finding optimal xmr-stak settings and got an OrangePi based [[hardware:power-meter]] for detecting the most efficient "sweet spot". No, I did't get rich, it's just a nice hobby...
+
+Step by step I wrote a bunch of bat scripts for managing mining rigs I had access to. So Rigutils tool set was born. Started as a simple helper for starting/stopping xmr-stak now it's capable of many more things. Is it possible to successfully manage a rig without using [[https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon|devcon.exe]] and [[https://forums.guru3d.com/threads/overdriventool-tool-for-amd-gpus.416116/|OverDriveNTool]]? The answer is Yes. Rigutils has no other binary dependencies except ones which is already present in any Windows setup.
+
+You may ask me - why bat files and not powershell or golang or PHP or bash, C/C++, Java etc.? Well, I hate writing bat files for its cryptic syntax, unpredictable behavior and absence of tooling of any kind. But I like it because it's a real challenge and fun and it reminds me of //good old days// of [[https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT|IBM XT]] computers, [[https://en.wikipedia.org/wiki/Intel_8086|i8086]], [[https://en.wikipedia.org/wiki/Floppy_disk|5.25" disks]] and [[https://en.wikipedia.org/wiki/IBM_PC_DOS#See_also|PC DOS]]
+

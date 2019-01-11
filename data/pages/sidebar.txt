@@ -1,3 +1,3 @@
 [[:windows|Windows]]
 
-[[:windows:rigutils|Rigutils]]
+[[windows:rigutils:install|Rigutils]]

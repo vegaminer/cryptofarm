@@ -112,3 +112,6 @@ interface
 languages
 whitelist
 dismissed
+configure
+automatic
+detection

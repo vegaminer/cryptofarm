@@ -1,11 +1,16 @@
 ''User Account Control'' or [[https://en.wikipedia.org/wiki/User_Account_Control|UAC]] for short is just an absurd and annoying Windows feature which may prevent automatization of some tasks. Looks like guys at Redmond never heard about [[https://en.wikipedia.org/wiki/Sudo|sudo]] and were forced into reinvention of wheel.
 
-You can disable UAC either manually by following this guide or by running the script [[windows:rigutils:disableuac.bat|DisableUAC.bat]]
+----
 
+<WRAP center round tip 60%>
+You can disable UAC either manually by following this guide or by running the script [[windows:rigutils:windows:disableuac.bat|DisableUAC.bat]]
+</WRAP>
+
+Here is an
 ** STEP 1.** Open UAC settings
 <WRAP group>
 <WRAP half column>
-  - Type UAC in the search box located at taskbar
+  - Type UAC in the search box located at taskbar (or call one by pressing WIN LOGO + S)
   - Click ''"Open"''
 </WRAP>
 <WRAP half column>

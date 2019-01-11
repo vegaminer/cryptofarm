@@ -1,0 +1,41 @@
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] tool set. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows/cmd_rigutils.bat|cmd_rigutils.bat]]</bootnote>
+
+----
+
+=== Launching command prompt ===
+
+Open ''c:\bin\rigutils\windows'' folder and run ''cmd_rigutils.bat'' by double clicking it. Or just press ''WinKey + R'', copy/paste ''cmd.exe /k pushd c:\bin\rigutils\windows'' and press Enter. Both methods are almost equivalent.
+
+----
+
+<WRAP center round tip 84%>
+//cmd.exe// is a Windows executable file located in Windows\System32 directory. It's the program which provides so called [[https://en.wikipedia.org/wiki/Cmd.exe|command prompt]] under Windows. The most close equivalent of it in UNIX world is a shell interpreter: bash, csh, zsh, etc. You type human readable commands and shell translates it in to actions changing state of your computer. Also //cmd.exe// is the program which executes/interprets bat files. Rigutils relies on //cmd.exe// heavily, so first of all you have to become accustomed to launching command prompt window and work with keyboard. Watch this excellent [[https://www.youtube.com/watch?v=MBBWVgE0ewk|video]] introduction to the world of command prompt. 
+</WRAP>
+
+=== Instruction ===
+
+<WRAP group>
+<WRAP half column>
+ 1. Open Windows Explorer window by simultaneous pressing of [[https://www.quora.com/How-do-I-press-Windows-E|Windows logo key + E key]] on your keyboard
+ 2. Navigate to ''c:\bin\rigutils\windows'' (see this [[windows:rigutils:install#install|page]] for tips on installing Rigutils)
+ 3. Double click ''cmd_rigutils.bat''
+ 4. This is your command prompt window and it's ready to accept your input.
+
+ <WRAP center round tip 80%>
+See full list of useful Windows keyboard shortcuts [[https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts|here]]
+</WRAP>
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:cmd_rigutils.png?direct&400|cmd_rigutils.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:cmd_rigutils.pdn|cmd_rigutils.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows/cmd_rigutils.bat|cmd_rigutils.bat]]
+
+

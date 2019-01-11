@@ -1,0 +1,116 @@
+Adding a directory to exclusions list of an antivirus program is always a questionable practice, but I prefer to use https://www.virustotal.com service for checking all of my downloads before using it for the first time, and keep the folder ''c:\bin\rigutils'' in exclusions list of Windows Defender Antivirus to prevent it from false-positive detection of viruses in miners. Another option is to disable Windows Defender completely, but I would advise against such a radical action.
+
+<note important>Never trust any file even from trusted sources. Always use [[https://www.virustotal.com|virustotal.com]] service for checking of all of your downloads.</note>
+
+=== Instruction ===
+
+**STEP 1** Launch antivirus settings screen
+<WRAP group>
+<WRAP half column>
+
+ 1. Press [[https://www.google.com/search?q=win+logo+key&source=lnms&tbm=isch&sa=X|WIN LOGO KEY + S]] to open search dialog.
+ 2. Type ''threat''.
+ 3. Click ''Virus & threat protection'' search item.
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:windows_defender_settings_00.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_defender_settings_00.pdn|windows_defender_settings_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+**STEP 2** Configure Exclusions list
+<WRAP group>
+<WRAP half column>
+1. Click ''Virus & threat protection settings''
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_00.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_00.pdn|avexclusions_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+2. Scroll down the screen
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_01.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_01.pdn|avexclusions_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+ 3. Switch **OFF** automatic sample submission. Who want his/her private key-files to be analyzed by MS? ;-)
+
+ <color #ffffff> </color>4. Click ''Add or remove exclusions''
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_02.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_02.pdn|avexclusions_02.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+5. Click ''Add and exclusion'' to open the popup menu
+
+<color #ffffff> </color>6. Click the ''Folder'' item
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_03.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_03.pdn|avexclusions_03.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+7. Type ''c:\bin\rigutils'' or whatever path you unpacked //rigtulis// into.
+
+<color #ffffff> </color>8. Click the ''Select folder'' button
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_04.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_04.pdn|avexclusions_04.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+9. Click the ''Yes'' button if you see this [[windows:tuning:disable_uac|dialog]]. 
+
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:avexclusions_05.png?direct&400|Threat protection}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:avexclusions_05.pdn|avexclusions_05.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----

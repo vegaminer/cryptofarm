@@ -1,5 +1,3 @@
-1545812767	90.154.71.6	C	rigutils_02.png	wikiadmin	created		25122
-1545812768	90.154.71.6	C	rigutils_02.pdn	wikiadmin	created		44024
 1546772076	90.154.70.56	C	antivirustest_00.pdn	wikiadmin	created		20147
 1546772076	90.154.70.56	C	antivirustest_00.png	wikiadmin	created		7397
 1546772199	90.154.70.56	C	windows:rigutils:antivirustest_00.png	wikiadmin	created		7397
@@ -38,3 +36,25 @@
 1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			0
 1546893495	90.154.70.56	E	windows:rigutils:antivirustest_08.pdn	wikiadmin			0
 1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			3120
+1546897457	90.154.70.56	C	windows:tuning:avexclusions_00.png	wikiadmin	created		22911
+1546897457	90.154.70.56	C	windows:tuning:avexclusions_00.pdn	wikiadmin	created		52929
+1546897598	90.154.70.56	C	windows:tuning:avexclusions_01.pdn	wikiadmin	created		59427
+1546897598	90.154.70.56	C	windows:tuning:avexclusions_01.png	wikiadmin	created		41594
+1546897864	90.154.70.56	C	windows:tuning:avexclusions_02.png	wikiadmin	created		45696
+1546897864	90.154.70.56	C	windows:tuning:avexclusions_02.pdn	wikiadmin	created		65815
+1546898120	90.154.70.56	C	windows:tuning:avexclusions_03.png	wikiadmin	created		15722
+1546898120	90.154.70.56	C	windows:tuning:avexclusions_03.pdn	wikiadmin	created		31866
+1546898332	90.154.70.56	C	windows:tuning:avexclusions_04.png	wikiadmin	created		51271
+1546898332	90.154.70.56	C	windows:tuning:avexclusions_04.pdn	wikiadmin	created		84838
+1546898423	90.154.70.56	E	windows:tuning:avexclusions_04.png	wikiadmin			-146
+1546898423	90.154.70.56	E	windows:tuning:avexclusions_04.pdn	wikiadmin			30
+1546898713	90.154.70.56	C	windows:tuning:avexclusions_05.png	wikiadmin	created		15945
+1546898713	90.154.70.56	C	windows:tuning:avexclusions_05.pdn	wikiadmin	created		37395
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_00.pdn	wikiadmin	created		22606
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_00.png	wikiadmin	created		6365
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_01.pdn	wikiadmin	created		36498
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_01.png	wikiadmin	created		15660
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_02.pdn	wikiadmin	created		43159
+1547062666	90.154.70.56	C	windows:rigutils:disableuac_02.png	wikiadmin	created		18949
+1547098069	90.154.70.56	E	windows:rigutils:disableuac_02.png	wikiadmin			1606
+1547098069	90.154.70.56	E	windows:rigutils:disableuac_02.pdn	wikiadmin			3345
