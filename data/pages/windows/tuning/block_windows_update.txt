@@ -1,0 +1,206 @@
+If you don't want to suddenly lose control of your mining rig like [[https://www.reddit.com/r/MoneroMining/search?q=windows+update&restrict_sr=on&sort=relevance&t=all|these guys]] you have to disable automatic Windows Update service right after installation of the OS. You can do it by running the script [[:windows:rigutils:windows_tuning:blockwindowsupdate.bat|BlockWindowsUpdate.bat]] <del>or by following this GUI oriented how-to.</del>
+
+<WRAP center round alert 80%>
+As stated on this page https://docs.microsoft.com/en-us/windows/deployment/update/waas-wu-settings
+
+//In Windows 10, any Group Policy user configuration settings for Windows Update were deprecated and are no longer supported on this platform.//
+
+So this GUI oriented how-to is here just for history. Please use BlockWindowsUpdate.bat script mentioned above or follow this excellent [[https://www.windowscentral.com/how-stop-updates-installing-automatically-windows-10#block_auto_windows10_update_regedit|guide]].
+
+</WRAP>
+
+
+----
+** STEP 1.** Open Edit group policy control panel aka //gpedit.msc//
+<WRAP group>
+<WRAP half column>
+1<color #0>.</color> Type ''gpedit'' in the search box located at taskbar (or call one by pressing WIN LOGO + S)
+
+2<color #0>.</color> Click the search item ''Edit group policy''.
+
+3<color #0>.</color> Click the ''Open'' action item.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_00.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_00.pdn|blockwindowsupdate_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 2.** Navigate to Windows Update settings
+<WRAP group>
+<WRAP half column>
+4<color #0>.</color> Unfold the ''Computer Configuration'' item.
+
+5<color #0>.</color> Unfold the ''Administrative Templates'' item.
+
+6<color #0>.</color> Unfold the ''Windows Components'' item.
+
+7<color #0>.</color> Scroll down the configuration tree.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_01.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_01.pdn|blockwindowsupdate_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 3.** Open //Configure Automatic Updates// dialog
+<WRAP group>
+<WRAP half column>
+8<color #0>.</color> Unfold the ''Windows Update'' item.
+
+9<color #0>.</color> Double click the ''Configure Automatic Updates'' item.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_02.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_02.pdn|blockwindowsupdate_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 4.** Apply configuration settings
+<WRAP group>
+<WRAP half column>
+10<color #0>.</color> Click the ''Enabled'' radio button.
+
+11<color #0>.</color> Click the pull-down menu and select the ''5 - Allow local admin to choose settings'' item.
+
+12<color #0>.</color> Click the ''OK'' button to close the dialog.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_03.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_03.pdn|blockwindowsupdate_03.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 5.** Open IP address configuration dialog
+<WRAP group>
+<WRAP half column>
+13<color #0>.</color> Double click the ''Specify intranet Microsoft update service location'' item. 
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_04.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_04.pdn|blockwindowsupdate_04.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 6.** Specify a fake IP address for the update server
+<WRAP group>
+<WRAP half column>
+14<color #0>.</color> Click the ''Enabled'' radio button.
+
+15<color #0>.</color> Enter the value ''http://127.0.0.2'' in each edit box
+
+16<color #0>.</color> Click the ''Download files with no url in the metadata...'' checkbox
+
+17<color #0>.</color> Click the ''OK'' button to close the dialog.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_05.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_05.pdn|blockwindowsupdate_05.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 7.** Open Windows Update alternate locations dialog
+<WRAP group>
+<WRAP half column>
+18<color #0>.</color> Double click the ''Do not connect to any Windows Update Internet locations'' item. 
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_06.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_06.pdn|blockwindowsupdate_06.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 8.** Disable Internet connections for Windows Update
+<WRAP group>
+<WRAP half column>
+19<color #0>.</color> Click the ''Enabled'' radio button.
+
+20<color #0>.</color> Click the ''OK'' button to close the dialog.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_07.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_07.pdn|blockwindowsupdate_07.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+** STEP 9.** Close Policy Editor window
+<WRAP group>
+<WRAP half column>
+21<color #0>.</color> Finally, just close the window
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_08.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_08.pdn|blockwindowsupdate_08.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 10.** Open Services control panel
+<WRAP group>
+<WRAP half column>
+22<color #0>.</color> Type ''services'' in the search box located at taskbar (or call one by pressing WIN LOGO + S)
+
+23<color #0>.</color> Click the search item ''Services''.
+
+24<color #0>.</color> Click the ''"Run as administrator"'' action item.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_09.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_09.pdn|blockwindowsupdate_09.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 11.** Disable Windows Updated related sevices
+<WRAP group>
+<WRAP half column>
+25<color #0>.</color> Double click the column divider next to the ''Name'' column.
+
+26<color #0>.</color> Click two times the header of the ''Status'' column to get running service on top of the list.
+
+27<color #0>.</color> Scroll down the list
+
+28<color #0>.</color> Locate ''Windows Update'' service and double click it for displaying service configuration dialog
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_10.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_10.pdn|blockwindowsupdate_10.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 12.** Update service settings
+<WRAP group>
+<WRAP half column>
+29<color #0>.</color> Select ''Disabled'' for the ''Startup type'' field.
+
+30<color #0>.</color> Click the ''Stop'' button if it's enabled (not grayed out).
+
+31<color #0>.</color> Click the ''OK'' button to close the dialog.
+
+32<color #0>.</color> Repeat steps 28-32 for services ''Update Orchestrator Service'' and ''Windows Update Medic Service''
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:blockwindowsupdate_13.png?direct&400|Block Windows Update}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:blockwindowsupdate_13.pdn|blockwindowsupdate_13.pdn}}</wrap>
+</WRAP>
+</WRAP>

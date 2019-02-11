@@ -4,7 +4,7 @@
 
 === Launching command prompt ===
 
-Open ''c:\bin\rigutils\windows'' folder and run ''cmd_rigutils.bat'' by double clicking it. Or just press ''WinKey + R'', copy/paste ''cmd.exe /k pushd c:\bin\rigutils\windows'' and press Enter. Both methods are almost equivalent.
+Open ''c:\bin\rigutils\windows\_tuning'' folder and run ''cmd_rigutils.bat'' by double clicking it. Or just press ''WinKey + R'', copy/paste ''cmd.exe /k pushd c:\bin\rigutils\windows\_tuning'' and press Enter. Both methods are almost equivalent.
 
 ----
 
@@ -16,8 +16,9 @@ Open ''c:\bin\rigutils\windows'' folder and run ''cmd_rigutils.bat'' by double c
 
 <WRAP group>
 <WRAP half column>
+
  1. Open Windows Explorer window by simultaneous pressing of [[https://www.quora.com/How-do-I-press-Windows-E|Windows logo key + E key]] on your keyboard
- 2. Navigate to ''c:\bin\rigutils\windows'' (see this [[windows:rigutils:install#install|page]] for tips on installing Rigutils)
+ 2. Navigate to ''c:\bin\rigutils\windows\_tuning'' (see this [[windows:rigutils:install#install|page]] for tips on installing Rigutils)
  3. Double click ''cmd_rigutils.bat''
  4. This is your command prompt window and it's ready to accept your input.
 
@@ -28,14 +29,14 @@ See full list of useful Windows keyboard shortcuts [[https://support.microsoft.c
 </WRAP>
 
 <WRAP half column>
-{{:windows:cmd_rigutils.png?direct&400|cmd_rigutils.bat}}
+{{:windows:rigutils:windows_tuning:cmd_rigutils.png?direct&400|cmd_rigutils.bat}}
 
-<wrap lo>{{material>attachment}}{{:windows:cmd_rigutils.pdn|cmd_rigutils.pdn}}</wrap>
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:cmd_rigutils.pdn|cmd_rigutils.pdn}}</wrap>
 
 </WRAP>
 </WRAP>
 
 ----
-GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows/cmd_rigutils.bat|cmd_rigutils.bat]]
+GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/cmd_rigutils.bat|cmd_rigutils.bat]]
 
 

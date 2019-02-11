@@ -1,5 +1,31 @@
-<WRAP center round tip 80%>
-All tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning steps by [[windows:rigutils:install|installing]] Rigutils first
-</WRAP>
+ 
+**STEP ~~#~~.** Install FireFox
 
-  * Disable [[windows:tuning:disable_uac|User Access Control (UAC)]]
+Most of downloading-related screenshots in this tutorial were made in assumption that you are using Firefox web browser. You may skip this step if you know what are you are doing, but I highly recommend to avoid using MS Internet Explorer or Edge and Google Chrome for browsing Internet on your rig station. So, please, install Firefox first, just follow this short [[windows:software:firefox|how-to]].
+
+**STEP ~~#~~.** Get Rigutils scripts
+
+Many tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning steps by [[windows:rigutils:install|installing]] Rigutils first.
+
+**STEP ~~#~~.** Disable User Access Control
+
+Here is a short [[windows:tuning:disable_uac|how-to disable]] User Access Control (UAC). Reboot will be required.
+
+**STEP ~~#~~.** Stop automatic Windows update
+
+This is a most dangerous feature of Windows. You have to disable it as soon as possible. Here is [[windows:tuning:block_windows_update|how-to stop Windows update]] once and for all.
+
+**STEP ~~#~~.** Configure firewall
+
+Protect your rig from potential network threats by configuring [[windows:tuning:firewall_configure|Windows Firewall]] rules.
+
+**STEP ~~#~~.** Restore network connection
+
+Just plug Ethernet cable back to your PC.
+
+**STEP ~~#~~.** Disable Microsoft Compatibility Telemetry service
+
+Do you want to report every action you take to Miscrosoft data center? I suppose that you may happily live without this feature. Follow steps described in this [[windows:tuning:shutup_telemetry|how-to]] to shut up Windows Telemetry service.
+
+----
+**~~STEP.#~~.** Disable Cortana search service

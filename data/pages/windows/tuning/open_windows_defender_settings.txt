@@ -7,7 +7,7 @@
  2. Type ''threat''.
  3. Click ''Virus & threat protection'' search item.
  4. Click ''Threat history''
- 5. [[windows:rigutils:windows:antivirustest.bat#threat_history|Back]] to AntiVirusTest troubleshooting.
+ 5. [[windows:rigutils:windows_tuning:antivirustest.bat#threat_history|Back]] to AntiVirusTest troubleshooting.
 
 </WRAP>
 

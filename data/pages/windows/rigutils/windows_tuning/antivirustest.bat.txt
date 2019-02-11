@@ -1,4 +1,4 @@
-<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] tool set. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows/AntiVirusTest.bat|AntiVirusTest.bat]]</bootnote>
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] tool set. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/AntiVirusTest.bat|AntiVirusTest.bat]]</bootnote>
 
 ----
 
@@ -25,9 +25,9 @@ Let's go through it part by part:
   1. ''set "self=%~s0"'' - assign to a variable with name 'self' the short (without spaces) file name of our script itself.
   2. ''whoami.exe /groups'' - Display group information for the user who is currently logged on to the local system (see official [[https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami|whoami]] manual). whoami is a system program located in C:\Windows\System32
   3. ''| findstr.exe "S-1-16-12288" >nul 2>&1'' - search for [[https://support.microsoft.com/en-us/help/243330/well-known-security-identifiers-in-windows-operating-systems|well known S-1-16-12288]] group name in whoami output. findstr is a system program located in C:\Windows\System32. The sign "vertical bar" has its own name "pipe" and is used for redirecting text output stream ([[https://en.wikipedia.org/wiki/Standard_streams|stdout]]) from one program to text input stream ([[https://en.wikipedia.org/wiki/Standard_streams|stdin]]) of another program.
-  4. ''|| (...)'' - if S-1-16-12288 was not found (findstr return false result) it means that our script is running in non elevated environment and expression in parentheses should be executed. Double pipes read as "logical or" operation. 
+  4. ''|| (...)'' - if S-1-16-12288 was not found (//findstr// return false result) it means that our script is running in non elevated environment and expression in parentheses should be executed. Double pipes read as "logical or" operation. 
   5. ''mshta.exe'' - is a standard windows program located in C:\Windows\System32\ It is used for running MS proprietary [[https://en.wikipedia.org/wiki/HTML_Application|HTML applications]] (HTA for short). mshta is a system program located in C:\Windows\System32
-  6. ''"javascript: . . ."'' - is a javascript code executed by mshta
+  6. ''"javascript: . . ."'' - is a javascript code executed by //mshta//
   7. ''var shell=new ActiveXObject('shell.application');'' - create an instance of [[https://msdn.microsoft.com/en-us/library/windows/desktop/bb774094(v=vs.85).aspx|shell.application]] object
   8. ''shell.ShellExecute('%self:\=\\%','','','runas',1);'' - execute our script given by variable self (expression %self:\=\\% just replaces single slash with double slash since this is js code) with admin rights. See [[https://docs.microsoft.com/en-us/windows/desktop/shell/shell-shellexecute|ShellExecute documentation]] for more details.
   9. ''close();'' - just close mshta and exit
@@ -36,43 +36,44 @@ Let's go through it part by part:
   
 Well, why indeed Windows Defender think that this harmless code is a virus? It's because of the ShellExecute method call. There are known viruses/trojans which infect computers using exactly the same technique for getting into the elevated environment with admin rights.
 
-After finishing the above text an idea came to my mind: Hey, let's try to fool Windows Defender by a simple trick - copy mstha.exe with a different name... And it turns out that this method works perfectly! So [[windows:rigutils:windows:antivirustest.bat|AntiVirusTest.bat]] was born. Get a copy of it and run from [[:windows:cmd.exe|cmd.exe]] shell.
+After finishing the above text an idea came to my mind: Hey, let's try to fool Windows Defender by a simple trick - copy mstha.exe with a different name... And it turns out that this method works perfectly! So [[windows:rigutils:windows_tuning:antivirustest.bat|AntiVirusTest.bat]] was born. Get a copy of it and run from [[:windows:rigutils:windows_tuning:cmd_rigutils.exe|cmd.exe]] shell.
 
-To my mind, such a Windows Defender bypass method is clearly a bug (not critical, but bug), feel free to submit it to [[https://www.microsoft.com/en-us/msrc/bounty|MS bug bounty program]] and share with me your reward 8-)
+To my mind, such a Windows Defender bypass method is clearly a bug (not critical, but bug), feel free to submit it to [[https://www.microsoft.com/en-us/msrc/bounty|MS bug bounty program]] and share your reward with me 8-)
 
-Seriously speaking, this trick may stop working in future. But luckily, Windows Defender has an [[https://support.microsoft.com/en-us/help/4028485/windows-10-add-an-exclusion-to-windows-security|exclusions list]] for trusted files and folders. If you ever got a message from Defender that //mshta.exe// pose a security risk to your system and block it from execution then you have to (re)enable it. After adding //mstha.exe// to the whitelist (see instruction below) of Windows Defender you may once again test your setup with [[windows:rigutils:windows:antivirustest.bat|AntiVirusTest.bat]]
+Seriously speaking, this trick may stop working in future. But luckily, Windows Defender has an [[https://support.microsoft.com/en-us/help/4028485/windows-10-add-an-exclusion-to-windows-security|exclusions list]] for trusted files and folders. If you ever got a message from Defender that //mshta.exe// pose a security risk to your system and block it from execution then you have to (re)enable it. After adding //mstha.exe// to the whitelist (see instruction below) of Windows Defender you may once again test your setup with [[windows:rigutils:windows_tuning:antivirustest.bat|AntiVirusTest.bat]]
 
 ----
 
 === Instruction ===
 
 **STEP 1.** Launch command prompt. 
-See [[windows:rigutils:windows:cmd_rigutils.bat|cmd_rigutils.bat]]
+See [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
 
 **STEP 2.** Run //AntiVirusTest.bat//
 <WRAP group>
 <WRAP half column>
 
- 1. Type ''AntiVirusTest.bat'' (case of letters doesn't matter)
- 2. Press ''Enter''  
+~~#SA~~ Type ''AntiVirusTest.bat'' (case of letters doesn't matter)
+
+~~#SA~~ Press ''Enter''  
+
  <color #ffffff>.</color>
  <WRAP center round tip 90%>
 You may start typing ''Anti'' and then press the ''Tab'' key on your keyboard. //cmd.exe// will search for commands in current directory starting with //Anti// and expand it to it's full name automatically.
 </WRAP>
  
+~~#SA~~ Confirm your action in this User Account Control dialog by clicking the ''Yes'' button. We will [[windows:tuning:disable_uac|disable]] this annoying ''User Account Control'' messages later.
 
-3. Confirm your action in this User Account Control dialog by clicking the ''Yes'' button. We will [[windows:tuning:disable_uac|disable]] this annoying ''User Account Control'' messages later.
-
- 4. If you see a popup windows with the message ''Hello, this is admin speaking!'' then it means that //AntiVirusTest// passed successfully and you don't have to do anything special about Windows Defender at the moment. Just click ''OK'' and that's it. 
+~~#SA~~ If you see a popup windows with the message ''Hello, this is admin speaking!'' then it means that //AntiVirusTest// passed successfully and you don't have to do anything special about Windows Defender at the moment. Just click ''OK'' and that's it. 
 
 If you see something different please continue to the next [[#step3|Step 3 "Troubleshooting"]]
 
 </WRAP>
 
 <WRAP half column>
-{{:windows:rigutils:antivirustest_00.png?direct&400|AntiVirusTest.bat}}
+{{:windows:rigutils:windows_tuning:antivirustest_00.png?direct&400|AntiVirusTest.bat}}
 
-<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_00.pdn|antivirustest_00.pdn}}</wrap>
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:antivirustest_00.pdn|antivirustest_00.pdn}}</wrap>
 
 {{:windows:rigutils:antivirustest_08.png?direct&400|AntiVirusTest.bat}}
 
@@ -82,9 +83,9 @@ If you see something different please continue to the next [[#step3|Step 3 "Trou
 
 <wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_09.pdn|antivirustest_09.pdn}}</wrap>
 
-{{:windows:rigutils:antivirustest_10.png?direct&400|AntiVirusTest.bat}}
+{{:windows:rigutils:windows_tuning:antivirustest_10.png?direct&400|AntiVirusTest.bat}}
 
-<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_10.pdn|antivirustest_10.pdn}}</wrap>
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:antivirustest_10.pdn|antivirustest_10.pdn}}</wrap>
 
 </WRAP>
 </WRAP>
@@ -97,9 +98,9 @@ If you see something different please continue to the next [[#step3|Step 3 "Trou
 </WRAP>
 
 <WRAP half column>
-{{:windows:rigutils:antivirustest_01.png?direct&400|AntiVirusTest.bat}}
+{{:windows:rigutils:windows_tuning:antivirustest_01.png?direct&400|AntiVirusTest.bat}}
 
-<wrap lo>{{material>attachment}}{{:windows:rigutils:antivirustest_01.pdn|antivirustest_01.pdn}}</wrap>
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:antivirustest_01.pdn|antivirustest_01.pdn}}</wrap>
 
 </WRAP>
 </WRAP>
@@ -150,9 +151,9 @@ If you see something different please continue to the next [[#step3|Step 3 "Trou
 ----
 <WRAP group>
 <WRAP half column>
+5<color #00>.</color> Verify that //mshta.exe// present in ''Affected items'' section.
 
-* 5. Verify that //mshta.exe// present in ''Affected items'' section.
-* 6. Click the ''OK'' button
+6<color #00>.</color> Click the ''OK'' button
 
 </WRAP>
 
@@ -195,4 +196,4 @@ If you see something different please continue to the next [[#step3|Step 3 "Trou
 </WRAP>
 
 ----
-GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows/AntiVirusTest.bat|AntiVirusTest.bat]]
+GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/AntiVirusTest.bat|AntiVirusTest.bat]]

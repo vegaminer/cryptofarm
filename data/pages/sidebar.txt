@@ -1,3 +1,5 @@
 [[:windows|Windows]]
 
 [[windows:rigutils:install|Rigutils]]
+
+[[:linux|Linux]]

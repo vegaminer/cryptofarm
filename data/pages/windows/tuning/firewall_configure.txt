@@ -1,0 +1,219 @@
+It's a matter of fact that modern computer systems are insecure - viruses, malicious actors, Trojan programs, etc. are always trying to breach into our systems using known and yet unpublished bugs in OS and services. MS Windows has a long history of [[https://www.quertime.com/article/15-deadly-windows-security-flaws-and-vulnerabilities/|security flows]] and vulnerabilities, more than [[https://www.cvedetails.com/product/32238/Microsoft-Windows-10.html?vendor_id=26|hundred bugs]] are discovered each year in the system. You may install a honeypot from this nice [[https://github.com/paralax/awesome-honeypots|list]] and assign it a white IP to get an idea of how aggressive are attempts of breaching into your system. 
+
+If you think that your rigs are protected by your NAT((https://en.wikipedia.org/wiki/Network_address_translation)) router then think twice (credits [[https://arstechnica.com/information-technology/2018/11/mass-router-hack-exposes-millions-of-devices-to-potent-nsa-exploit/|arstechnica.com]]): 
+<code>(11/29/2018) More than 45,000 Internet routers have been compromised by a newly discovered campaign that’s designed to open networks to attacks by EternalBlue, the potent exploit that was developed by, and then stolen from, the National Security Agency and leaked to the Internet at large, researchers said Wednesday... As a result, almost 2 million computers, phones, and other network devices connected to the routers are reachable to the Internet on those ports. 
+</code>
+
+<WRAP center round info 80%>
+If you are interesting in security of computer systems then I would recommend you to learn how to use [[https://en.wikipedia.org/wiki/Nmap|Nmap]] network scanner or/and [[https://en.wikipedia.org/wiki/OpenVAS|OpenVAS]] tools. Who knows, may be you'll find a new bug in MS products and earn $100,000 by submitting the bug report to [[https://www.microsoft.com/en-us/msrc/bounty?SilentAuth=1&wa=wsignin1.0|MS bounty program]].
+</WRAP>
+
+==== Configuring Windows Defender Firewall ====
+
+Unfortunately, a computer connected by Ethernet((https://en.wikipedia.org/wiki/Ethernet)) cable to a network can't be 100% secured, there is always a risk of being compromised, but we may lower the risk by protecting our system by the mean of Windows Defender Firewall((https://en.wikipedia.org/wiki/Windows_Firewall))
+
+Consider the quote below (credits [[https://support.rackspace.com/how-to/best-practices-for-firewall-rules-configuration/|rackspace.com]] //Best practices for firewall rules configuration//):
+<code>Block all traffic by default and explicitly allow only specific traffic to known services. This strategy provides good control over the traffic and reduces the possibility of a breach because of service misconfiguration.</code>
+
+I'm totally agree with it. We'll configure windows firewall in exactly the same way - block all inbound connections and add rules for allowing selected services to be able accept incoming packets. Note: services such as TeamViewer, RDP, etc. will be not affected, they will continue working as before.
+
+----
+<WRAP center round info 80%>
+You may configure Windows Firewall either manually by following this how-to or by running the script [[windows:rigutils:windows_tuning:configurefirewall.bat|ConfigureFirewall.bat]]
+</WRAP>
+
+=== Blocking inbound connections ===
+
+**{{anchor:step1:STEP 1. Open firewall control panel}}**
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Press ''WINLOGO+S'' to open search dialog.
+
+~~#~~. Type ''firewall'' into the search box.
+
+~~#~~. Click the ''Check firewall status'' item
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_00.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_00.pdn|firewall_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP ~~#STEP2~~**. Verify firewall status
+<WRAP group>
+<WRAP half column>
+~~#~~. Be sure that firewall is ''ON'' for all of your networks. 
+
+~~#~~. Use the ''Turn Windows Defender Firewall on or off'' control panel if firewall is off for some of your networks.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_01.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_01.pdn|firewall_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP ~~#STEP~~**. Open Advanced Settings panel
+<WRAP group>
+<WRAP half column>
+~~#~~. Click the ''Advanced settings'' menu item.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_02.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_02.pdn|firewall_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+**STEP ~~#STEP~~**. Verify default policy
+<WRAP group>
+<WRAP half column>
+~~#~~. Each Profile should be configured as follows:
+<code>
+Windows Defender Firewall is on.
+Inbound connections that do not match a rule are blocked.
+Outbound connections that do not match a rule are allowed.
+</code>
+~~#~~. If your configuration differs from the above settings, then click the ''Windows Defender Firewall property'' label to call the configuration dialog and follow clauses 9 and 10. If it's OK, the jump to **[[#step5|STEP 5]]**
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_03.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_03.pdn|firewall_03.pdn}}</wrap>
+</WRAP>
+</WRAP>
+<WRAP group>
+<WRAP half column>
+~~#~~. Click each profile's tab and configure the ''State'' fields as follows:
+<code>
+Firewall state: On (recommended)
+Inbound connections: Block(default)
+Outbound connections: Allow (default)
+</code>
+
+~~#~~. If your configuration differs from the above settings, then click the ''Windows Defender Firewall property'' label to call the configuration dialog.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_04.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_04.pdn|firewall_04.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+**{{anchor:step5:STEP 5. Backup firewall configuration}}**
+<WRAP group>
+<WRAP half column>
+I recommend to save your current firewall configuration into a file. You'll be able to undo all of your changes if something goes wrong by importing this settings back.
+
+~~#~~. Click the ''Export Policy'' items
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_05.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_05.pdn|firewall_05.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+
+~~#~~. Select a folder (it's up to you).
+
+~~#~~. Type a name of the exporting file, for example ''firewall_settings''. It'll be saved with the ''wfw'' extension.
+
+~~#~~. Press the ''Save'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_06.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_06.pdn|firewall_06.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Click the ''OK'' button.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_07.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_07.pdn|firewall_07.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+**STEP ~~#STEP6~~**. Disable existing ''Allow'' rules
+<WRAP group>
+<WRAP half column>
+Let's disable **all** existing firewall rules which allow some inbound connections.
+
+~~#~~. Click the ''Inbound rules'' item.
+
+~~#~~. Click the ''Filter by state'' item to show the popup menu.
+
+~~#~~. Click the ''Filter by Enabled'' item in popup menu.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_08.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_08.pdn|firewall_08.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+Selecting all rules
+
+~~#~~. Click the header of the ''Action'' column to get sorted list.
+
+~~#~~. Select the first item in the list by clicking on it.
+
+~~#~~. Scroll down the list by mouse wheel or using scrollbar.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_09.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_09.pdn|firewall_09.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+
+~~#~~. Scroll to the last ''Allow'' rule (it's particular name is unimportant, it could be a last item in the list at the very bottom)
+
+~~#~~. Press the ''Shift'' key on your keyboard and while keeping it in pressed state click the last item with the left mouse button to select all //Allow// items in the list. They all should turn blue (selected).
+
+~~#~~. Click the ''Disable rule'' item. **Wait** from 1 to 10 seconds.
+
+~~#~~. Click the ''Clear All Filters'' item
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_10.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_10.pdn|firewall_10.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+Your final list may looks something like this.
+
+~~#~~. Note the absence on any icons Allow(green)/Block(red) in front of rule's name.
+
+Well done! Continue to the next section - [[:windows:tuning:firewall_block_ports|Explicitly block unwanted/illegal traffic]]
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:firewall_11.png?direct&400|Firewall}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:firewall_11.pdn|firewall_11.pdn}}</wrap>
+</WRAP>
+</WRAP>

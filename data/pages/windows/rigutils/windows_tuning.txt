@@ -1,9 +1,16 @@
 See the [[windows:rigutils:install|install]] page for installation instructions.
 
 ---
-This is a short summary for individual files in Rigutils/windows_tuning directory. For detailed information and instruction consult corresponding pages.
+This is a short summary of individual files in //rigutils/windows_tuning// directory. For detailed information and instructions consult corresponding pages. Follow this step by step [[:windows:tuning|tuning]] guide for Windows configuration/tuning.
 
-  -<color #ffffff> </color> [[windows:rigutils:windows:cmd_rigutils.bat|cmd_rigutils.bat]] - simple script for fast opening //command prompt// window 
+~~#~~. [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]] - simple script for fast opening of a //command prompt// window 
   
-  - [[windows:rigutils:windows:antivirustest.bat|AntiVirusTest.bat]] - run it (once) before any other script in the package. It'll help you to detect any AntiVirus related problems.
-  - [[:windows:rigutils:windows_defender|Window Defender]]
+~~#~~. [[windows:rigutils:windows_tuning:antivirustest.bat|AntiVirusTest.bat]] - run it (once) before any other script in the package. It'll help you to detect any AntiVirus related problems.
+
+~~#~~. [[:windows:rigutils:windows_tuning:disableuac.bat|Disable User Access Control (UAC)]] - stop annoying popups.
+
+~~#~~. [[:windows:rigutils:windows_tuning:configurefirewall.bat|Configure Firewall]] - all your [[https://arstechnica.com/information-technology/2018/11/mass-router-hack-exposes-millions-of-devices-to-potent-nsa-exploit/|router]] are belong to us.
+
+~~#~~. [[:windows:rigutils:windows_tuning:blockwindowsupdate.bat|Block Windows Update]] - keep a rig under your control.
+
+~~#~~. [[:windows:rigutils:windows_tuning:shutuptelemetry.bat|Shutup Telemetry Service]] - what happened on your PC, stays on your PC.

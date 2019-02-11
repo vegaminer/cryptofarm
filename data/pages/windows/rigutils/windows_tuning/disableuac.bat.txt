@@ -1,4 +1,4 @@
-<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] tool set. GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows/DisableUAC.bat|DisableUAC.bat]]</bootnote>
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] tool set. GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/DisableUAC.bat|DisableUAC.bat]]</bootnote>
 
 You can disable User Access Control via GUI by following this [[:windows:tuning:disable_uac|guide]]
 
@@ -6,10 +6,11 @@ You can disable User Access Control via GUI by following this [[:windows:tuning:
 
 === Prerequisites ===
 
-1. [[windows:rigutils:install|Install]] Rigutils and start [[windows:rigutils:windows:cmd_rigutils.bat|cmd_rigutils.bat]]
-2. I highly recommend to complete [[windows:rigutils:windows:antivirustest.bat|AntiVirusTest.bat]] step before executing //DisableUAC.bat// 
+1. [[windows:rigutils:install|Install]] Rigutils
+2. I highly recommend to complete [[windows:rigutils:windows_tuning:antivirustest.bat|AntiVirusTest.bat]] step before executing //DisableUAC.bat//
+3. Start [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
 
-
+----
 === Instruction ===
 
 <WRAP group>
@@ -21,9 +22,9 @@ You can disable User Access Control via GUI by following this [[:windows:tuning:
 
 <WRAP half column>
 
-{{:windows:rigutils:disableuac_00.png?direct&400|DisableUAC.bat}}
+{{:windows:rigutils:windows_tuning:disableuac_00.png?direct&400|DisableUAC.bat}}
 
-<wrap lo>{{material>attachment}}{{:windows:rigutils:disableuac_00.pdn|disableuac_00.pdn}}</wrap>
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:disableuac_00.pdn|disableuac_00.pdn}}</wrap>
 
 </WRAP>
 </WRAP>
@@ -60,4 +61,4 @@ You have to reboot your PC for the changes to take effect.
 </WRAP>
 </WRAP>
 ----
-GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows/DisableUAC.bat|DisableUAC.bat]]
+GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/DisableUAC.bat|DisableUAC.bat]]

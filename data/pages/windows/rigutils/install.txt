@@ -1,4 +1,4 @@
-<bootnote>All scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils</bootnote>
+<bootnote>All Rigutils scripts are licensed under GNU GPLv3 [[https://www.gnu.org/licenses/gpl-3.0.html|license]]. Source code hosted at https://github.com/vegaminer/rigutils</bootnote>
 
 === Install ===
 
@@ -13,7 +13,7 @@ There is no special install program for Rigutils. It's just a[[https://en.wikipe
 ** STEP 1. ** Download Rigutils
 
 Download zip-archive from GitHub
-  1. Open [[:windows:tuning:firefox|FireFox]] and navigate to
+  1. Open [[windows:software:firefox|FireFox]] and navigate to
   ''https://github.com/vegaminer/rigutils''
   2. Click pull-down menu ''Clone or download''
   3. Click ''Download ZIP'' button
@@ -103,9 +103,18 @@ This step is optional, but I highly recommend to add the directory ''c:\bin\rigu
 
 === History ===
 
-It was May of year 2017 when I (re)discovered wonderful crypto-mining world after reading an article about a botnet mining [[https://www.getmonero.org/|Monero]]. Next day I was running full node and digging through [[https://www.reddit.com/r/MoneroMining/|reddit/MoneroMining]]. Two weeks later xmr-stak-cpu was running almost on every machine I had access to 8-) Next milestone was AMD Vega card. It was a nightmare to setup and manage, [[https://www.amd.com/en/support/kb/release-notes/rn-rad-win-blockchain-beta|blockchain]] driver was of beta quality, but for a long time it was the only choice for mining Monero... and Windows was his ball and chain he has to bear. I spent countless nights trying to figure out optimal undervolting setting, wrote a PHP script for finding optimal xmr-stak settings and got an OrangePi based [[hardware:power-meter]] for detecting the most efficient "sweet spot". No, I did't get rich, it's just a nice hobby...
+It was May of year 2017 when I (re)discovered wonderful crypto-mining world after reading an article about a botnet mining [[https://www.getmonero.org/|Monero]]. Next day I was running full node and digging through [[https://www.reddit.com/r/MoneroMining/|reddit/MoneroMining]]. Two weeks later xmr-stak-cpu was running almost on every machine I had access to 8-) Next milestone was AMD Vega card. It was a nightmare to setup and manage, [[https://www.amd.com/en/support/kb/release-notes/rn-rad-win-blockchain-beta|blockchain]] driver was of beta quality, but for a long time it was the only choice for mining Monero... and Windows was //his ball and chain he has to bear//. I spent countless nights trying to figure out optimal undervolting setting, wrote a PHP script for finding optimal xmr-stak settings and even ordered an OrangePi based [[hardware:power-meter]] for detecting the most efficient "sweet spot". No, I did't get rich, it's just a nice hobby...
 
-Step by step I wrote a bunch of bat scripts for managing mining rigs I had access to. So Rigutils tool set was born. Started as a simple helper for starting/stopping xmr-stak now it's capable of many more things. Is it possible to successfully manage a rig without using [[https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon|devcon.exe]] and [[https://forums.guru3d.com/threads/overdriventool-tool-for-amd-gpus.416116/|OverDriveNTool]]? The answer is Yes. Rigutils has no other binary dependencies except ones which is already present in any Windows setup.
+Step by step I wrote a bunch of //bat scripts// for managing mining rigs, so Rigutils toolset was born. Started as a simple helper for starting/stopping xmr-stak it became capable of many more things. Is it possible to successfully manage a rig without using [[https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon|devcon.exe]] and [[https://forums.guru3d.com/threads/overdriventool-tool-for-amd-gpus.416116/|OverDriveNTool]]? The answer is Yes. Rigutils has no other binary dependencies except ones which are already present in any Windows setup by default.
 
-You may ask me - why bat files and not powershell or golang or PHP or bash, C/C++, Java etc.? Well, I hate writing bat files for its cryptic syntax, unpredictable behavior and absence of tooling of any kind. But I like it because it's a real challenge and fun and it reminds me of //good old days// of [[https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT|IBM XT]] computers, [[https://en.wikipedia.org/wiki/Intel_8086|i8086]], [[https://en.wikipedia.org/wiki/Floppy_disk|5.25" disks]] and [[https://en.wikipedia.org/wiki/IBM_PC_DOS#See_also|PC DOS]]
+You may ask me - why //bat file//s and not //powershell// or //golang// or //PHP// or //bas//h, //C/C++//, //Java// etc.? Well, I hate writing bat files for its cryptic syntax, unpredictable behavior and absence of tooling of any kind. But I like it because it's a real challenge and fun and it reminds me of //good old days// of [[https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT|IBM XT]] computers, [[https://en.wikipedia.org/wiki/Intel_8086|i8086]], [[https://en.wikipedia.org/wiki/Floppy_disk|5.25" disks]] and [[https://en.wikipedia.org/wiki/IBM_PC_DOS#See_also|PC DOS]]. 
+
+Just an example... Can you guess the purpose of the following bat code?
+<code>
+((for /L %%P in (1,1,70) do pause>nul)&set /p "t=")<"%COMSPEC%"
+set "t= %t:~0,1%"
+</code>
+
+Answer is here https://stackoverflow.com/a/49959194 This is why I love bat files 8-)
+
 

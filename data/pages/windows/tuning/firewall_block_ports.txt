@@ -1,0 +1,145 @@
+<WRAP center round info 80%>
+You may configure Windows Firewall either manually by following this how-to or by running the script [[windows:rigutils:windows_tuning:configurefirewall.bat|ConfigureFirewall.bat]]
+</WRAP>
+
+=== Explicitly block unwanted/illegal traffic ===
+
+You may call me paranoid, but steps described in the [[windows:tuning:firewall_configure|configure firewall]] guide were just //a passive defense//. I would like to take a more proactive approach against possible network attacks. Just skip next steps if you don't want/need it (not recommended).
+
+So, first of all I'm going to create a //block// rules for all listening services on my rig. For doing this we need a list of active listening ports on our computer.
+
+To get list of all //LISTENING//((http://ssfnet.org/Exchange/tcp/tcpTutorialNotes.html)) ports on your PC run((See [[:windows:software|cmd.exe]])) the command:
+<code batch>netstat -an | findstr LISTEN</code>
+
+or run this small one-liner to get the same list extended by process info (preferred way):
+
+<code powershell>powershell -Command "& Get-NetTCPConnection | ? {($_.State -eq 'Listen') -and ($_.RemoteAddress -eq '0.0.0.0')} | ForEach { $n=(Get-Process -ErrorAction SilentlyContinue -PID $_.OwningProcess -FileVersionInfo ).FileName; if ( $n -eq $null ) { $n=(Get-Process -ErrorAction SilentlyContinue -PID $_.OwningProcess).Name }; New-Object PSObject -Property @{ Port=$_.LocalPort; Name=$n; PID=$_.OwningProcess } }"</code>
+
+This a possible output of the above command on freshly installed Windows machine:
+
+{{:windows:tuning:netstat_00.png?400|netstat}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:netstat_00.pdn|netstat_00.pdn}}</wrap>
+
+Consult this table of known [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers|TCP/UDP ports]], if you want to know which services are listening to what port. In my particular case I'm going to block ports 49664-49675, 3389, 139 and 135. 
+
+Here is the a list of well known ports which should be explicitly blocked:
+
+~~#PORT~~. **Windows RPC**((Windows RPC general info [[https://serverfault.com/questions/859817/windows-firewall-rpc-135|Windows RPC]])) - TCP/UDP ports 135((Port [[https://www.speedguide.net/port.php?port=135|135]])), 593((Port [[https://www.speedguide.net/port.php?port=593|593]])), 49664-49675((Ports 49664-49675 [[https://answers.microsoft.com/es-es/windows/forum/windows_other-winapps/widnows-server-mitigar-vulnerabilidad-dcerpc-and/5ab3f7b2-eaf5-4168-a103-3442e323b7a2|finger printing]] and [[https://alamot.github.io/tally_writeup/|port scanning]]))
+
+~~#PORT~~. **Windows Deployment Services (WDS)**(([[https://en.wikipedia.org/wiki/Windows_Deployment_Services|WDS general info]])) - TCP/UDP port 5040((Port [[http://techgenix.com/windowsdeploymentservicesandfirewalls/|5040]]))
+
+~~#PORT~~. **NetBIOS(([[https://en.wikipedia.org/wiki/NetBIOS|NetBIOS]] general info)) Name Service** - TCP/UDP port 137 ((NetBIOS Name Service port [[https://wiki.wireshark.org/NetBIOS/NBNS|137]]))
+
+~~#PORT~~. **NetBIOS Datagram Service** - TCP/UDP port 138 ((NetBIOS Datagram Service port [[https://wiki.wireshark.org/NetBIOS/NBDS|138]]))
+
+~~#PORT~~. **NetBIOS Session Service** - TCP/UDP port 139((NetBIOS Session Service port [[https://wiki.wireshark.org/NetBIOS/NBSS|139]]))
+
+~~#PORT~~. **TCP NetBIOS helper** - TCP port 445((TCP NetBIOS helper port [[https://www.speedguide.net/port.php?port=445|445]]))
+
+~~#PORT~~. **UPnP Service** - TCP port 5000((UPnP Service port  [[https://www.speedguide.net/port.php?port=5000|5000]]))
+
+~~#PORT~~. **DNSCache Service** - TCP/UDP port 5353((DNSCache Service port [[https://www.speedguide.net/port.php?port=5353|5353]]))
+
+~~#PORT~~. **Windows Update Delivery Optimization** - TCP/UDP port 7680((DNSCache Service port [[https://www.speedguide.net/port.php?port=7680|7680]]))
+
+~~#PORT~~. **Windows Remote Desktop Protocol RDP** - TCP port 3389((Remote Desktop Protocol port [[https://www.speedguide.net/port.php?port=3389|3389]]))
+
+<WRAP center round important 80%>
+Don't block port 3389 if you are planning to access your rig over **RDP**. But if you plan it, I would highly recommend to change its port number and create //Allow// rule for it (see below).
+</WRAP>
+----
+== Block listening services/ports ==
+
+<WRAP group>
+<WRAP half column>
+~~#~~. [[:windows:tuning:firewall_configure#step1|Open]] Firewall Control Panel and switch to the ''Inbound Rules'' screen. For the above mentioned ports, both TCP and UDP, you should repeat the following steps 2-14:
+
+~~#~~. Click the item (//create//) ''New Rule''.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_00.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_00.pdn|fw_block_port_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Click the ''Port'' control.
+
+~~#~~. Click the ''Next'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_01.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_01.pdn|fw_block_port_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Click the ''TCP'' control.
+
+~~#~~. Click the ''Specific local ports'' button.
+
+~~#~~. Enter comma separated list of related ports. On this particular screenshot I block at once all ''Windows RPC'' related **TCP** ports: ''135, 593, 5040, 49664-49675''. Another logical group of ports is ''NetBIOS'': ''137, 138, 139, 445'', you may create just one rule for them.
+<WRAP center round important 80%>
+Please note that you should repeat this steps for **UDP** ports as well - start from point 2, but at point 5 instead   of ''TCP'' select ''UDP'' control.
+</WRAP>
+
+~~#~~. Click the ''Next'' button.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_02.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_02.pdn|fw_block_port_02.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Click the ''Block the connection'' control.
+
+~~#~~. Click the ''Next'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_03.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_03.pdn|fw_block_port_03.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Check all firewall profiles: ''Domain'', ''Private'', ''Public''
+
+~~#~~. Click the ''Next'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_04.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_04.pdn|fw_block_port_04.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Enter a name for the rule. It's just a text which will be displayed in the rules list on the Firewall Control Panel.
+
+~~#~~. Click the ''Finish'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:fw_block_port_05.png?direct&400|Firewall block port}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_block_port_05.pdn|fw_block_port_05.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----

@@ -1,0 +1,61 @@
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] toolset. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/BlockWindowsUpdate.bat|BlockWindowsUpdate.bat]]</bootnote>
+
+=== Prerequisites ===
+
+1. Complete [[windows:tuning:disable_uac|Disable UAC]] step
+2. Start [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
+
+----
+=== Instruction ===
+
+<WRAP group>
+<WRAP half column>
+  1. Type ''BlockWindowsUpdate.bat'' (case of letters doesn't matter)
+  2. Press ''Enter''  
+  
+<WRAP center round tip 80%>
+Type //Block// and press the ''Tab'' key to speedup command entry.
+</WRAP>
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:blockwindowsupdate_00.png?direct&400|Block Windows Update.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:blockwindowsupdate_00.pdn|blockwindowsupdate_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+3<color #0>.</color> You don't have to do anything. Be sure that the script finished with the ''Success!'' message.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:blockwindowsupdate_01.png?direct&400|Block Windows Update.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:blockwindowsupdate_01.pdn|blockwindowsupdate_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+If you got the message ''Some error occurred!'' then you have to analyze output of the script and fix the problem by yourself before running the script again.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:blockwindowsupdate_02.png?direct&400|Block Windows Update.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:blockwindowsupdate_02.pdn|blockwindowsupdate_02.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/BlockWindowsUpdate.bat|BlockWindowsUpdate.bat]]

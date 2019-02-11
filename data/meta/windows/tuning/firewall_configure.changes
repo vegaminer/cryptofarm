@@ -1,0 +1,18 @@
+1548752316	90.154.70.56	C	windows:tuning:configure_firewall	wikiadmin	created		2274
+1548758617	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			871
+1548758722	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
+1548795244	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			513
+1548799900	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			111
+1548837103	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			857
+1548838807	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			468
+1548883538	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			2132
+1548883632	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
+1548883690	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			0
+1548884936	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			419
+1549270291	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			288
+1549359503	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			1995
+1549491933	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			3101
+1549870789	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			-3909
+1549871100	90.154.71.27	C	windows:tuning:firewall_configure	wikiadmin	↷ Page name changed from windows:tuning:configure_firewall to windows:tuning:firewall_configure		9122
+1549871241	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			37
+1549872058	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			14

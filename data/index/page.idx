@@ -25,3 +25,16 @@ windows:rigutils
 windows:tuning:open_windows_defender_settings
 windows:tuning:antivirus_exclusions
 windows:rigutils:windows_tuning
+windows:rigutils:windows_tuning:cmd_rigutils.bat
+windows:rigutils:windows_tuning:disableuac.bat
+windows:software:firefox
+wiki:dokuwiki
+windows:rigutils:windows_tuning:antivirustest.bat
+windows:tuning:block_windows_update
+windows:rigutils:windows_tuning:blockwindowsupdate.bat
+windows:tuning:shutup_telemetry
+windows:rigutils:windows_tuning:shutuptelemetry.bat
+linux
+windows:tuning:firewall_configure
+windows:software
+windows:tuning:firewall_block_ports

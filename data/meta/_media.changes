@@ -1,60 +1,43 @@
-1546772076	90.154.70.56	C	antivirustest_00.pdn	wikiadmin	created		20147
-1546772076	90.154.70.56	C	antivirustest_00.png	wikiadmin	created		7397
-1546772199	90.154.70.56	C	windows:rigutils:antivirustest_00.png	wikiadmin	created		7397
-1546772199	90.154.70.56	C	windows:rigutils:antivirustest_00.pdn	wikiadmin	created		20147
-1546864339	90.154.70.56	C	windows:rigutils:antivirustest_10.pdn	wikiadmin	created		23381
-1546864339	90.154.70.56	C	windows:rigutils:antivirustest_10.png	wikiadmin	created		6465
-1546864507	90.154.70.56	C	windows:rigutils:antivirustest_09.pdn	wikiadmin	created		20310
-1546864507	90.154.70.56	C	windows:rigutils:antivirustest_09.png	wikiadmin	created		5840
-1546864830	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			205
-1546864830	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			79
-1546869439	90.154.70.56	C	windows:rigutils:antivirustest_01.png	wikiadmin	created		23208
-1546869439	90.154.70.56	C	windows:rigutils:antivirustest_01.pdn	wikiadmin	created		51226
-1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_00.png	wikiadmin	created		19814
-1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_00.pdn	wikiadmin	created		49537
-1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_01.pdn	wikiadmin	created		46037
-1546871454	90.154.70.56	C	windows:rigutils:windows_defender_settings_01.png	wikiadmin	created		27374
-1546872286	90.154.70.56	C	windows:rigutils:antivirustest_02.pdn	wikiadmin	created		40919
-1546872286	90.154.70.56	C	windows:rigutils:antivirustest_02.png	wikiadmin	created		17584
-1546889093	90.154.70.56	C	windows:rigutils:antivirustest_03.png	wikiadmin	created		7819
-1546889093	90.154.70.56	C	windows:rigutils:antivirustest_03.pdn	wikiadmin	created		24266
-1546889348	90.154.70.56	C	windows:rigutils:antivirustest_04.pdn	wikiadmin	created		27479
-1546889348	90.154.70.56	C	windows:rigutils:antivirustest_04.png	wikiadmin	created		9070
-1546889615	90.154.70.56	C	windows:rigutils:antivirustest_05.png	wikiadmin	created		17117
-1546889615	90.154.70.56	C	windows:rigutils:antivirustest_05.pdn	wikiadmin	created		47841
-1546891956	90.154.70.56	C	windows:rigutils:antivirustest_06.pdn	wikiadmin	created		28894
-1546891956	90.154.70.56	C	windows:rigutils:antivirustest_06.png	wikiadmin	created		13924
-1546892544	90.154.70.56	C	windows:rigutils:antivirustest_07.png	wikiadmin	created		16018
-1546892544	90.154.70.56	C	windows:rigutils:antivirustest_07.pdn	wikiadmin	created		37307
-1546893296	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			-196
-1546893296	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			-333
-1546893442	90.154.70.56	C	windows:rigutils:antivirustest_08.png	wikiadmin	created		15509
-1546893442	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			728
-1546893442	90.154.70.56	C	windows:rigutils:antivirustest_08.pdn	wikiadmin	created		36353
-1546893442	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			0
-1546893495	90.154.70.56	E	windows:rigutils:antivirustest_08.png	wikiadmin			0
-1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.pdn	wikiadmin			0
-1546893495	90.154.70.56	E	windows:rigutils:antivirustest_08.pdn	wikiadmin			0
-1546893495	90.154.70.56	E	windows:rigutils:antivirustest_09.png	wikiadmin			3120
-1546897457	90.154.70.56	C	windows:tuning:avexclusions_00.png	wikiadmin	created		22911
-1546897457	90.154.70.56	C	windows:tuning:avexclusions_00.pdn	wikiadmin	created		52929
-1546897598	90.154.70.56	C	windows:tuning:avexclusions_01.pdn	wikiadmin	created		59427
-1546897598	90.154.70.56	C	windows:tuning:avexclusions_01.png	wikiadmin	created		41594
-1546897864	90.154.70.56	C	windows:tuning:avexclusions_02.png	wikiadmin	created		45696
-1546897864	90.154.70.56	C	windows:tuning:avexclusions_02.pdn	wikiadmin	created		65815
-1546898120	90.154.70.56	C	windows:tuning:avexclusions_03.png	wikiadmin	created		15722
-1546898120	90.154.70.56	C	windows:tuning:avexclusions_03.pdn	wikiadmin	created		31866
-1546898332	90.154.70.56	C	windows:tuning:avexclusions_04.png	wikiadmin	created		51271
-1546898332	90.154.70.56	C	windows:tuning:avexclusions_04.pdn	wikiadmin	created		84838
-1546898423	90.154.70.56	E	windows:tuning:avexclusions_04.png	wikiadmin			-146
-1546898423	90.154.70.56	E	windows:tuning:avexclusions_04.pdn	wikiadmin			30
-1546898713	90.154.70.56	C	windows:tuning:avexclusions_05.png	wikiadmin	created		15945
-1546898713	90.154.70.56	C	windows:tuning:avexclusions_05.pdn	wikiadmin	created		37395
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_00.pdn	wikiadmin	created		22606
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_00.png	wikiadmin	created		6365
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_01.pdn	wikiadmin	created		36498
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_01.png	wikiadmin	created		15660
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_02.pdn	wikiadmin	created		43159
-1547062666	90.154.70.56	C	windows:rigutils:disableuac_02.png	wikiadmin	created		18949
-1547098069	90.154.70.56	E	windows:rigutils:disableuac_02.png	wikiadmin			1606
-1547098069	90.154.70.56	E	windows:rigutils:disableuac_02.pdn	wikiadmin			3345
+1548880990	90.154.70.56	C	windows:tuning:firewall_04.pdn	wikiadmin	created		59001
+1548880990	90.154.70.56	C	windows:tuning:firewall_04.png	wikiadmin	created		24707
+1548881154	90.154.70.56	E	windows:tuning:firewall_04.png	wikiadmin			-29
+1548881154	90.154.70.56	E	windows:tuning:firewall_04.pdn	wikiadmin			25
+1548883374	90.154.70.56	C	windows:tuning:firewall_05.pdn	wikiadmin	created		30740
+1548883374	90.154.70.56	C	windows:tuning:firewall_05.png	wikiadmin	created		9433
+1548884593	90.154.70.56	C	windows:tuning:firewall_06.pdn	wikiadmin	created		56390
+1548884593	90.154.70.56	C	windows:tuning:firewall_06.png	wikiadmin	created		31220
+1548951760	90.154.71.27	C	windows:tuning:firewall_07.png	wikiadmin	created		4195
+1548951760	90.154.71.27	C	windows:tuning:firewall_07.pdn	wikiadmin	created		21719
+1549270132	90.154.71.27	E	windows:tuning:firewall_07.pdn	wikiadmin			0
+1549270132	90.154.71.27	E	windows:tuning:firewall_07.png	wikiadmin			0
+1549357165	90.154.71.27	C	windows:tuning:firewall_08.png	wikiadmin	created		42791
+1549357165	90.154.71.27	C	windows:tuning:firewall_08.pdn	wikiadmin	created		75743
+1549357989	90.154.71.27	C	windows:tuning:firewall_09.pdn	wikiadmin	created		79856
+1549357989	90.154.71.27	C	windows:tuning:firewall_09.png	wikiadmin	created		47115
+1549359319	90.154.71.27	C	windows:tuning:firewall_10.png	wikiadmin	created		47019
+1549359319	90.154.71.27	C	windows:tuning:firewall_10.pdn	wikiadmin	created		82541
+1549359319	90.154.71.27	C	windows:tuning:firewall_11.pdn	wikiadmin	created		57776
+1549359319	90.154.71.27	C	windows:tuning:firewall_11.png	wikiadmin	created		30429
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_00.png	wikiadmin	created		35518
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_00.pdn	wikiadmin	created		63805
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_01.pdn	wikiadmin	created		36958
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_01.png	wikiadmin	created		21476
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_02.pdn	wikiadmin	created		44917
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_03.pdn	wikiadmin	created		44920
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_04.pdn	wikiadmin	created		42391
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_05.pdn	wikiadmin	created		49157
+1549825993	90.154.71.27	C	windows:tuning:fw_block_port_05.png	wikiadmin	created		30848
+1549825994	90.154.71.27	C	windows:tuning:fw_block_port_06.pdn	wikiadmin	created		32692
+1549825994	90.154.71.27	C	windows:tuning:fw_block_port_06.png	wikiadmin	created		19358
+1549871703	90.154.71.27	E	windows:tuning:fw_block_port_00.pdn	wikiadmin			-176
+1549871703	90.154.71.27	E	windows:tuning:fw_block_port_00.png	wikiadmin			-137
+1549873172	90.154.71.27	C	windows:tuning:fw_block_port_02.png	wikiadmin	created		27420
+1549873186	90.154.71.27	E	windows:tuning:fw_block_port_02.png	wikiadmin			0
+1549873186	90.154.71.27	E	windows:tuning:fw_block_port_02.pdn	wikiadmin			0
+1549873396	90.154.71.27	C	windows:tuning:fw_block_port_03.png	wikiadmin	created		25112
+1549873406	90.154.71.27	E	windows:tuning:fw_block_port_03.png	wikiadmin			0
+1549873406	90.154.71.27	E	windows:tuning:fw_block_port_03.pdn	wikiadmin			-2528
+1549873758	90.154.71.27	C	windows:tuning:fw_block_port_04.png	wikiadmin	created		30848
+1549873758	90.154.71.27	E	windows:tuning:fw_block_port_04.pdn	wikiadmin			9687
+1549874378	90.154.71.27	E	windows:tuning:fw_block_port_05.pdn	wikiadmin			-16465
+1549874378	90.154.71.27	E	windows:tuning:fw_block_port_05.png	wikiadmin			-11490

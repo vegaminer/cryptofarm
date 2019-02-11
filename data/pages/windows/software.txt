@@ -1,0 +1,13 @@
+~~#~~. Select a command text with your mouse.
+
+~~#~~. Press the ''Ctrl-C'' key combination to copy selected text into Windows clipboard.
+
+~~#~~. Press the ''WINLOGO+R'' key combination to call the ''Run'' dialog window.
+
+~~#~~. Type the ''cmd.exe'' string into the ''Open'' input field.
+
+~~#~~. Click the ''OK'' button in Run dialog, command prompt window (black one) will appear.
+
+~~#~~. Press the ''Ctrl-V''key combination to paste the text of previously selected command.
+
+~~#~~. Press the ''Enter'' key to execute the command.

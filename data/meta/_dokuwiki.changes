@@ -1,82 +1,31 @@
-1546770150	90.154.70.56	E	windows:rigutils:cmd_rigutils.bat	wikiadmin			11
-1546770368	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			-155
-1546771871	90.154.70.56	E	windows:rigutils:cmd_rigutils.bat	wikiadmin			-23
-1546771896	90.154.70.56	E	windows:rigutils:cmd_rigutils.bat	wikiadmin			0
-1546772339	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			822
-1546866258	90.154.70.56	E	windows:media_creation_tool	wikiadmin			-7
-1546872076	90.154.70.56	C	windows:rigutils:open_windows_defender_settings	wikiadmin	created		875
-1546872092	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			1209
-1546872391	90.154.70.56	E	windows:rigutils:open_windows_defender_settings	wikiadmin			9
-1546872481	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			308
-1546892280	90.154.70.56	E	windows:tuning:uac	wikiadmin			4
-1546892617	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			1731
-1546893860	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			365
-1546894470	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			0
-1546895395	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			-1
-1546896200	90.154.70.56	E	windows:rigutils	wikiadmin			243
-1546896227	90.154.70.56	E	windows:rigutils	wikiadmin			5
-1546898823	90.154.70.56	C	windows:tuning:antivirus	wikiadmin	created		3087
-1546898864	90.154.70.56	C	windows:tuning:disable_uac	wikiadmin	↷ Page name changed from windows:tuning:uac to windows:tuning:disable_uac		1488
-1546898864	90.154.70.56	D	windows:tuning:uac	wikiadmin	↷ Page name changed from windows:tuning:uac to windows:tuning:disable_uac		-1488
-1546898864	90.154.70.56	e	windows:rigutils:antivirustest.bat	wikiadmin	↷ Links adapted because of a move operation		16
-1546898864	90.154.70.56	e	windows:tuning:antivirus	wikiadmin	↷ Links adapted because of a move operation		7
-1546898864	90.154.70.56	e	windows:tuning	wikiadmin	↷ Links adapted because of a move operation		6
-1546945943	90.154.70.56	E	windows:rigutils	wikiadmin			-22
-1546946011	90.154.70.56	E	windows:rigutils:description	wikiadmin			-1
-1546946404	90.154.70.56	E	windows:tuning	wikiadmin			23
-1546947316	90.154.70.56	C	windows:tuning:antivirus_exclusions	wikiadmin	↷ Page name changed from windows:tuning:antivirus to windows:tuning:antivirus_exclusions		3094
-1546947316	90.154.70.56	D	windows:tuning:antivirus	wikiadmin	↷ Page name changed from windows:tuning:antivirus to windows:tuning:antivirus_exclusions		-3094
-1546947316	90.154.70.56	e	windows:rigutils	wikiadmin	↷ Links adapted because of a move operation		10
-1546947989	90.154.70.56	E	windows:rigutils:antivirustest.bat	wikiadmin			106
-1546948033	90.154.70.56	E	windows:rigutils:disableuac.bat	wikiadmin			438
-1547062258	90.154.70.56	E	windows:rigutils:disableuac.bat	wikiadmin			29
-1547062420	90.154.70.56	E	windows:rigutils:cmd_rigutils.bat	wikiadmin			104
-1547063060	90.154.70.56	E	windows:rigutils:disableuac.bat	wikiadmin			365
-1547097845	90.154.70.56	E	windows:tuning:disable_uac	wikiadmin			39
-1547098266	90.154.70.56	E	windows:rigutils:disableuac.bat	wikiadmin			799
-1547098291	90.154.70.56	E	windows:rigutils:disableuac.bat	wikiadmin			-36
-1547098348	90.154.70.56	C	windows:rigutils:install	wikiadmin	↷ Page moved and renamed from windows:rigutils to windows:rigutils:install		5989
-1547098348	90.154.70.56	D	windows:rigutils	wikiadmin	↷ Page moved and renamed from windows:rigutils to windows:rigutils:install		-5989
-1547098348	90.154.70.56	e	windows:rigutils:antivirustest.bat	wikiadmin	↷ Links adapted because of a move operation		7
-1547098348	90.154.70.56	e	windows:rigutils:cmd_rigutils.bat	wikiadmin	↷ Links adapted because of a move operation		15
-1547098348	90.154.70.56	e	windows:rigutils:description	wikiadmin	↷ Links adapted because of a move operation		8
-1547098348	90.154.70.56	e	windows:rigutils:disableuac.bat	wikiadmin	↷ Links adapted because of a move operation		14
-1547098390	90.154.70.56	C	windows:rigutils	wikiadmin	↷ Page moved and renamed from windows:rigutils:description to windows:rigutils		447
-1547098390	90.154.70.56	D	windows:rigutils:description	wikiadmin	↷ Page moved and renamed from windows:rigutils:description to windows:rigutils		-447
-1547098391	90.154.70.56	e	windows:rigutils:install	wikiadmin	↷ Links adapted because of a move operation		-12
-1547098421	90.154.70.56	E	windows:rigutils	wikiadmin			0
-1547098421	90.154.70.56	e	windows:tuning	wikiadmin	↷ Links adapted because of a move operation		6
-1547098444	90.154.70.56	E	windows:rigutils	wikiadmin			1
-1547098492	90.154.70.56	C	windows:rigutils:windows:antivirustest.bat	wikiadmin	↷ Page moved from windows:rigutils:antivirustest.bat to windows:rigutils:windows:antivirustest.bat		9556
-1547098492	90.154.70.56	D	windows:rigutils:antivirustest.bat	wikiadmin	↷ Page moved from windows:rigutils:antivirustest.bat to windows:rigutils:windows:antivirustest.bat		-9556
-1547098493	90.154.70.56	e	windows:rigutils:windows:antivirustest.bat	wikiadmin	↷ Links adapted because of a move operation		17
-1547098493	90.154.70.56	e	windows:rigutils:disableuac.bat	wikiadmin	↷ Links adapted because of a move operation		7
-1547098493	90.154.70.56	e	windows:rigutils:open_windows_defender_settings	wikiadmin	↷ Links adapted because of a move operation		7
-1547098493	90.154.70.56	e	windows:rigutils	wikiadmin	↷ Links adapted because of a move operation		6
-1547098514	90.154.70.56	C	windows:rigutils:windows:cmd_rigutils.bat	wikiadmin	↷ Page moved from windows:rigutils:cmd_rigutils.bat to windows:rigutils:windows:cmd_rigutils.bat		2163
-1547098514	90.154.70.56	D	windows:rigutils:cmd_rigutils.bat	wikiadmin	↷ Page moved from windows:rigutils:cmd_rigutils.bat to windows:rigutils:windows:cmd_rigutils.bat		-2163
-1547098515	90.154.70.56	e	windows:rigutils:windows:antivirustest.bat	wikiadmin	↷ Links adapted because of a move operation		8
-1547098515	90.154.70.56	e	windows:rigutils:disableuac.bat	wikiadmin	↷ Links adapted because of a move operation		7
-1547098535	90.154.70.56	C	windows:rigutils:windows:disableuac.bat	wikiadmin	↷ Page moved from windows:rigutils:disableuac.bat to windows:rigutils:windows:disableuac.bat		1741
-1547098535	90.154.70.56	D	windows:rigutils:disableuac.bat	wikiadmin	↷ Page moved from windows:rigutils:disableuac.bat to windows:rigutils:windows:disableuac.bat		-1741
-1547098535	90.154.70.56	e	windows:tuning:disable_uac	wikiadmin	↷ Links adapted because of a move operation		8
-1547098557	66.249.65.197	E	sidebar		↷ Links adapted because of a move operation		7
-1547098860	90.154.70.56	C	windows:tuning:open_windows_defender_settings	wikiadmin	↷ Page moved from windows:rigutils:open_windows_defender_settings to windows:tuning:open_windows_defender_settings		891
-1547098860	90.154.70.56	D	windows:rigutils:open_windows_defender_settings	wikiadmin	↷ Page moved from windows:rigutils:open_windows_defender_settings to windows:tuning:open_windows_defender_settings		-891
-1547098860	90.154.70.56	e	windows:rigutils:windows:antivirustest.bat	wikiadmin	↷ Links adapted because of a move operation		10
-1547098960	90.154.70.56	E	windows:tuning	wikiadmin			-2
-1547098974	90.154.70.56	E	windows:tuning	wikiadmin			1
-1547099019	90.154.70.56	E	windows:rigutils	wikiadmin			0
-1547099384	90.154.70.56	E	windows:tuning:antivirus_exclusions	wikiadmin			243
-1547099487	90.154.70.56	E	windows:tuning:antivirus_exclusions	wikiadmin			9
-1547099683	90.154.70.56	E	windows:rigutils:windows:antivirustest.bat	wikiadmin			188
-1547099715	90.154.70.56	E	windows:tuning:antivirus_exclusions	wikiadmin			3
-1547102527	90.154.70.56	E	windows:tuning:disable_uac	wikiadmin			5
-1547102689	90.154.70.56	E	windows:tuning:disable_uac	wikiadmin			48
-1547103331	90.154.70.56	E	windows:rigutils	wikiadmin			164
-1547188697	90.154.70.56	C	windows:rigutils:windows	wikiadmin	created		627
-1547188784	90.154.70.56	E	windows:rigutils	wikiadmin			-267
-1547188870	90.154.70.56	E	windows:rigutils:windows	wikiadmin			7
-1547188896	90.154.70.56	C	windows:rigutils:windows_tuning	wikiadmin	↷ Page name changed from windows:rigutils:windows to windows:rigutils:windows_tuning		634
-1547188896	90.154.70.56	D	windows:rigutils:windows	wikiadmin	↷ Page name changed from windows:rigutils:windows to windows:rigutils:windows_tuning		-634
-1547188896	90.154.70.56	e	windows:rigutils	wikiadmin	↷ Links adapted because of a move operation		7
+1548758617	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			871
+1548758722	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
+1548795244	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			513
+1548797371	90.154.70.56	C	windows:software	wikiadmin	created		530
+1548799900	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			111
+1548835925	90.154.70.56	E	windows:tuning:shutup_telemetry	wikiadmin			0
+1548836404	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			11
+1548836702	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			-8
+1548837103	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			857
+1548838807	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			468
+1548882403	90.154.70.56	E	windows:tuning:antivirus_exclusions	wikiadmin			20
+1548882478	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			-2
+1548883538	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			2132
+1548883558	90.154.70.56	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			18
+1548883632	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
+1548883690	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			0
+1548884936	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			419
+1549270291	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			288
+1549359503	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			1995
+1549491933	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			3101
+1549870789	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			-3909
+1549871034	90.154.71.27	C	windows:tuning:firewall_block_ports	wikiadmin	created		4048
+1549871100	90.154.71.27	C	windows:tuning:firewall_configure	wikiadmin	↷ Page name changed from windows:tuning:configure_firewall to windows:tuning:firewall_configure		9122
+1549871100	90.154.71.27	D	windows:tuning:configure_firewall	wikiadmin	↷ Page name changed from windows:tuning:configure_firewall to windows:tuning:firewall_configure		-9122
+1549871100	90.154.71.27	e	windows:tuning:firewall_block_ports	wikiadmin	↷ Links adapted because of a move operation		-1
+1549871122	162.158.68.165	E	windows:tuning		↷ Links adapted because of a move operation		0
+1549871241	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			37
+1549872058	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			14
+1549874596	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			3005
+1549874619	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			6
+1549874651	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1

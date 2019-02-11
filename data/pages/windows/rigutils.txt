@@ -3,5 +3,5 @@ See the [[windows:rigutils:install|install]] page for installation instructions
 ---
 This is a short summary for individual files in Rigutils tools set. For detailed information and instruction consult corresponding pages.
 
-  -<color #ffffff> </color> [[windows:rigutils:windows_tuning|windows]] - directory with MS Windows tuning/tweaking related scripts
+  -<color #ffffff> </color> [[windows:rigutils:windows_tuning|windows_tuning/]] - directory with MS Windows tuning/tweaking related scripts
   

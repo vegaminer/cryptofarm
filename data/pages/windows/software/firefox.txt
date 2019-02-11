@@ -1,0 +1,193 @@
+Why FireFox - you may ask? Well, there are a lot of reasons for that, but most important one is that FireFox really does care about your online privacy. I have no desire to feed MS and Google's Big Data servers with my sensitive information. At last we are talking about protecting our cryptomining farm from "probably yet unknown" security threats, in such a case we should take every possible measure to prevent a malicious actor from stealing our hard mined coins.
+
+Once again, it's up to you, I can't insist. But my choice is FireFox.
+
+----
+
+<WRAP group>
+<WRAP half column>
+
+1. Click the blue ''IE'' icon on taskbar.
+2. Click the ''Close'' button to close the setup page.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_00.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_00.pdn|firefox_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+
+3<color #00>.</color> Type ''mozilla.org'' in the address bar.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_01.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_01.pdn|firefox_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+
+4<color #00>.</color> Click the ''Download FireFox'' button.
+
+<WRAP center round info 60%>
+Layout of mozilla.org site may looks different.
+</WRAP>
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_02.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_02.pdn|firefox_02.pdn}}</wrap>
+
+{{:windows:soft:firefox_08.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_08.pdn|firefox_08.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+
+5<color #00>.</color> Click the ''Run'' button.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_09.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_09.pdn|firefox_09.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+
+6<color #00>.</color> Just wait for the installer to finish its work.
+
+<WRAP center round info 60%>
+In newer versions of FireFox layout of its UI may looks different.
+</WRAP>
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_03.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_03.pdn|firefox_03.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+<WRAP group>
+<WRAP half column>
+
+7<color #00>.</color> Close the tab. Don't give your email even to Mozilla.org
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_04.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_04.pdn|firefox_04.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+
+8<color #00>.</color> Start FireFox by clicking the icon on the taskbar.
+
+9<color #00>.</color> Click the ''Use Firefox as my default browser'' button.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_05.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_05.pdn|firefox_05.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+
+10<color #00>.</color> Click the ''Microsoft Edge'' icon.
+
+11<color #00>.</color> Click the ''Firefox'' icon in popup menu.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_06.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_06.pdn|firefox_06.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+Funny MS... m(
+
+12<color #00>.</color> Click the ''Switch anyway'' text.
+
+13<color #00>.</color> Close the dialog window.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_07.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_07.pdn|firefox_07.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+Let's configure Firefox for providing even more privacy and security.
+
+14<color #00>.</color> Click the ''Menu'' icon at the top right corner of Firefox.
+
+15<color #00>.</color> In the pull-down menu click the ''Options'' item. Firefox will open the Options page.
+
+16<color #00>.</color> Click the ''Privacy & Security'' item
+
+17<color #00>.</color> Adjust settings according to the screenshot.
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:soft:firefox_10.png?direct&400|FireFox}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:firefox_10.pdn|firefox_10.pdn}}</wrap>
+
+</WRAP>
+</WRAP>

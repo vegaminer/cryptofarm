@@ -1,0 +1,72 @@
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] toolset. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/ShutupTelemetry.bat|ShutupTelemetry.bat]]</bootnote>
+
+=== Prerequisites ===
+
+1. A working connection to Internet is required
+2. Complete [[windows:tuning:disable_uac|Disable UAC]] step
+3. Complete [[windows:tuning:block_windows_update|Block Windows Update]] step
+4. Start [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
+
+----
+
+=== General info ===
+
+This script uses data from [[https://github.com/crazy-max/WindowsSpyBlocker|Windows Spy Blocker]] project. Consider visiting the page for getting in-depth understanding of how it works. 
+
+It'll block sending of Windows Telemetry data by adding known host names to the local ''hosts'' file with fake ''0.0.0.0'' IP address. Here is GUI oriented [[:windows:tuning:shutup_telemetry|tutorial]] if you want to do it manually.
+
+----
+
+=== Instruction ===
+
+<WRAP group>
+<WRAP half column>
+  1. Type ''ShutupTelemetry.bat'' (case of letters doesn't matter)
+  2. Press ''Enter''  
+  
+<WRAP center round tip 80%>
+Type //Shutup// and press the ''Tab'' key to speedup command entry.
+</WRAP>
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:shutuptelemetry_00.png?direct&400|Shut up Telemetry.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:shutuptelemetry_00.pdn|shutuptelemetry_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+3<color #0>.</color> You don't have to do anything. Be sure that the script finished with the ''Success!'' message.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:shutuptelemetry_01.png?direct&400|Shut up Telemetry.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:shutuptelemetry_01.pdn|shutuptelemetry_01.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+If you got the message ''Some error occurred!'' then you have to analyze output of the script and fix the problem by yourself before running the script again.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:shutuptelemetry_02.png?direct&400|Shut up Telemetry.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:shutuptelemetry_02.pdn|shutuptelemetry_02.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/ShutupTelemetry.bat|ShutupTelemetry.bat]]

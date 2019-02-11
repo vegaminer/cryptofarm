@@ -1,6 +1,11 @@
-Adding a directory to exclusions list of an antivirus program is always a questionable practice, but I prefer to use https://www.virustotal.com service for checking all of my downloads before using it for the first time, and keep the folder ''c:\bin\rigutils'' in exclusions list of Windows Defender Antivirus to prevent it from false-positive detection of viruses in miners. Another option is to disable Windows Defender completely, but I would advise against such a radical action.
+Adding a directory to exclusions list of an antivirus program is always a questionable practice, but I prefer to use https://www.virustotal.com service for checking all of my downloads before using it for the first time, and keep the folder ''c:\bin\rigutils'' in exclusions list of Windows Defender Antivirus to prevent it from [[https://www.reddit.com/r/MoneroMining/comments/aipomg/possible_trojan_in_xmr_stak_windows_binary/|false-positive]] detection of viruses in miners. Another option is to disable Windows Defender completely, but I would advise against such a radical action.
 
-<note important>Never trust any file even from trusted sources. Always use [[https://www.virustotal.com|virustotal.com]] service for checking of all of your downloads.</note>
+<WRAP center round important 80%>
+Never trust any file even from trusted sources. Always use [[https://www.virustotal.com|virustotal.com]] service for checking of all of your downloads.
+</WRAP>
+
+
+----
 
 === Instruction ===
 

@@ -1,0 +1,123 @@
+=== What is Windows Telemetry? ===
+
+The default-enabled Windows 10 telemetry feature set periodically sends usage and performance data to select Microsoft IP addresses.
+
+=== What is telemetry data? ===
+
+Windows 10 transmits the following data back to the company:
+
+* Typed text on keyboard sent every 30 minutes (//my favorite one!//)
+* Transmits anything you say into a microphone
+* Transcripts of things you say while using Cortana (//we'll disable it too//)
+* Index of all media files on your computer
+* When your webcam is first enabled, 35mb of data
+* Telemetry data
+
+Credits [[https://www.neweggbusiness.com/smartbuyer/windows/should-you-disable-windows-10-telemetry/|neweggbusiness.com]]
+
+----
+You may block Windows Telemetry either manually by following this how-to or by running the script [[windows:rigutils:windows_tuning:shutuptelemetry.bat|ShutupTelemetry.bat]]
+
+----
+** STEP 1.** Open ''notepad.exe''
+<WRAP group>
+<WRAP half column>
+1<color #0>.</color> Press ''WINLOGO + R'' keys on your keyboard to open the ''Run'' dialog.
+
+2<color #0>.</color> Type or [[https://en.wikipedia.org/wiki/Cut,_copy,_and_paste|copy/paste]] (select, Ctrl+C, Ctrl+V) the command 
+
+''notepad %windir%\System32\drivers\etc\hosts''
+
+3<color #0>.</color> Click the ''OK'' button
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_04.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_04.pdn|shutuptelemetry_04.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 2.** Download hosts files
+<WRAP group>
+<WRAP half column>
+4<color #0>.</color> Open [[:windows:software:firefox|FireFox]] web browser.
+
+5<color #0>.</color> Open the following URLs one by one if FireFox:
+
+* ''https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt''
+* ''https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt''
+* ''https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/update.txt''
+
+and perform steps 3 and 4 for each of the addresses.
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_05.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_05.pdn|shutuptelemetry_05.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+** STEP 3.** Copy text to clipboard
+<WRAP group>
+<WRAP half column>
+6<color #0>.</color> Click anywhere on the page.
+
+7<color #0>.</color> Press ''Ctrl+A'' keys to select all text.
+
+8<color #0>.</color> Press ''Ctrl+C'' keys to copy selected text to Windows clipboard.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_06.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_06.pdn|shutuptelemetry_06.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+** STEP 4.** Update ''etc\hosts'' files
+<WRAP group>
+<WRAP half column>
+9<color #0>.</color> Switch to the opened ''notepad'' window (see the Step 1 above). You can do this by pressing ''Alt+Tab'' keys.
+
+10<color #0>.</color> Place text cursor at the end of the document - click anywhere and press ''Ctrl+End'' keys.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_07.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_07.pdn|shutuptelemetry_07.pdn}}</wrap>
+</WRAP>
+</WRAP>
+----
+<WRAP group>
+<WRAP half column>
+11<color #0>.</color> Paste text by pressing ''Ctrl+V'' keys
+
+12<color #0>.</color> Place text cursor at the end of the document - press 2 times the ''Enter'' key. Return to the #5 and repeat step for the rest or URLs.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_08.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_08.pdn|shutuptelemetry_08.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+** STEP 5.** Close ''notepad'' window
+<WRAP group>
+<WRAP half column>
+13<color #0>.</color> Open the ''File'' menu - click or press ''Alt-F'' keyes.
+
+14<color #0>.</color> Save the document - click the ''Save'' menu or press ''Ctrl-S''.
+
+15<color #0>.</color> Close the window.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:shutuptelemetry_09.png?direct&400|Shutup Windows Telemetry}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:shutuptelemetry_09.pdn|shutuptelemetry_09.pdn}}</wrap>
+</WRAP>
+</WRAP>
