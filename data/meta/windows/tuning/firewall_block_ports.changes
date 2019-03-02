@@ -3,3 +3,7 @@
 1549874596	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			3005
 1549874619	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			6
 1549874651	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1
+1549955355	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			104
+1550046186	90.154.71.27	e	windows:tuning:firewall_block_ports	wikiadmin	↷ Links adapted because of a move operation		9
+1551335826	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1
+1551336338	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			122

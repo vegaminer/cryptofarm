@@ -1,0 +1,105 @@
+=== Allow inbound connections ===
+
+After completing steps of securing your firewall setup described [[:windows:tuning:firewall_configure|here]] and [[:windows:tuning:firewall_block_ports|here]], you may ask yourself: Well, what should I do if I want to use some of my programs/services running on my rig via network? Good candidates are web interface of your miner, [[https://openhardwaremonitor.org/|open hardware monitor]] status page and RDP((Remote Desktop Protocol[[https://en.wikipedia.org/wiki/Remote_Desktop_Protocol|Microsoft RDP]]))
+
+The answer is simple: allow inbound connections for any required port. These steps are almost the same as described in [[:windows:tuning:firewall_block_ports|block ports]] tutorial, the only difference is that at ''step 9'' you have to click ''Allow the connection''.
+
+{{:windows:tuning:fw_allow_port_02.png?400|netstat}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:fw_allow_port_02.pdn|fw_allow_port_02.pdn}}</wrap>
+
+=== Change default RDP port ===
+
+Look at this nice graph of hits (network probes) per day for port 3389 at this [[https://www.speedguide.net/port.php?port=3389|page]]. It's a good idea to change default port number 3389 used by MS Terminal Service to say 33421 or 23786 or whatever random port number you want in the range 1024-65534. We'll use ''regedit'' for doing this.
+
+----
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Open the ''Run'' dialog by pressing ''WINLOGO+R'' keys on your keyboard.
+
+~~#~~. Enter ''regedit'' into the ''open'' field.
+
+~~#~~. Click the ''OK'' button
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:rdp_port_change_00.png?direct&400|RDP port change}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:rdp_port_change_00.pdn|rdp_port_change_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Copy/paste or just type into the ''path'' field the following string <code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</code> and press the ''Enter'' button.
+
+~~#~~. Scroll down the list of keys until you find the ''PortNumber'' entry.
+
+~~#~~. Double click the line or right click it to display a context menu window and select ''Modify'' item.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:rdp_port_change_01.png?direct&400|RDP port change}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:rdp_port_change_01.pdn|rdp_port_change_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Switch to ''Decimal'' mode.
+
+~~#~~. Enter desired port number into the ''Value data'' field.
+
+~~#~~. Click the ''OK'' button.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:rdp_port_change_01.png?direct&400|RDP port change}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:rdp_port_change_01.pdn|rdp_port_change_01.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. Close the regedit window. No reboot required.
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:rdp_port_change_03.png?direct&400|RDP port change}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:rdp_port_change_03.pdn|rdp_port_change_03.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<WRAP group>
+<WRAP half column>
+~~#~~. [[:windows:tuning:run_cmd_exe|Start]] the ''cmd.exe'' command prompt window and execute the following command in it: <code>powershell -Command "Restart-Service -Force -Verbose TermService"</code>
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:restart_termservice.png?direct&400|Restart Terminal Service}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:restart_termservice.pdn|restart_termservice.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----
+
+=== Connect to remote PC with changed port ===
+
+<WRAP group>
+<WRAP half column>
+It's really easy, just start your RDP client and add new port number to the IP address of your remote computer (don't forget to put colon before port number). Here is //mstsc// example. By the way, I recommend official Remote Desktop Connection Manager from Microsoft for managing your remote computers, it's much more convenient for managing multiply machines than default //mstcs// RDP client. Grab it from the [[https://www.microsoft.com/en-us/download/details.aspx?id=44989|download page]]
+
+</WRAP>
+<WRAP half column>
+{{:windows:tuning:mstsc_connect_00.png?direct&400|MSTSC}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:mstsc_connect_00.pdn|mstsc_connect_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+----

@@ -1,7 +1,7 @@
 See the [[windows:rigutils:install|install]] page for installation instructions.
 
 ---
-This is a short summary of individual files in //rigutils/windows_tuning// directory. For detailed information and instructions consult corresponding pages. Follow this step by step [[:windows:tuning|tuning]] guide for Windows configuration/tuning.
+This is a short summary of individual files in //rigutils/windows_tuning// directory. For detailed information and instructions consult corresponding pages. Follow step by step this [[:windows:tuning|tuning]] guide for Windows configuration/tuning.
 
 ~~#~~. [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]] - simple script for fast opening of a //command prompt// window 
   

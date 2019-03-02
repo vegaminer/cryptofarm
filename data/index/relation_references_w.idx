@@ -44,5 +44,7 @@ windows:rigutils:windows_tuning:configurefirewall.bat
 windows:rigutils:router
 windows:tuning:firewall_configure
 linux
-windows:software
+windows:tuning:run_cmd_exe
 windows:tuning:firewall_block_ports
+windows:tuning:firewall_allow_ports
+windows:software:openvpn

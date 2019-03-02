@@ -3,6 +3,17 @@ It's a matter of fact that modern computer systems are insecure - viruses, malic
 If you think that your rigs are protected by your NAT((https://en.wikipedia.org/wiki/Network_address_translation)) router then think twice (credits [[https://arstechnica.com/information-technology/2018/11/mass-router-hack-exposes-millions-of-devices-to-potent-nsa-exploit/|arstechnica.com]]): 
 <code>(11/29/2018) More than 45,000 Internet routers have been compromised by a newly discovered campaign that’s designed to open networks to attacks by EternalBlue, the potent exploit that was developed by, and then stolen from, the National Security Agency and leaked to the Internet at large, researchers said Wednesday... As a result, almost 2 million computers, phones, and other network devices connected to the routers are reachable to the Internet on those ports. 
 </code>
+Also consider reading the following articles on DNS-rebinding technique which among others may be used for stealing money from selected e-Wallets:
+
+1. https://blog.hacker.af/how-your-ethereum-can-be-stolen-using-dns-rebinding
+2. https://medium.com/@brannondorsey/attacking-private-networks-from-the-internet-with-dns-rebinding-ea7098a2d325
+3. https://github.com/filetofirewall/fof
+4. https://medium.com/coinmonks/the-call-is-coming-from-inside-the-house-dns-rebinding-in-eosio-keosd-wallet-e11deae05974
+5. https://github.com/transmission/transmission/pull/468
+6. https://labs.mwrinfosecurity.com/advisories/minikube-rce/
+7. http://benmmurphy.github.io/blog/2016/07/11/rails-webconsole-dns-rebinding/
+8. https://bugs.chromium.org/p/project-zero/issues/detail?id=1471&desc=3#maincol
+9. https://labs.mwrinfosecurity.com/blog/from-http-referer-to-aws-security-credentials/
 
 <WRAP center round info 80%>
 If you are interesting in security of computer systems then I would recommend you to learn how to use [[https://en.wikipedia.org/wiki/Nmap|Nmap]] network scanner or/and [[https://en.wikipedia.org/wiki/OpenVAS|OpenVAS]] tools. Who knows, may be you'll find a new bug in MS products and earn $100,000 by submitting the bug report to [[https://www.microsoft.com/en-us/msrc/bounty?SilentAuth=1&wa=wsignin1.0|MS bounty program]].
@@ -88,6 +99,8 @@ Outbound connections that do not match a rule are allowed.
 <wrap lo>{{material>attachment}}{{:windows:tuning:firewall_03.pdn|firewall_03.pdn}}</wrap>
 </WRAP>
 </WRAP>
+
+----
 <WRAP group>
 <WRAP half column>
 ~~#~~. Click each profile's tab and configure the ''State'' fields as follows:
@@ -121,6 +134,7 @@ I recommend to save your current firewall configuration into a file. You'll be a
 </WRAP>
 </WRAP>
 
+----
 <WRAP group>
 <WRAP half column>
 
@@ -138,6 +152,7 @@ I recommend to save your current firewall configuration into a file. You'll be a
 </WRAP>
 </WRAP>
 
+----
 <WRAP group>
 <WRAP half column>
 ~~#~~. Click the ''OK'' button.
@@ -167,6 +182,7 @@ Let's disable **all** existing firewall rules which allow some inbound connectio
 </WRAP>
 </WRAP>
 
+----
 <WRAP group>
 <WRAP half column>
 Selecting all rules
@@ -184,6 +200,7 @@ Selecting all rules
 </WRAP>
 </WRAP>
 
+----
 <WRAP group>
 <WRAP half column>
 
@@ -202,6 +219,7 @@ Selecting all rules
 </WRAP>
 </WRAP>
 
+----
 <WRAP group>
 <WRAP half column>
 Your final list may looks something like this.
@@ -217,3 +235,4 @@ Well done! Continue to the next section - [[:windows:tuning:firewall_block_ports
 <wrap lo>{{material>attachment}}{{:windows:tuning:firewall_11.pdn|firewall_11.pdn}}</wrap>
 </WRAP>
 </WRAP>
+----

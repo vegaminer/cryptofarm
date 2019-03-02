@@ -1,0 +1,382 @@
+<bootnote>This script is a part of [[windows:rigutils:install|Rigutils]] toolset. GitHub: [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/ConfigureFirewall.bat|ConfigureFirewall.bat]]</bootnote>
+
+=== Prerequisites ===
+
+1. Complete [[windows:tuning:disable_uac|Disable UAC]] step
+
+----
+
+=== General info ===
+
+Detailed information on firewall setup as well as GUI oriented tutorial could be found [[[[:windows:tuning:firewall_configure|here]]. 
+
+----
+
+=== Instruction ===
+
+**STEP 1.** Launch command prompt via [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
+<WRAP group>
+<WRAP half column>
+**STEP 2.** Run //ConfigureFirewall.bat//
+
+~~#~~. Type ''ConfigureFirewall.bat'' (case of letters doesn't matter)
+
+~~#~~. Press ''Enter''  
+
+<WRAP center round tip 90%>
+You may start typing ''Conf'' and then press the ''Tab'' key on your keyboard to speedup command entry. //cmd.exe// will search for commands in current directory starting with //Conf// and expand it to it's full name automatically.
+</WRAP>
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:rigutils:windows_tuning:config_firewall_bat_00.png?direct&400|ConfigureFirewall.bat}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:config_firewall_bat_00.pdn|config_firewall_bat_00.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+----
+~~#~~. You don't have to do anything until the script begins to ask you questions (see [[#step3|STEP 3]] below). Here is just a step-by-step walkthrough of actions this script performs:
+
+----
+~~#.~~. Saving current state of firewall into a backup file
+<code powershell>
+set "BackupDir=%~dp0firewall.bak"
+if not exist "%BackupDir%" (
+    echo == Creating backup directory ==
+    echo %BackupDir%
+    mkdir "%BackupDir%" || goto :exitWithError
+)
+
+if not exist "%BackupDir%\firewall.wfw" (
+    echo == Saving current firewall configuration ==
+    echo file: %BackupDir%\firewall.wfw
+    netsh advfirewall export "%BackupDir%\firewall.wfw" || goto :exitWithError    
+)
+</code>
+Output:
+<code powershell>== Creating backup directory ==
+C:\bin\rigutils\windows_tuning\firewall.bak
+
+== Saving current firewall configuration ==
+file: C:\bin\rigutils\windows_tuning\firewall.bak\firewall.wfw
+Ok.
+
+For restoring of your original firewall configuration use the command:
+  netsh advfirewall import C:\bin\rigutils\windows_tuning\firewall.bak\firewall.wfw
+or the following command if you want to restore default Windows settings:
+  netsh advfirewall reset
+</code>
+
+----
+~~#.~~. Disabling ALL non BLOCKING inbound rules
+
+This nice one-liner //powershell// script loops through all inbound rules which allow connections and disables them one by one
+
+<code powershell>
+powershell -Command "& { $fw=New-object -comObject HNetCfg.FwPolicy2 ; $fw.rules | where-object { $_.Direction -eq 1 -and $_.Enabled -eq $true -and $_.Action -ne 0 } | ForEach { echo $_.Name; $_.Enabled=0 }; $rc=@($rules).Count; echo ' ' \"$rc firewall rules were disabled\" }" || goto :exitWithError
+</code>
+
+Output:
+<code>
+== Disabling ALL PERMISSIVE inbound rules ==
+<A lengthy list of disabled rules goes here>
+
+201 firewall rules were disabled
+
+For restoring of your original firewall configuration use the command:
+  netsh advfirewall import C:\bin\rigutils\windows_tuning\firewall.bak\firewall.wfw
+or the following command if you want to restore default Windows settings:
+  netsh advfirewall reset
+</code>
+----
+~~#.~~. Disabling IPv6
+Detailed information on IPv6 enabling/disabling could be found here at [[https://support.microsoft.com/en-us/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users|support.microsoft.com]]
+
+<code powershell>
+set "RegPath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"
+set "RegValue=255"
+
+echo RegPath: %RegPath%
+echo RegValue: %RegValue%
+
+reg.exe ADD %RegPath% /v DisabledComponents /t REG_DWORD /d %RegValue% /f || goto :exitWithError
+</code>
+Output:
+<code>
+== Disabling IPv6 ==
+RegPath: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
+RegValue: 255
+The operation completed successfully.
+</code>
+
+----
+~~#.~~. Activating the restrictive firewall policy
+
+Read this nice [[https://soykablog.wordpress.com/2013/04/04/disable-firewall-from-the-command-line/|blog post]] on working with firewall from CLI.
+<code powershell>
+echo == Configuring firewall policy ==
+echo deny ALL INCOMING connections with NO MATCHING rules and allow ALL OUTGOING connections
+
+netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound || goto :exitWithError
+
+echo To re-enable ALL INCOMING connections by default run the following command: 
+echo   netsh advfirewall set allprofiles firewallpolicy allowinbound,allowoutbound
+</code>
+Output:
+<code>
+== Configuring firewall policy ==
+deny ALL INCOMING connections with NO MATCHING rules and allow ALL OUTGOING connections
+Ok.
+
+To re-enable ALL INCOMING connections by default run the following command:
+  netsh advfirewall set allprofiles firewallpolicy allowinbound,allowoutbound
+</code>
+
+----
+~~#.~~. Explicitly blocking well know ports and applications
+
+Quote from [[:windows:tuning:firewall_block_ports|block ports]] guide:
+<code>You may call me paranoid, but steps described in the configure firewall guide were just a passive defense. I would like to take a more proactive approach against possible network attacks.</code>
+
+During this step the following ports/applications will be blocked:
+
+~~#PORT~~. //Windows RPC//((Windows RPC general info [[https://serverfault.com/questions/859817/windows-firewall-rpc-135|Windows RPC]])) - TCP/UDP ports 135((Port [[https://www.speedguide.net/port.php?port=135|135]])), 593((Port [[https://www.speedguide.net/port.php?port=593|593]])), 49664-49675((Ports 49664-49675 [[https://answers.microsoft.com/es-es/windows/forum/windows_other-winapps/widnows-server-mitigar-vulnerabilidad-dcerpc-and/5ab3f7b2-eaf5-4168-a103-3442e323b7a2|finger printing]] and [[https://alamot.github.io/tally_writeup/|port scanning]]))
+
+~~#PORT~~. //Windows Deployment Services (WDS)//(([[https://en.wikipedia.org/wiki/Windows_Deployment_Services|WDS general info]])) - TCP/UDP port 5040((Port [[http://techgenix.com/windowsdeploymentservicesandfirewalls/|5040]]))
+
+Please note that by disabling NETBIOS ports you will be not able to share folders or disks from your computer any more. 
+
+~~#PORT~~. //NetBIOS(([[https://en.wikipedia.org/wiki/NetBIOS|NetBIOS]] general info)) Name Service// - TCP/UDP port 137 ((NetBIOS Name Service port [[https://wiki.wireshark.org/NetBIOS/NBNS|137]]))
+
+~~#PORT~~. //NetBIOS Datagram Service// - TCP/UDP port 138 ((NetBIOS Datagram Service port [[https://wiki.wireshark.org/NetBIOS/NBDS|138]]))
+
+~~#PORT~~. //NetBIOS Session Service// - TCP/UDP port 139((NetBIOS Session Service port [[https://wiki.wireshark.org/NetBIOS/NBSS|139]]))
+
+~~#PORT~~. //TCP NetBIOS helper// - TCP port 445((TCP NetBIOS helper port [[https://www.speedguide.net/port.php?port=445|445]]))
+
+~~#PORT~~. //UPnP Service// - TCP port 5000((UPnP Service port  [[https://www.speedguide.net/port.php?port=5000|5000]]))
+
+~~#PORT~~. //DNSCache Service// - TCP/UDP port 5353((DNSCache Service port [[https://www.speedguide.net/port.php?port=5353|5353]]))
+
+~~#PORT~~. //Windows Update Delivery Optimization// - TCP/UDP port 7680((DNSCache Service port [[https://www.speedguide.net/port.php?port=7680|7680]]))
+
+~~#PORT~~. //Windows Remote Desktop Protocol RDP// - TCP port 3389((Remote Desktop Protocol port [[https://www.speedguide.net/port.php?port=3389|3389]]))
+
+This is a function for managing rules creation. First it checks the existence of a rule with a given name and create the rule if necessary after that.
+<code powershell>
+:inboundRule 
+    set "action=%~1"
+    set "proto=%~2"
+    set "port=%~3"
+    set "serviceName=%~4"
+    set "ruleName=[%action%] %serviceName% %proto%-%port%"
+    
+    rem Select enabled inbound rule with the given name
+    powershell -Command "& { try { $fw=New-object -comObject HNetCfg.FwPolicy2; $fw.rules | where-object { $_.Direction -eq 1 -and $_.Name -eq '%ruleName%' } | ForEach { exit 1 }; exit 0 } catch { write-host "\"Exception Message: $($_.Exception.Message)\"" -ForegroundColor Red; exit 2 } }"
+    
+    if ERRORLEVEL 2 exit /b 1 rem ERROR
+    if ERRORLEVEL 1 exit /b 0 rem echo Already exists
+
+    rem echo NOT FOUND
+    echo %proto%: %port%, rule: %ruleName%
+    netsh advfirewall add rule dir=in action=%action% protocol=%proto% localport=%port% name="%ruleName%" >nul || exit /b 1
+    echo OK
+    
+exit /b 0
+</code>
+Here is code for disabling it all:
+<code>
+echo == Creating explicit BLOCK rules for known Windows services ==
+
+call :inboundRule block TCP 135 "Windows RPC" || goto :exitWithError
+call :inboundRule block UDP 135 "Windows RPC" || goto :exitWithError
+call :inboundRule block TCP 593 "Windows RPC" || goto :exitWithError
+call :inboundRule block UDP 593 "Windows RPC" || goto :exitWithError
+call :inboundRule block TCP 5040 "Windows RPC" || goto :exitWithError
+call :inboundRule block TCP 49664-49675 "Windows RPC" || goto :exitWithError
+call :inboundRule block UDP 49664-49675 "Windows RPC" || goto :exitWithError
+call :inboundRule block TCP 137 "NetBIOS Name Service" || goto :exitWithError
+call :inboundRule block UDP 137 "NetBIOS Name Service" || goto :exitWithError
+call :inboundRule block TCP 138 "NetBIOS Datagram Service" || goto :exitWithError
+call :inboundRule block UDP 138 "NetBIOS Datagram Service" || goto :exitWithError
+call :inboundRule block TCP 139 "NetBIOS Session Service" || goto :exitWithError
+call :inboundRule block UDP 139 "NetBIOS Session Service" || goto :exitWithError
+call :inboundRule block TCP 445 "TCP NetBIOS helper" || goto :exitWithError
+call :inboundRule block TCP 5000 "UPnP Service" || goto :exitWithError
+call :inboundRule block UDP 5353 "DNSCache Service" || goto :exitWithError
+call :inboundRule block UDP 5355 "DNSCache Service" || goto :exitWithError
+call :inboundRule block TCP 7680 "Windows Update Delivery Optimization" || goto :exitWithError
+call :inboundRule block UDP 7680 "Windows Update Delivery Optimization" || goto :exitWithError
+
+echo.
+echo Use the command to delete a created rule if you want to unblock a port:
+echo   netsh advfirewall firewall delete rule protocol=^<tcp^|udp^> localport=^<port^> name="<rule>"
+</code>
+
+Output:
+<code>
+== Creating explicit BLOCK rules for known Windows services ==
+TCP: 135, rule: [block] Windows RPC TCP-135...OK
+UDP: 135, rule: [block] Windows RPC UDP-135...OK
+TCP: 593, rule: [block] Windows RPC TCP-593...OK
+UDP: 593, rule: [block] Windows RPC UDP-593...OK
+TCP: 5040, rule: [block] Windows RPC TCP-5040...OK
+TCP: 49664-49675, rule: [block] Windows RPC TCP-49664-49675...OK
+UDP: 49664-49675, rule: [block] Windows RPC UDP-49664-49675...OK
+TCP: 137, rule: [block] NetBIOS Name Service TCP-137...OK
+UDP: 137, rule: [block] NetBIOS Name Service UDP-137...OK
+TCP: 138, rule: [block] NetBIOS Datagram Service TCP-138...OK
+UDP: 138, rule: [block] NetBIOS Datagram Service UDP-138...OK
+TCP: 139, rule: [block] NetBIOS Session Service TCP-139...OK
+UDP: 139, rule: [block] NetBIOS Session Service UDP-139...OK
+TCP: 445, rule: [block] TCP NetBIOS helper TCP-445...OK
+TCP: 5000, rule: [block] UPnP Service TCP-5000...OK
+UDP: 5353, rule: [block] DNSCache Service UDP-5353...OK
+UDP: 5355, rule: [block] DNSCache Service UDP-5355...OK
+TCP: 7680, rule: [block] Windows Update Delivery Optimization TCP-7680...OK
+UDP: 7680, rule: [block] Windows Update Delivery Optimization UDP-7680...OK
+
+Use the command to delete a created rule if you want to unblock a port:
+  netsh advfirewall firewall delete rule protocol=<tcp|udp> localport=<port> name="<rule>"
+</code>
+
+----
+**{{anchor:step3:STEP 3. Allow selected inbound connections}}**
+
+Some of programs running at your rig may publish useful information via its web interface accessible through a browser, if you followed all the above steps to harden your firewall setup, then you have to take care of opening selected ports for allowing inbound connections.
+
+----
+~~#ALLOW3.~~.
+Almost each miner software has its own web interface. Although I'm not recommending to use it due to security concerns, here is the code which may help you to configure your firewall for allowing such a traffic. You have to know which port is used by your miner, in most cases you may specify just any port number above 1024 here and put it in miner's configuration file. The following fragment of the script will ask you couple of questions - Would you like to use web GUI at all and its port number:
+
+<code powershell>
+set /p allowWebGUI="Would you like to use your miner's Web GUI^? If 'yes' press 1:" || set "allowWebGUI=0"
+
+if /i "y" == "%allowWebGUI%" set "allowWebGUI=1"
+if "1" == "%allowWebGUI%" (
+    set /p webGUIPort="Enter a Web GUI port number or 0 to cancel:" || set "webGUIPort=0"
+    
+    rem Validating input
+    set /a "portNumber=!webGUIPort!"
+    if "!portNumber!" neq "!webGUIPort!" set /a portNumber=0
+    
+    if "0" == "!portNumber!" (
+        echo operation canceled
+    ) else (
+        call :inboundRule allow TCP !webGUIPort! "Miner Web GUI" || goto :exitWithError
+    )
+)
+</code>
+Output:
+<code>
+== Allow individual services ==
+Would you like to use your miner's Web GUI? If 'yes' press 1: 1
+Enter a Web GUI port number or 0 to cancel: 9087
+TCP: 9087, rule: [allow] Miner Web GUI TCP-9087...OK
+</code>
+
+----
+<WRAP group>
+<WRAP half column>
+~~#ALLOW.~~. [[https://openhardwaremonitor.org|Open Hardware Monitor]] is a nice freeware program for monitoring various parameters of your rig. Not all mining programs report GPU/CPU temperature. OHM may become very useful in such cases. It runs as well as a normal windows program and also as a web server on port 8085 for remote monitoring.
+</WRAP>
+
+<WRAP half column>
+{{:windows:rigutils:windows_tuning:openhardwaremonitor_00.png?direct&400|OpenHardwareMonitor}}
+
+<wrap lo>{{material>attachment}}{{:windows:rigutils:windows_tuning:openhardwaremonitor_00.pdn|openhardwaremonitor_00.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
+<code powershell>
+set /p allowOHMWebGUI=Would you like to use "Open Hardware Monitor" Web GUI? If 'yes' press 1: || set "allowOHMWebGUI=0"
+
+if /i "y" == "%allowOHMWebGUI%" set "allowOHMWebGUI=1"
+if "1" == "%allowOHMWebGUI%" (
+    call :inboundRule allow TCP 8085 "Open Hardware Monitor Web GUI" || goto :exitWithError
+)
+</code>
+Output:
+<code>
+Would you like to use "Open Hardware Monitor" Web GUI? If 'yes' press 1: y
+TCP: 8085, rule: [allow] Open Hardware Monitor Web GUI TCP-8085...OK
+</code>
+
+----
+~~#ALLOW.~~. Configuring RDP server.
+
+RDP states for //Remote Desktop Protocol// It's an MS invention for working with your desktop over network connection. Watch this [[https://www.youtube.com/watch?v=gsP46ltENRY|tutorial]] at YouTube. By default RDP server works on TCP,UPD port 3389. Unfortunately, it's became a quite popular [[https://www.speedguide.net/port.php?port=3389|target]] for hackers. Strong password for your remote user is a must and I also recommend to change((Changing RDP port [[https://danielzstinson.wordpress.com/change-the-default-listening-port-for-rdp/|blog post]])) the default port number to some random one. Most of automatic scanning bots will test just 3389 and will not try to scan the whole range of ports (1-65535) to find your RDP server. It'll not protect your from a determined hacker, but may reduce number of brute-force attacks. Using of [[:windows:software:openvpn|OpenVPN]] or a similar VPN solution is highly recommended if you plan to access your rig from Internet.
+
+Well, too much words, code is much shorter:
+<code powershell>
+set /p allowRDP=Would you like to use Remote Desktop on your PC? If 'yes' press 1: || set "allowRDP=0"
+
+if /i "y" == "%allowRDP%" set "allowRDP=1"
+if "1" == "%allowRDP%" (
+    call :allowRDP
+) else (
+    call :inboundRule block TCP 3389 "Windows Remote Desktop - RDP" || goto :exitWithError
+)
+
+:allowRDP
+    set "rdpPort=3389"
+    
+    set /p changeRDPort=Would you like to change default RDP port-%rdpPort% ^(recomended^)? If 'yes' press 1: || exit /b 0
+    
+    if /i "y" == "%changeRDPort%" set "changeRDPort=1"
+    if "1" == "%changeRDPort%" (
+        set /p rdpPort=Enter RDP port number or 0 to cancel: || exit /b 0
+    
+        rem Validating input
+        set /a "portNumber=!rdpPort!"
+        if "!portNumber!" neq "!rdpPort!" set /a rdpPort=0
+    ) 
+
+    if "0" == "!rdpPort!" (
+        echo action canceled
+        exit /b 0
+    )    
+    
+    call :inboundRule allow TCP !rdpPort! "Windows RDP" || goto :exitWithError
+    call :inboundRule allow UDP !rdpPort! "Windows RDP" || goto :exitWithError
+            
+    echo updating RDP port number in registry
+    reg.exe ADD "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /t REG_DWORD /d !rdpPort! /f || goto :exitWithError       
+    
+    echo restarting RDP service to changes take effect
+    powershell -Command "Restart-Service -Force -Verbose TermService"
+
+exit /b 0
+</code>
+Output
+<code>
+Would you like to use Remote Desktop on your PC? If 'yes' press 1: y
+Would you like to change default RDP port-3389 (recomended)? If 'yes' press 1: y
+Enter RDP port number or 0 to cancel: 43801
+TCP: 43801, rule: [allow] Windows RDP TCP-43801...OK
+UDP: 43801, rule: [allow] Windows RDP UDP-43801...OK
+updating RDP port number in registry
+The operation completed successfully.
+restarting RDP service to changes take effect
+VERBOSE: Performing the operation "Restart-Service" on target "Remote Desktop Services (TermService)".
+</code>
+
+----
+~~#ALLOW.~~. Restoring firewall configuration in case of troubles.
+
+Just a reminder:
+<code>
+For restoring of your original firewall configuration use the command:
+  netsh advfirewall import \firewall.wfw
+or the following command if you want to restore default Windows settings:
+  netsh advfirewall reset
+</code>  
+
+----
+Con
+----
+GitHub [[https://github.com/vegaminer/rigutils/blob/master/windows_tuning/ConfigureFirewall.bat|ConfigureFirewall.bat]]
+
+----

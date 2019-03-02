@@ -21,8 +21,9 @@ It'll block sending of Windows Telemetry data by adding known host names to the 
 
 <WRAP group>
 <WRAP half column>
-  1. Type ''ShutupTelemetry.bat'' (case of letters doesn't matter)
-  2. Press ''Enter''  
+~~#~~. Type ''ShutupTelemetry.bat'' (case of letters doesn't matter)
+
+~~#~~. Press ''Enter''  
   
 <WRAP center round tip 80%>
 Type //Shutup// and press the ''Tab'' key to speedup command entry.
@@ -41,7 +42,7 @@ Type //Shutup// and press the ''Tab'' key to speedup command entry.
 ----
 <WRAP group>
 <WRAP half column>
-3<color #0>.</color> You don't have to do anything. Be sure that the script finished with the ''Success!'' message.
+~~#~~. You don't have to do anything. Be sure that the script finished with the ''Success!'' message.
 
 </WRAP>
 

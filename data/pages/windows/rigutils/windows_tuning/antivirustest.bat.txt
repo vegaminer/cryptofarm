@@ -46,25 +46,23 @@ Seriously speaking, this trick may stop working in future. But luckily, Windows 
 
 === Instruction ===
 
-**STEP 1.** Launch command prompt. 
-See [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
+**STEP 1.** Launch command prompt via [[windows:rigutils:windows_tuning:cmd_rigutils.bat|cmd_rigutils.bat]]
 
 **STEP 2.** Run //AntiVirusTest.bat//
 <WRAP group>
 <WRAP half column>
 
-~~#SA~~ Type ''AntiVirusTest.bat'' (case of letters doesn't matter)
+~~#SA~~. Type ''AntiVirusTest.bat'' (case of letters doesn't matter)
 
-~~#SA~~ Press ''Enter''  
+~~#SA~~. Press ''Enter''  
 
- <color #ffffff>.</color>
- <WRAP center round tip 90%>
+<WRAP center round tip 90%>
 You may start typing ''Anti'' and then press the ''Tab'' key on your keyboard. //cmd.exe// will search for commands in current directory starting with //Anti// and expand it to it's full name automatically.
 </WRAP>
  
-~~#SA~~ Confirm your action in this User Account Control dialog by clicking the ''Yes'' button. We will [[windows:tuning:disable_uac|disable]] this annoying ''User Account Control'' messages later.
+~~#SA~~. Confirm your action in this User Account Control dialog by clicking the ''Yes'' button. We will [[windows:tuning:disable_uac|disable]] this annoying ''User Account Control'' messages later.
 
-~~#SA~~ If you see a popup windows with the message ''Hello, this is admin speaking!'' then it means that //AntiVirusTest// passed successfully and you don't have to do anything special about Windows Defender at the moment. Just click ''OK'' and that's it. 
+~~#SA~~. If you see a popup windows with the message ''Hello, this is admin speaking!'' then it means that //AntiVirusTest// passed successfully and you don't have to do anything special about Windows Defender at the moment. Just click ''OK'' and that's it. 
 
 If you see something different please continue to the next [[#step3|Step 3 "Troubleshooting"]]
 

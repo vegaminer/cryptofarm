@@ -8,7 +8,7 @@ You may call me paranoid, but steps described in the [[windows:tuning:firewall_c
 
 So, first of all I'm going to create a //block// rules for all listening services on my rig. For doing this we need a list of active listening ports on our computer.
 
-To get list of all //LISTENING//((http://ssfnet.org/Exchange/tcp/tcpTutorialNotes.html)) ports on your PC run((See [[:windows:software|cmd.exe]])) the command:
+To get list of all //LISTENING//((http://ssfnet.org/Exchange/tcp/tcpTutorialNotes.html)) ports on your PC run((See [[windows:tuning:run_cmd_exe|cmd.exe]])) the command:
 <code batch>netstat -an | findstr LISTEN</code>
 
 or run this small one-liner to get the same list extended by process info (preferred way):
@@ -25,25 +25,28 @@ Consult this table of known [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_
 
 Here is the a list of well known ports which should be explicitly blocked:
 
-~~#PORT~~. **Windows RPC**((Windows RPC general info [[https://serverfault.com/questions/859817/windows-firewall-rpc-135|Windows RPC]])) - TCP/UDP ports 135((Port [[https://www.speedguide.net/port.php?port=135|135]])), 593((Port [[https://www.speedguide.net/port.php?port=593|593]])), 49664-49675((Ports 49664-49675 [[https://answers.microsoft.com/es-es/windows/forum/windows_other-winapps/widnows-server-mitigar-vulnerabilidad-dcerpc-and/5ab3f7b2-eaf5-4168-a103-3442e323b7a2|finger printing]] and [[https://alamot.github.io/tally_writeup/|port scanning]]))
+~~#PORT~~. //Windows RPC//((Windows RPC general info [[https://serverfault.com/questions/859817/windows-firewall-rpc-135|Windows RPC]])) - TCP/UDP ports 135((Port [[https://www.speedguide.net/port.php?port=135|135]])), 593((Port [[https://www.speedguide.net/port.php?port=593|593]])), 49664-49675((Ports 49664-49675 [[https://answers.microsoft.com/es-es/windows/forum/windows_other-winapps/widnows-server-mitigar-vulnerabilidad-dcerpc-and/5ab3f7b2-eaf5-4168-a103-3442e323b7a2|finger printing]] and [[https://alamot.github.io/tally_writeup/|port scanning]]))
 
-~~#PORT~~. **Windows Deployment Services (WDS)**(([[https://en.wikipedia.org/wiki/Windows_Deployment_Services|WDS general info]])) - TCP/UDP port 5040((Port [[http://techgenix.com/windowsdeploymentservicesandfirewalls/|5040]]))
+~~#PORT~~. //Windows Deployment Services (WDS)//(([[https://en.wikipedia.org/wiki/Windows_Deployment_Services|WDS general info]])) - TCP/UDP port 5040((Port [[http://techgenix.com/windowsdeploymentservicesandfirewalls/|5040]]))
 
-~~#PORT~~. **NetBIOS(([[https://en.wikipedia.org/wiki/NetBIOS|NetBIOS]] general info)) Name Service** - TCP/UDP port 137 ((NetBIOS Name Service port [[https://wiki.wireshark.org/NetBIOS/NBNS|137]]))
+Please note that by disabling NETBIOS ports you will be not able to share folders or disks from your computer any more. 
 
-~~#PORT~~. **NetBIOS Datagram Service** - TCP/UDP port 138 ((NetBIOS Datagram Service port [[https://wiki.wireshark.org/NetBIOS/NBDS|138]]))
+~~#PORT~~. //NetBIOS(([[https://en.wikipedia.org/wiki/NetBIOS|NetBIOS]] general info)) Name Service// - TCP/UDP port 137 ((NetBIOS Name Service port [[https://wiki.wireshark.org/NetBIOS/NBNS|137]]))
 
-~~#PORT~~. **NetBIOS Session Service** - TCP/UDP port 139((NetBIOS Session Service port [[https://wiki.wireshark.org/NetBIOS/NBSS|139]]))
+~~#PORT~~. //NetBIOS Datagram Service// - TCP/UDP port 138 ((NetBIOS Datagram Service port [[https://wiki.wireshark.org/NetBIOS/NBDS|138]]))
 
-~~#PORT~~. **TCP NetBIOS helper** - TCP port 445((TCP NetBIOS helper port [[https://www.speedguide.net/port.php?port=445|445]]))
+~~#PORT~~. //NetBIOS Session Service// - TCP/UDP port 139((NetBIOS Session Service port [[https://wiki.wireshark.org/NetBIOS/NBSS|139]]))
 
-~~#PORT~~. **UPnP Service** - TCP port 5000((UPnP Service port  [[https://www.speedguide.net/port.php?port=5000|5000]]))
+~~#PORT~~. //TCP NetBIOS helper// - TCP port 445((TCP NetBIOS helper port [[https://www.speedguide.net/port.php?port=445|445]]))
 
-~~#PORT~~. **DNSCache Service** - TCP/UDP port 5353((DNSCache Service port [[https://www.speedguide.net/port.php?port=5353|5353]]))
+~~#PORT~~. //UPnP Service// - TCP port 5000((UPnP Service port  [[https://www.speedguide.net/port.php?port=5000|5000]]))
 
-~~#PORT~~. **Windows Update Delivery Optimization** - TCP/UDP port 7680((DNSCache Service port [[https://www.speedguide.net/port.php?port=7680|7680]]))
+~~#PORT~~. //DNSCache Service// - TCP/UDP port 5353((DNSCache Service port [[https://www.speedguide.net/port.php?port=5353|5353]]))
 
-~~#PORT~~. **Windows Remote Desktop Protocol RDP** - TCP port 3389((Remote Desktop Protocol port [[https://www.speedguide.net/port.php?port=3389|3389]]))
+~~#PORT~~. //Windows Update Delivery Optimization// - TCP/UDP port 7680((DNSCache Service port [[https://www.speedguide.net/port.php?port=7680|7680]]))
+
+~~#PORT~~. //Windows Remote Desktop Protocol RDP// - TCP port 3389((Remote Desktop Protocol port [[https://www.speedguide.net/port.php?port=3389|3389]]))
+
 
 <WRAP center round important 80%>
 Don't block port 3389 if you are planning to access your rig over **RDP**. But if you plan it, I would highly recommend to change its port number and create //Allow// rule for it (see below).
@@ -143,3 +146,4 @@ Please note that you should repeat this steps for **UDP** ports as well - start 
 </WRAP>
 
 ----
+Continue to the next [[:windows:tuning:firewall_allow_ports|how-to allow]] selected inbound connection.

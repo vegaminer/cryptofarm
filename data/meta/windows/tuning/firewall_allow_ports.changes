@@ -1,0 +1,5 @@
+1549956118	90.154.71.27	C	windows:tuning:firewall_allow_ports	wikiadmin	created		464
+1549962567	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			788
+1549963505	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			39
+1550048780	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			3061
+1550474996	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			11

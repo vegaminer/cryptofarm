@@ -1,31 +1,22 @@
-1548758617	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			871
-1548758722	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
-1548795244	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			513
-1548797371	90.154.70.56	C	windows:software	wikiadmin	created		530
-1548799900	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			111
-1548835925	90.154.70.56	E	windows:tuning:shutup_telemetry	wikiadmin			0
-1548836404	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			11
-1548836702	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			-8
-1548837103	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			857
-1548838807	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			468
-1548882403	90.154.70.56	E	windows:tuning:antivirus_exclusions	wikiadmin			20
-1548882478	90.154.70.56	E	windows:tuning:block_windows_update	wikiadmin			-2
-1548883538	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			2132
-1548883558	90.154.70.56	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			18
-1548883632	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			1
-1548883690	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			0
-1548884936	90.154.70.56	E	windows:tuning:configure_firewall	wikiadmin			419
-1549270291	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			288
-1549359503	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			1995
-1549491933	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			3101
-1549870789	90.154.71.27	E	windows:tuning:configure_firewall	wikiadmin			-3909
-1549871034	90.154.71.27	C	windows:tuning:firewall_block_ports	wikiadmin	created		4048
-1549871100	90.154.71.27	C	windows:tuning:firewall_configure	wikiadmin	↷ Page name changed from windows:tuning:configure_firewall to windows:tuning:firewall_configure		9122
-1549871100	90.154.71.27	D	windows:tuning:configure_firewall	wikiadmin	↷ Page name changed from windows:tuning:configure_firewall to windows:tuning:firewall_configure		-9122
-1549871100	90.154.71.27	e	windows:tuning:firewall_block_ports	wikiadmin	↷ Links adapted because of a move operation		-1
-1549871122	162.158.68.165	E	windows:tuning		↷ Links adapted because of a move operation		0
-1549871241	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			37
-1549872058	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			14
-1549874596	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			3005
-1549874619	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			6
-1549874651	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1
+1550048780	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			3061
+1550136729	90.154.71.27	E	windows:rigutils:windows_tuning:shutuptelemetry.bat	wikiadmin			-9
+1550137245	90.154.71.27	C	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin	created		2047
+1550139112	90.154.71.27	E	windows:rigutils:windows_tuning	wikiadmin			0
+1550139196	90.154.71.27	E	windows:tuning	wikiadmin			28
+1550147312	195.128.86.202	E	windows:tuning:firewall_configure	wikiadmin			904
+1550474996	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			11
+1550475070	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			0
+1550475504	90.154.71.27	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			-2
+1550475715	90.154.71.27	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			-23
+1550480902	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			1050
+1550480951	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			7
+1550482293	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			504
+1551251197	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			1108
+1551252376	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			931
+1551335826	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1
+1551336338	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			122
+1551336746	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			5576
+1551487500	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			3003
+1551506677	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			303
+1551510915	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			370
+1551515374	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			3063

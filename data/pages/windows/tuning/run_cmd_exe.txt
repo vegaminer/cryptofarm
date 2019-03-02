@@ -1,4 +1,6 @@
-~~#~~. Select a command text with your mouse.
+<WRAP group>
+<WRAP half column>
+~~#~~. Select the text of a command with your mouse.
 
 ~~#~~. Press the ''Ctrl-C'' key combination to copy selected text into Windows clipboard.
 
@@ -11,3 +13,12 @@
 ~~#~~. Press the ''Ctrl-V''key combination to paste the text of previously selected command.
 
 ~~#~~. Press the ''Enter'' key to execute the command.
+</WRAP>
+
+<WRAP half column>
+{{:windows:tuning:run_cmd_exe.png?direct&400|Run cmd.exe}}
+
+<wrap lo>{{material>attachment}}{{:windows:tuning:run_cmd_exe.pdn|run_cmd_exe.pdn}}</wrap>
+</WRAP>
+</WRAP>
+
