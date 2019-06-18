@@ -1,11 +1,11 @@
  
 **STEP ~~#TUNE~~.** Install FireFox
 
-Most of downloading-related screenshots in this tutorial were made in assumption that you are using Firefox web browser. You may skip this step if you know what are you are doing, but I highly recommend to avoid using MS Internet Explorer or Edge and Google Chrome for browsing Internet on your rig station. So, please, install Firefox first, just follow this short [[windows:software:firefox|how-to]].
+Most of downloading-related screenshots in this tutorial were made in assumption that you are using Firefox web browser. You may skip this step if you know what you are doing, but I highly recommend to avoid using MS Internet Explorer or Edge and Google Chrome for browsing Internet on your rig computers. So, please, install Firefox first, just follow this short [[windows:software:firefox|how-to]].
 
 **STEP ~~#TUNE~~.** Get Rigutils scripts
 
-Many tuning steps presented in this tutorial could be carried out either manually using GUI or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning steps by [[windows:rigutils:install|installing]] Rigutils first.
+Many tuning steps presented in this tutorial could be carried out either manually, using GUI, or by executing corresponding //bat scripts//. I prefer the second way, so I would recommend to start your Windows tuning steps by [[windows:rigutils:install|installing]] Rigutils first.
 
 **STEP ~~#TUNE~~.** Disable User Access Control
 
@@ -26,6 +26,10 @@ Just plug Ethernet cable back to your PC.
 **STEP ~~#TUNE~~.** Disable Microsoft Compatibility Telemetry service
 
 Do you want to report every action you take to Miscrosoft data center? I suppose that you may happily live without this feature. Follow steps described in this [[windows:tuning:shutup_telemetry|how-to]] to shut up Windows Telemetry service.
+
+**STEP ~~#TUNE~~.** Tweak UI settings
+
+I prefer minimalist style for my desktop. Small Quicklaunch buttons, no stupid icons and grouping windows. It's a mining rig not an entertaining center finally. See what you can do in this [[windows:tuning:tweak_ui|Tweking UI tutorial]]
 
 ----
 **~~STEP.#~~.** Disable Cortana search service

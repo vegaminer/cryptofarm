@@ -27,7 +27,7 @@ Instruction
 
 Launching command prompt
 Prerequisites
-
+Installing via full (off-line) installer
 DokuWiki
 Description
 
@@ -40,3 +40,5 @@ Configuring Windows Defender Firewall
 Explicitly block unwanted/illegal traffic
 Allow inbound connections
 Prerequisites
+
+

@@ -1,22 +1,28 @@
-1550048780	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			3061
-1550136729	90.154.71.27	E	windows:rigutils:windows_tuning:shutuptelemetry.bat	wikiadmin			-9
-1550137245	90.154.71.27	C	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin	created		2047
-1550139112	90.154.71.27	E	windows:rigutils:windows_tuning	wikiadmin			0
-1550139196	90.154.71.27	E	windows:tuning	wikiadmin			28
-1550147312	195.128.86.202	E	windows:tuning:firewall_configure	wikiadmin			904
-1550474996	90.154.71.27	E	windows:tuning:firewall_allow_ports	wikiadmin			11
-1550475070	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			0
-1550475504	90.154.71.27	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			-2
-1550475715	90.154.71.27	E	windows:rigutils:windows_tuning:antivirustest.bat	wikiadmin			-23
-1550480902	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			1050
-1550480951	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			7
-1550482293	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			504
-1551251197	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			1108
-1551252376	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			931
-1551335826	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			1
 1551336338	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			122
 1551336746	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			5576
 1551487500	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			3003
 1551506677	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			303
 1551510915	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			370
 1551515374	90.154.71.27	E	windows:rigutils:windows_tuning:configurefirewall.bat	wikiadmin			3063
+1553501088	90.154.71.27	E	windows:software:firefox	wikiadmin			1405
+1553501395	90.154.71.27	E	windows:tuning	wikiadmin			0
+1553501609	90.154.71.27	E	windows:rigutils:install	wikiadmin			403
+1553501643	90.154.71.27	E	windows:software:firefox	wikiadmin			-1
+1553502110	90.154.71.27	E	windows:installation	wikiadmin			368
+1553586627	90.154.71.27	E	windows:rigutils:install	wikiadmin			4
+1553586686	90.154.71.27	E	windows:rigutils:install	wikiadmin			3
+1553586721	90.154.71.27	E	windows:bootable_usb	wikiadmin			437
+1553587547	90.154.71.27	E	windows:bootable_usb	wikiadmin			13
+1553587922	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			5
+1553587981	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			-1
+1553588049	90.154.71.27	E	windows:tuning:firewall_block_ports	wikiadmin			5
+1553588081	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin	[Configuring Windows Defender Firewall] 		-6
+1553755620	90.154.71.27	E	windows:tuning	wikiadmin			277
+1560823033	90.154.71.188	E	start	wikiadmin			15
+1560823376	90.154.71.188	E	sidebar	wikiadmin			20
+1560823454	90.154.71.188	C	miners	wikiadmin	created		35
+1560823834	90.154.71.188	C	phoenixminer	wikiadmin	created		196
+1560823855	90.154.71.188	C	miners:phoenixminer	wikiadmin	↷ Page moved from phoenixminer to miners:phoenixminer		196
+1560823855	90.154.71.188	D	phoenixminer	wikiadmin	↷ Page moved from phoenixminer to miners:phoenixminer		-196
+1560823867	90.154.71.188	e	miners	wikiadmin	↷ Links adapted because of a move operation		6
+1560826593	90.154.71.188	E	miners:phoenixminer	wikiadmin			1780

@@ -3,3 +3,5 @@
 [[windows:rigutils:install|Rigutils]]
 
 [[:linux|Linux]]
+
+[[:miners|Miners]]

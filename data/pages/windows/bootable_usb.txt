@@ -54,6 +54,12 @@ Insert USB stick into your PC and start rufus tool
 <wrap lo>{{material>attachment}}{{:windows:rufus_02.pdn|rufus_02.pdn}}</wrap>
 </WRAP>
 </WRAP>
+
 ----
-Continue to the next step "Windows [[installation]]"
+**STEP 3.** Download FireFox and rigutils.zip
+
+I recommend to disconnect your PC during Windows installation procedure. Having full version of FireFox setup executable and rigutils.zip on the same USB drive may help you in reducing the time you spend on your rig configuration. Download FireFox by following this [[:windows:software:firefox#full|instruction]] and rigutils.zip by following [[:windows:rigutils:install|this one]].
+
+----
+Continue to the next step "[[installation|Windows installation]]"
 

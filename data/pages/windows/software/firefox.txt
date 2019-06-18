@@ -3,6 +3,38 @@ Why FireFox - you may ask? Well, there are a lot of reasons for that, but most i
 Once again, it's up to you, I can't insist. But my choice is FireFox.
 
 ----
+{{anchor:full:}}
+=== Installing via full (off-line) installer ===
+
+This is a recommended way of installing FireFox on freshly installed Windows computer. Download Firefox before [[:windows:installation|installing]] Windows and put it onto the same [[:windows:bootable_usb|bootable USB]] media. If you are installing Windows don't enable internet connection until you've completed [[:windows:tuning:block_windows_update|Block Windows Update]] step. So, I'll repeat it once again - please, download FireFox **before** installing Windows.
+
+----
+
+Credits [[https://www.ghacks.net/2018/05/11/how-to-download-firefox-offline-installers/|ghacks.net]].
+Open the download page https://www.mozilla.org/en-US/firefox/all/ in your browser. 
+
+<WRAP group>
+<WRAP half column>
+
+1. Search for the language of your choice or just scroll down the page to locate it.
+2. Click a download link in the //Windows 64-bit// column.
+3. Wait for download to complete and copy the downloaded file to your USB drive.
+4. You'll be able to run the installer later for your freshly installed Windows machine even without a network connection.
+
+</WRAP>
+
+<WRAP half column>
+
+{{:windows:software:firefox_full_version.png?direct&400|FireFox full version}}
+
+<wrap lo>{{material>attachment}}{{:windows:software:firefox_full_version.pdn|firefox_full_version.pdn}}</wrap>
+
+</WRAP>
+</WRAP>
+
+----
+
+=== Installing via stub (on-line) installer ===
 
 <WRAP group>
 <WRAP half column>

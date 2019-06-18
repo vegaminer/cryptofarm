@@ -4,6 +4,8 @@
 
 There is no special install program for Rigutils. It's just a[[https://en.wikipedia.org/wiki/Zip_(file_format)|zip]] archive. You have to download it from GitHub [[https://github.com/vegaminer/rigutils|repository]] and unpack to your local hard drive. My favorite location for scripts and programs under Windows is ''c:\bin'', so Rigutils will reside in ''c:\bin\rigutils'' accordingly. See the [[windows:rigutils|description]] page for short info on each file from the tool set.
 
+As with [[:windows:software:firefox|FireFox]] itself I recommend to download //rigutils.zip// file **before** installing Windows and put in onto the same USB drive. First step before installing Windows you should do is disconnecting of your PC from Internet by unplugging an Ethernet cable from it. You'll reconnect it back later, but having rigutils and FireFox already on your USB drive may be very handy. 
+
 ----
 === Instruction ===
 

@@ -1,11 +1,3 @@
-1550044508	90.154.71.27	C	windows:tuning:rdp_port_change_00.pdn	wikiadmin	created		38168
-1550044508	90.154.71.27	C	windows:tuning:rdp_port_change_00.png	wikiadmin	created		15702
-1550044508	90.154.71.27	C	windows:tuning:rdp_port_change_01.pdn	wikiadmin	created		80094
-1550044508	90.154.71.27	C	windows:tuning:rdp_port_change_02.pdn	wikiadmin	created		31695
-1550044508	90.154.71.27	C	windows:tuning:rdp_port_change_01.png	wikiadmin	created		45131
-1550044509	90.154.71.27	C	windows:tuning:rdp_port_change_02.png	wikiadmin	created		10227
-1550045568	90.154.71.27	C	windows:tuning:rdp_port_change_03.png	wikiadmin	created		8899
-1550045568	90.154.71.27	C	windows:tuning:rdp_port_change_03.pdn	wikiadmin	created		28270
 1550046044	90.154.71.27	C	windows:tuning:run_cmd_exe.pdn	wikiadmin	created		36221
 1550046044	90.154.71.27	C	windows:tuning:run_cmd_exe.png	wikiadmin	created		15083
 1550046908	90.154.71.27	C	windows:tuning:restart_termservice.png	wikiadmin	created		13330
@@ -20,3 +12,13 @@
 1550477401	90.154.71.27	C	windows:rigutils:windows_tuning:config_firewall_bat_00.png	wikiadmin	created		9284
 1551489026	90.154.71.27	C	windows:rigutils:windows_tuning:openhardwaremonitor_00.pdn	wikiadmin	created		118598
 1551489026	90.154.71.27	C	windows:rigutils:windows_tuning:openhardwaremonitor_00.png	wikiadmin	created		92548
+1553499569	90.154.71.27	C	windows:software:firefox_full_version.pdn	wikiadmin	created		198058
+1553499569	90.154.71.27	C	windows:software:firefox_full_version.png	wikiadmin	created		186132
+1553500202	90.154.71.27	E	windows:software:firefox_full_version.pdn	wikiadmin			825
+1553500202	90.154.71.27	E	windows:software:firefox_full_version.png	wikiadmin			728
+1553752765	90.154.71.27	E	windows:rigutils:windows_tuning:shutuptelemetry_01.png	wikiadmin			1205
+1553752765	90.154.71.27	E	windows:rigutils:windows_tuning:shutuptelemetry_01.pdn	wikiadmin			2178
+1560823962	90.154.71.188	C	miners:odnt.png	wikiadmin	created		10567
+1560823962	90.154.71.188	C	miners:hwinfo64.png	wikiadmin	created		33157
+1560823962	90.154.71.188	C	miners:phoenixminer.png	wikiadmin	created		58027
+1560825208	90.154.71.188	C	miners:gpuz.png	wikiadmin	created		29547

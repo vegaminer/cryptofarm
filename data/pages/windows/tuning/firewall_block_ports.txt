@@ -146,4 +146,4 @@ Please note that you should repeat this steps for **UDP** ports as well - start 
 </WRAP>
 
 ----
-Continue to the next [[:windows:tuning:firewall_allow_ports|how-to allow]] selected inbound connection.
+Continue to the next step [[:windows:tuning:firewall_allow_ports|how-to allow]] selected inbound connection.

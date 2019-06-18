@@ -17,3 +17,6 @@
 1549871241	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			37
 1549872058	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			14
 1550147312	195.128.86.202	E	windows:tuning:firewall_configure	wikiadmin			904
+1553587922	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			5
+1553587981	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin			-1
+1553588081	90.154.71.27	E	windows:tuning:firewall_configure	wikiadmin	[Configuring Windows Defender Firewall] 		-6

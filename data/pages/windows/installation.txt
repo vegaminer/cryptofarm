@@ -1,11 +1,16 @@
-The process of Windows installation is straight forward. For the rig with 8xVEGA cards I recommend at least 120GB SSD drive. Please remember that during installation all data from the drive will be erased.
+The process of Windows installation is straight forward. For the rig with 8xVEGA cards I recommend at least 120GB SSD drive (8 cards x 8G VRAM = 64G swap file + min. 30G for Windows itself).  Please remember that during the installation all of your data from the drive will be erased.
 
 <note important>Before starting installation process you have to **disable network** on your PC, just unplug Ethernet cable and/or switch off Wi-Fi adapter. Windows may/should try to download updates during installation and this may lead to unpredictable results. You'll be able to enable network connection after completely disabling windows update mechanism</note>
 
 Insert [[bootable_usb|bootable USB]] drive with Windows installation into your PC and boot from it. Probably, you have to change BIOS settings in Boot section to be able to boot from USB drive. It may be a tricky task and depends on particular model of motherboard and BIOS version. 
 
 ----
-**STEP 1.** Locale settings
+**STEP 0.** First step
+
+Disconnect your PC from network (see warning message above)
+
+----
+**STEP ~~#INSTALL~~.** Locale settings
 <WRAP group>
 <WRAP half column>
 If you need other language then you have to select it at "Media creation tool [[media_creation_tool#step5|Step 5]]"
@@ -23,7 +28,7 @@ It's possible to install any additional language later. I would recommende to co
 </WRAP>
 </WRAP>
 ----
-**STEP 2.** Confirm installation
+**STEP ~~#INSTALL~~.** Confirm installation
 <WRAP group>
 <WRAP half column>
   2. Click ''"Install now"'' button
@@ -35,7 +40,7 @@ It's possible to install any additional language later. I would recommende to co
 </WRAP>
 </WRAP>
 ----
-**STEP 3.** Product key
+**STEP ~~#INSTALL~~.** Product key
 <WRAP group>
 <WRAP half column>
 
@@ -50,7 +55,7 @@ It's possible to install any additional language later. I would recommende to co
 </WRAP>
 </WRAP>
 ----
-**STEP 4.** Select edition
+**STEP ~~#INSTALL~~.** Select edition
 <WRAP group>
 <WRAP half column>
 This is the only valid choice you have - Operating system: Windows10 **Pro**, Architecture: **x64**. Otherwise you'll be not able to run mining software on it. 
@@ -63,7 +68,7 @@ This is the only valid choice you have - Operating system: Windows10 **Pro**, Ar
 </WRAP>
 </WRAP>
 ----
-**STEP 5.** License terms
+**STEP ~~#INSTALL~~.** License terms
 <WRAP group>
 <WRAP half column>
 I'm happy that they don't put such a window before every step...
@@ -76,7 +81,7 @@ I'm happy that they don't put such a window before every step...
 </WRAP>
 </WRAP>
 ----
-**STEP 6.** Type of installation
+**STEP ~~#INSTALL~~.** Type of installation
 <WRAP group>
 <WRAP half column>
 We need more control on installation process.
@@ -89,7 +94,7 @@ We need more control on installation process.
 </WRAP>
 </WRAP>
 ----
-**STEP 7.** Disk preparation
+**STEP ~~#INSTALL~~.** Disk preparation
 <WRAP group>
 <WRAP half column>
 If your disk was used before then you have to delete all existing partitions on it. Select them one by one and click ''"Delete"'' button, until you get one unallocated free space.
@@ -106,7 +111,7 @@ If your disk was used before then you have to delete all existing partitions on 
 </WRAP>
 </WRAP>
 ----
-**STEP 8.** Select region
+**STEP ~~#INSTALL~~.** Select region
 <WRAP group>
 <WRAP half column>
 All setting from this step up may be changed later in control panel of Windows itself.
@@ -119,7 +124,7 @@ All setting from this step up may be changed later in control panel of Windows i
 </WRAP>
 </WRAP>
 ----
-**STEP 9.** Keyboard layout
+**STEP ~~#INSTALL~~.** Keyboard layout
 <WRAP group>
 <WRAP half column>
   9. Correct the default keyboard if you need and click ''"Yes"'' button.
@@ -132,7 +137,7 @@ All setting from this step up may be changed later in control panel of Windows i
 </WRAP>
 </WRAP>
 ----
-**STEP 10.** Secondary keyboard
+**STEP ~~#INSTALL~~.** Secondary keyboard
 <WRAP group>
 <WRAP half column>
 If you are living in a country with national alphabet different from Latin one (Hebrew, Cyrillic, Arabic, 	Chinese, etc.)  then you may want to add secondary keyboard at this step.
@@ -159,7 +164,7 @@ Coffee brake {{typcn>beer}}
 </WRAP>
 </WRAP>
 ----
-**STEP 11.** Account type
+**STEP ~~#INSTALL~~.** Account type
 <WRAP group>
 <WRAP half column>
 Try to share with MS as little as possible. Use [[https://answers.microsoft.com/en-us/windows/forum/windows_10-security/microsoft-account-vs-local-account-on-windows-10/da6826f7-5e9b-48bf-8e0d-bf25456b4e0e|local account]] and enjoy full control over your rig.
@@ -176,7 +181,7 @@ Try to share with MS as little as possible. Use [[https://answers.microsoft.com/
 </WRAP>
 </WRAP>
 ----
-**STEP 12.** Account type (continue)
+**STEP ~~#INSTALL~~.** Account type (continue)
 <WRAP group>
 <WRAP half column>
 No thank you! Just get out of my way with your time and money stealing services.
@@ -189,7 +194,7 @@ No thank you! Just get out of my way with your time and money stealing services.
 </WRAP>
 </WRAP>
 ----
-**STEP 13.** User name
+**STEP ~~#INSTALL~~.** User name
 <WRAP group>
 <WRAP half column>
   13. Type your user name here and click ''"Next"'' button
@@ -201,7 +206,7 @@ No thank you! Just get out of my way with your time and money stealing services.
 </WRAP>
 </WRAP>
 ----
-**STEP 14.** Password
+**STEP ~~#INSTALL~~.** Password
 <WRAP group>
 <WRAP half column>
   14. Enter really strong password (no 1234 or something like that). Click ''"Next"'' button
@@ -213,7 +218,7 @@ No thank you! Just get out of my way with your time and money stealing services.
 </WRAP>
 </WRAP>
 ----
-**STEP 15.** Confirm password
+**STEP ~~#INSTALL~~.** Confirm password
 <WRAP group>
 <WRAP half column>
   15. Retype your password and click ''"Next"'' button
@@ -225,7 +230,7 @@ No thank you! Just get out of my way with your time and money stealing services.
 </WRAP>
 </WRAP>
 ----
-**STEP 16.** Security questions
+**STEP ~~#INSTALL~~.** Security questions
 <WRAP group>
 <WRAP half column>
 It's a security risk to provide easy to guess answers. Just enter some meaningless garbage here and forget about it.
@@ -238,7 +243,7 @@ It's a security risk to provide easy to guess answers. Just enter some meaningle
 </WRAP>
 </WRAP>
 ----
-**STEP 17.** Cortana
+**STEP ~~#INSTALL~~.** Cortana
 <WRAP group>
 <WRAP half column>
 Cortana is a super hungry hog and wasteful piece of crap, you definitely don't need it at your mining rig. We'll disable it completely later, but for now just say No.
@@ -251,7 +256,7 @@ Cortana is a super hungry hog and wasteful piece of crap, you definitely don't n
 </WRAP>
 </WRAP>
 ----
-**STEP 18.** Privacy settings
+**STEP ~~#INSTALL~~.** Privacy settings
 <WRAP group>
 <WRAP half column>
 Say NO to all questions here as shown on the screenshot. Unfortunately, it has almost no effect since Windows will continue to collect usage statistic and send it back to Redmond (we will disable it completely later).
@@ -264,7 +269,7 @@ Say NO to all questions here as shown on the screenshot. Unfortunately, it has a
 </WRAP>
 </WRAP>
 ----
-**STEP 19.** Last step
+**STEP ~~#INSTALL~~.** Last step
 <WRAP group>
 <WRAP half column>
 Just wait. Your PC will be rebooted automatically. After successful login continue to the next step [[:windows:tuning|"Windows tuning"]]

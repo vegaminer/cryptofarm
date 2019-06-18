@@ -48,3 +48,6 @@ windows:tuning:run_cmd_exe
 windows:tuning:firewall_block_ports
 windows:tuning:firewall_allow_ports
 windows:software:openvpn
+windows:tuning:tweak_ui
+miners
+miners:phoenixminer

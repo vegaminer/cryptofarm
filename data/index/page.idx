@@ -40,3 +40,5 @@ windows:tuning:run_cmd_exe
 windows:tuning:firewall_block_ports
 windows:tuning:firewall_allow_ports
 windows:rigutils:windows_tuning:configurefirewall.bat
+miners
+miners:phoenixminer

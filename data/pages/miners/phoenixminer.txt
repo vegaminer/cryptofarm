@@ -1,0 +1,55 @@
+Miner's official home page at [[https://bitcointalk.org/index.php?topic=2647654.0|bitcointalk.org]]
+
+----
+
+<WRAP group>
+<WRAP half column>
+8xVEGA56 rig. All cards are [[https://www.techpowerup.com/gpu-specs/radeon-rx-vega-56.c2993|AMD reference models]], flashed with VEGA64-Liquid BIOS (I believe it's irrelevant, you may try just to run it with stock BIOS). Driver version 18.5.1
+</WRAP>
+<WRAP half column>
+{{:miners:gpuz.png?direct&400|GPU-Z output}}
+</WRAP>
+
+----
+
+<WRAP group>
+<WRAP half column>
+Output from PnoenixMiner 4.2c. Note the difference in hashrate, it's a silicon lottery, your results may vary.
+</WRAP>
+<WRAP half column>
+{{:miners:phoenixminer.png?direct&400|PhoenixMiner 8xVEGA56}}
+</WRAP>
+
+----
+
+<WRAP group>
+<WRAP half column>
+[[https://forums.guru3d.com/threads/overdriventool-tool-for-amd-gpus.416116/|ODNTool]] absolutely outdated v.0.2.3, but it works fine. Please note that GPU speed is set to the minimum possible value. Increasing it will bring your more power consumption only, for ETH mining the memory speed is more important, try to set it as high as possible. This is a quite stable setup, it runs for weeks without rebooting.
+</WRAP>
+<WRAP half column>
+{{:miners:odnt.png?direct&400|OverDrive NTool v.0.2.3}}
+</WRAP>
+
+----
+
+And finaly the "secret" ingredient - AMD Mem Tweak Tool (home page at [[https://bitcointalk.org/index.php?topic=5123724.0|bitcointalk.org]]) I prefer CLI version, here is my settings (probably not the best one, feel free to experiment with it)
+
+eth_tweak.bat
+<code>
+@echo off
+pushd "%~dp0"
+
+WinAMDTweak.exe --CL 19 --RAS 28 --RCDRD 12 --RCDWR 5 --RC 44 --RP 12 --RRDS 3 --RRDL 3 --RTP 4 --FAW 18 --CWL 6 --WTRS 4 --WTRL 9 --WR 15 --WRRD 1 --RDWR 18 --REF 17000 --RFC 248
+
+popd
+</code>
+
+----
+
+<WRAP group>
+<WRAP half column>
+A screenshot from HWInfo64. According to it the power consumption of the 47MH/s card is 129W, others consume less.
+</WRAP>
+<WRAP half column>
+{{:miners:hwinfo64.png?direct&400|HWINFO64}}
+</WRAP>

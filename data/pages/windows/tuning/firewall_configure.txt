@@ -225,9 +225,6 @@ Selecting all rules
 Your final list may looks something like this.
 
 ~~#~~. Note the absence on any icons Allow(green)/Block(red) in front of rule's name.
-
-Well done! Continue to the next section - [[:windows:tuning:firewall_block_ports|Explicitly block unwanted/illegal traffic]]
-
 </WRAP>
 <WRAP half column>
 {{:windows:tuning:firewall_11.png?direct&400|Firewall}}
@@ -236,3 +233,4 @@ Well done! Continue to the next section - [[:windows:tuning:firewall_block_ports
 </WRAP>
 </WRAP>
 ----
+Well done! Continue to the next section - [[:windows:tuning:firewall_block_ports|Explicitly block unwanted/illegal traffic]]
